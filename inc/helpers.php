@@ -87,11 +87,11 @@ function masar_query_items( $n = 6 ) {
 	return new WP_Query( array( 'post_type' => 'product', 'posts_per_page' => max( 1, (int) $n ), 'ignore_sticky_posts' => true ) );
 }
 
-/** تصنيفات حقيقية أو مصفوفة فاضية */
+/** تصنيفات منتجات WooCommerce الحقيقية، أو مصفوفة فاضية (بنستخدم تصنيفات القالب الافتراضية) */
 function masar_real_terms( $n = 8 ) {
-	$tax = taxonomy_exists( 'product_cat' ) ? 'product_cat' : 'category';
-	$args = array( 'taxonomy' => $tax, 'hide_empty' => false, 'number' => (int) $n );
-	$def = (int) get_option( 'default_' . ( 'product_cat' === $tax ? 'product_cat' : 'category' ), 0 );
+	if ( ! taxonomy_exists( 'product_cat' ) ) { return array(); }
+	$args = array( 'taxonomy' => 'product_cat', 'hide_empty' => false, 'number' => (int) $n );
+	$def = (int) get_option( 'default_product_cat', 0 );
 	if ( $def ) { $args['exclude'] = array( $def ); }
 	$terms = get_terms( $args );
 	if ( is_wp_error( $terms ) || ! $terms ) { return array(); }
@@ -129,4 +129,14 @@ function masar_preset_has( $section ) {
 	$p = masar_presets();
 	foreach ( $p[ $k ]['sections'] as $row ) { if ( $row[0] === $section ) { return true; } }
 	return false;
+}
+
+/** أسئلة شائعة افتراضية */
+function masar_faq_defaults() {
+	return array(
+		array( 'كم يستغرق التوصيل؟', 'من 1 إلى 3 أيام عمل داخل المدن الكبرى، وحتى 5 أيام للمحافظات.' ),
+		array( 'هل يمكنني استرجاع المنتج؟', 'نعم، خلال 14 يوم من الاستلام بشرط أن يكون بحالته الأصلية.' ),
+		array( 'ما وسائل الدفع المتاحة؟', 'الدفع عند الاستلام، بطاقات الائتمان، والمحافظ الإلكترونية.' ),
+		array( 'كيف أتواصل معكم؟', 'عبر واتساب أو الهاتف أو البريد، وبنرد خلال ساعات العمل.' ),
+	);
 }

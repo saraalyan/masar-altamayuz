@@ -4,11 +4,13 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'MASAR_VER', '2.0.1' );
+define( 'MASAR_VER', '2.1.0' );
 
 require get_template_directory() . '/inc/helpers.php';
 require get_template_directory() . '/inc/presets.php';
 require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/studio.php';
+require get_template_directory() . '/inc/demo.php';
 
 function masar_setup() {
 	load_theme_textdomain( 'masar-altamayuz', get_template_directory() . '/languages' );

@@ -2,7 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 $var   = masar_arg( $args, 'variant', 'insta' );
 $items = masar_arg( $args, 'items', array() );
-$emo   = array( '👗', '👒', '👜', '🧥', '👠', '💍', '🧣', '🕶️' );
+$emo   = ( 'projects' === $var ) ? array( '🛋️', '🍳', '🏡', '🛁', '🪴', '🛏️', '🏺', '🕯️' ) : array( '👗', '👒', '👜', '🧥', '👠', '💍', '🧣', '🕶️' );
 ?>
 <section class="sec sec-tight"<?php if ( ! empty( $args['id'] ) ) { echo ' id="' . esc_attr( $args['id'] ) . '"'; } ?>>
 	<div class="wrap">

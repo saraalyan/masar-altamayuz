@@ -65,7 +65,7 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.35;margin:0 0 .6em}
 .hdr-luxe .hdr-actions{grid-column:3;grid-row:1;justify-content:flex-end}
 .hdr-luxe .brand-text{letter-spacing:.14em;font-size:1.7rem}
 .hdr-minimal .site-header{background:transparent;border:0;backdrop-filter:none}
-.hdr-over .site-header{position:absolute;inset-inline:0;background:transparent;border-color:rgba(255,255,255,.2);backdrop-filter:none}
+.hdr-over .site-header,.hdr-over .site-header.is-sticky{position:absolute;top:auto;inset-inline:0;background:transparent;border-color:rgba(255,255,255,.2);backdrop-filter:none}
 .hdr-over .site-header .menu a,.hdr-over .site-header .brand-text,.hdr-over .icon-btn,.hdr-over .custom-logo-link{color:#fff}
 .hdr-over .nav-toggle span{background:#fff}
 .hdr-over .hero{padding-top:90px}
@@ -99,6 +99,7 @@ h1,h2,h3,h4{font-family:var(--font-head);line-height:1.35;margin:0 0 .6em}
 .eyebrow{display:inline-block;background:color-mix(in srgb,var(--accent) 28%,transparent);color:var(--primary);padding:.2rem .95rem;border-radius:99px;font-weight:700;font-size:.85rem;margin-bottom:1rem}
 .hero-center .eyebrow{background:rgba(255,255,255,.18);color:#fff}
 .skin-dark .eyebrow{color:var(--accent)}
+.skin-dark .hero-center .eyebrow{color:#fff}
 .hero-btns{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem}
 .hero-center .hero-btns{justify-content:center}
 .hero-center .btn{background:#fff;color:#2a211c}
@@ -304,7 +305,8 @@ html[dir=rtl] .svc-ico{transform:translateX(50%)}
 
 /* footer */
 .site-footer{background:var(--soft);padding:3rem 0 1.4rem}
-.footer-cols{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:2rem;margin-bottom:2rem}
+.footer-cols{display:grid;grid-template-columns:var(--fc,1.6fr 1fr);gap:2rem;margin-bottom:2rem}
+.fcols-2{--fc:1.6fr 1fr}.fcols-3{--fc:1.6fr 1fr 1fr}.fcols-4{--fc:1.6fr 1fr 1fr 1fr}.fcols-5{--fc:1.5fr repeat(4,1fr)}
 .fbrand p{color:var(--muted);max-width:340px}
 .flogo{margin-bottom:.4rem}
 .flinks{flex-direction:column;gap:.4rem}
@@ -356,7 +358,7 @@ html[dir=rtl] .svc-ico{transform:translateX(50%)}
 	.pgrid.cols-6{grid-template-columns:repeat(3,1fr)}
 	.promo-grid.cols-3{grid-template-columns:1fr}
 	.proj-grid{grid-template-columns:repeat(3,1fr)}
-	.footer-cols{grid-template-columns:1fr 1fr}
+	.footer-cols.footer-cols{--fc:1fr 1fr}
 }
 @media (max-width:900px){
 	.layout.has-side,.about,.hero-split .hero-inner,.hero-arch .hero-inner,.journal-in,.side-layout,.promo-grid.cols-2{grid-template-columns:1fr}
@@ -388,7 +390,7 @@ html[dir=rtl] .svc-ico{transform:translateX(50%)}
 	.woocommerce ul.products{grid-template-columns:1fr}
 	.hero-text{text-align:center}
 	.hero-btns{justify-content:center}
-	.footer-cols{grid-template-columns:1fr}
+	.footer-cols.footer-cols{--fc:1fr}
 	.journal-posts{grid-template-columns:repeat(2,1fr)}
 	.topbar-in{justify-content:center;text-align:center}
 	.footer-bottom{flex-direction:column}

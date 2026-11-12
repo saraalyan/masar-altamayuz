@@ -63,7 +63,7 @@
 	/* بتلات */
 	var box = document.querySelector('.petals');
 	var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-	if (box && cfg.petals && !reduce) {
+	if (box && parseInt(cfg.petals, 10) === 1 && !reduce) {
 		var n = Math.min(Math.max(parseInt(cfg.petalCnt, 10) || 14, 4), 40);
 		for (var i = 0; i < n; i++) {
 			var p = document.createElement('span');

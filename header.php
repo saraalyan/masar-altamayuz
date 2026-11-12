@@ -16,11 +16,11 @@ $hs = get_theme_mod( 'masar_header_style', 'split' );
 <?php if ( get_theme_mod( 'masar_topbar_on', 1 ) ) : ?>
 <div class="topbar">
 	<div class="wrap topbar-in">
-		<span><?php echo esc_html( get_theme_mod( 'masar_announce', '' ) ); ?></span>
+		<span><?php echo esc_html( get_theme_mod( 'masar_announce', 'شحن مجاني للطلبات فوق 500 جنيه  |  استرجاع سهل خلال 14 يوم' ) ); ?></span>
 		<span class="topbar-links">
 			<?php
 			for ( $i = 1; $i <= 2; $i++ ) {
-				$l = get_theme_mod( 'masar_topbar_link' . $i, '' );
+				$l = get_theme_mod( 'masar_topbar_link' . $i, array( 1 => 'تتبّع طلبك', 2 => 'مركز المساعدة' )[ $i ] );
 				if ( $l ) { echo '<a href="' . esc_url( get_theme_mod( 'masar_topbar_link' . $i . '_url', '' ) ?: '#' ) . '">' . esc_html( $l ) . '</a>'; }
 			}
 			?>

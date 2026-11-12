@@ -1,7 +1,8 @@
 <?php if ( ! defined( 'ABSPATH' ) ) { exit; }
 $fs   = get_theme_mod( 'masar_footer_style', 'columns' );
-$any  = false;
-for ( $i = 1; $i <= 4; $i++ ) { if ( is_active_sidebar( 'footer-' . $i ) ) { $any = true; } }
+$any  = 0;
+for ( $i = 1; $i <= 4; $i++ ) { if ( is_active_sidebar( 'footer-' . $i ) ) { $any++; } }
+$ncols = 1 + max( 1, $any );
 $phone = get_theme_mod( 'masar_contact_phone', '' );
 $mail  = get_theme_mod( 'masar_contact_email', '' );
 $addr  = get_theme_mod( 'masar_contact_address', '' );
@@ -13,14 +14,14 @@ $addr  = get_theme_mod( 'masar_contact_address', '' );
 <footer class="site-footer">
 	<div class="wrap">
 		<?php if ( 'minimal' !== $fs ) : ?>
-		<div class="footer-cols">
+		<div class="footer-cols fcols-<?php echo (int) $ncols; ?>">
 			<div class="fcol fbrand">
 				<div class="flogo"><?php if ( has_custom_logo() ) { the_custom_logo(); } else { echo '<a class="brand-text" href="' . esc_url( home_url( '/' ) ) . '">' . esc_html( get_bloginfo( 'name' ) ) . '</a>'; } ?></div>
-				<p><?php echo esc_html( get_theme_mod( 'masar_footer_about', '' ) ); ?></p>
+				<p><?php echo esc_html( get_theme_mod( 'masar_footer_about', 'نقدّم لك تجربة تسوّق راقية بجودة تدوم وخدمة تستاهلها.' ) ); ?></p>
 				<?php masar_social_links( 'socials' ); ?>
 				<?php if ( $phone || $mail || $addr ) : ?>
 				<ul class="contact-list">
-					<?php if ( $phone ) { echo '<li>📞 <a href="tel:' . esc_attr( preg_replace( '/[^\d+]/', '', $phone ) ) . '">' . esc_html( $phone ) . '</a></li>'; } ?>
+					<?php if ( $phone ) { echo '<li>📞 <a dir="ltr" href="tel:' . esc_attr( preg_replace( '/[^\d+]/', '', $phone ) ) . '">' . esc_html( $phone ) . '</a></li>'; } ?>
 					<?php if ( $mail ) { echo '<li>✉️ <a href="mailto:' . esc_attr( $mail ) . '">' . esc_html( $mail ) . '</a></li>'; } ?>
 					<?php if ( $addr ) { echo '<li>📍 ' . esc_html( $addr ) . '</li>'; } ?>
 				</ul>

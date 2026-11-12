@@ -4,7 +4,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'MASAR_VER', '2.0.0' );
+define( 'MASAR_VER', '2.0.1' );
 
 require get_template_directory() . '/inc/helpers.php';
 require get_template_directory() . '/inc/presets.php';
@@ -138,7 +138,10 @@ function masar_body_classes( $c ) {
 	if ( $dark ) { $c[] = 'skin-dark'; }
 	if ( $preset ) {
 		$c[] = 'preset-' . $preset;
-		if ( get_theme_mod( 'masar_header_overlay', 0 ) ) { $c[] = 'hdr-over'; }
+		$first = isset( $presets[ $preset ]['sections'][0] ) ? $presets[ $preset ]['sections'][0] : array();
+		$hero  = ( $first && 'hero' === $first[0] ) ? masar_override( 'hero_style', masar_arg( isset( $first[1] ) ? $first[1] : array(), 'style', 'split' ) ) : '';
+		// الهيدر الشفاف يناسب هيرو الصورة الخلفية الداكنة فقط
+		if ( get_theme_mod( 'masar_header_overlay', 0 ) && 'center' === $hero ) { $c[] = 'hdr-over'; }
 	}
 	$c[] = 'card-' . get_theme_mod( 'masar_card_style', 'soft' );
 	$c[] = 'btn-' . get_theme_mod( 'masar_btn_style', 'pill' );

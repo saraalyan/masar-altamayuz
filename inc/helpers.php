@@ -81,11 +81,10 @@ function masar_sec_head( $args, $default_title = '', $default_sub = '' ) {
 	echo '</div>';
 }
 
-/** منتجات حقيقية (WooCommerce) أو مقالات، أو null لو مفيش */
+/** منتجات WooCommerce الحقيقية، أو null لو الإضافة مش مفعّلة */
 function masar_query_items( $n = 6 ) {
-	$type = post_type_exists( 'product' ) ? 'product' : 'post';
-	$q = new WP_Query( array( 'post_type' => $type, 'posts_per_page' => max( 1, (int) $n ), 'ignore_sticky_posts' => true ) );
-	return $q;
+	if ( ! post_type_exists( 'product' ) ) { return null; }
+	return new WP_Query( array( 'post_type' => 'product', 'posts_per_page' => max( 1, (int) $n ), 'ignore_sticky_posts' => true ) );
 }
 
 /** تصنيفات حقيقية أو مصفوفة فاضية */

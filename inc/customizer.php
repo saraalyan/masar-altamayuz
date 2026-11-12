@@ -53,7 +53,7 @@ function masar_customize_register( $wp_customize ) {
 		'minimal' => 'بسيط شفاف',
 	) ), 'masar_sanitize_choice', 'select', 'masar_header' );
 	$add( 'masar_sticky', 1, array( 'label' => 'تثبيت الهيدر عند التمرير' ), 'masar_sanitize_check', 'checkbox', 'masar_header' );
-	$add( 'masar_header_overlay', 0, array( 'label' => 'هيدر شفاف فوق الهيرو (في الصفحات ذات القوالب)' ), 'masar_sanitize_check', 'checkbox', 'masar_header' );
+	$add( 'masar_header_overlay', 0, array( 'label' => 'هيدر شفاف فوق الهيرو (يعمل مع هيرو الصورة الخلفية فقط)' ), 'masar_sanitize_check', 'checkbox', 'masar_header' );
 	$add( 'masar_show_search', 1, array( 'label' => 'أيقونة البحث' ), 'masar_sanitize_check', 'checkbox', 'masar_header' );
 	$add( 'masar_show_account', 1, array( 'label' => 'أيقونة حسابي' ), 'masar_sanitize_check', 'checkbox', 'masar_header' );
 	$add( 'masar_show_theme_toggle', 1, array( 'label' => 'زر الوضع الليلي' ), 'masar_sanitize_check', 'checkbox', 'masar_header' );

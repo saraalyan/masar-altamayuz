@@ -12,8 +12,8 @@ $q = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 3, 'ignore_
 		</div>
 		<div class="journal-posts">
 			<?php if ( $q->have_posts() ) : while ( $q->have_posts() ) : $q->the_post(); ?>
-				<a class="jp" href="<?php the_permalink(); ?>"><span class="jp-img"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'masar-card' ); } else { echo '<span class="ph-box">✦</span>'; } ?></span><b><?php the_title(); ?></b></a>
-			<?php endwhile; wp_reset_postdata(); else : foreach ( array( '✨', '🎁', '🛍️' ) as $e ) { echo '<a class="jp" href="#"><span class="jp-img"><span class="ph-box">' . esc_html( $e ) . '</span></span><b>مقال قريباً</b></a>'; } endif; ?>
+				<a class="jp" href="<?php the_permalink(); ?>"><span class="jp-img"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'masar-card' ); } else { echo masar_media( '', 'sparkle' ); } ?></span><b><?php the_title(); ?></b></a>
+			<?php endwhile; wp_reset_postdata(); else : foreach ( array( 'sparkle', 'gift', 'bag' ) as $e ) { echo '<a class="jp" href="#"><span class="jp-img">' . masar_media( '', $e ) . '</span><b>مقال قريباً</b></a>'; } endif; ?>
 		</div>
 	</div>
 </section>

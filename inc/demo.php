@@ -7,28 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 /** صورة تجريبية متدرجة اللون (GD) بدون تحميل من الإنترنت */
 function masar_demo_image( $seed, $w = 1000, $h = 1250 ) {
-	if ( ! function_exists( 'imagecreatetruecolor' ) ) { return 0; }
-	$pairs = array(
-		array( array( 233, 221, 208 ), array( 201, 173, 143 ) ),
-		array( array( 240, 228, 214 ), array( 168, 120, 90 ) ),
-		array( array( 222, 226, 210 ), array( 120, 135, 90 ) ),
-		array( array( 245, 232, 224 ), array( 196, 130, 100 ) ),
-		array( array( 214, 206, 196 ), array( 90, 74, 62 ) ),
-		array( array( 236, 226, 232 ), array( 150, 110, 140 ) ),
-	);
-	$pair = $pairs[ abs( crc32( (string) $seed ) ) % count( $pairs ) ];
-	$im = imagecreatetruecolor( $w, $h );
-	for ( $y = 0; $y < $h; $y++ ) {
-		$t = $y / $h;
-		$c = imagecolorallocate( $im, (int) ( $pair[0][0] + ( $pair[1][0] - $pair[0][0] ) * $t ), (int) ( $pair[0][1] + ( $pair[1][1] - $pair[0][1] ) * $t ), (int) ( $pair[0][2] + ( $pair[1][2] - $pair[0][2] ) * $t ) );
-		imageline( $im, 0, $y, $w, $y, $c );
-	}
-	$circle = imagecolorallocatealpha( $im, 255, 255, 255, 100 );
-	imagefilledellipse( $im, (int) ( $w * 0.62 ), (int) ( $h * 0.42 ), (int) ( $w * 0.7 ), (int) ( $w * 0.7 ), $circle );
-	ob_start();
-	imagejpeg( $im, null, 84 );
-	$data = ob_get_clean();
-	imagedestroy( $im );
+	$n   = ( abs( crc32( (string) $seed ) ) % 8 ) + 1;
+	$src = get_template_directory() . '/assets/images/art-' . $n . '.jpg';
+	if ( ! file_exists( $src ) ) { return 0; }
+	$data = file_get_contents( $src ); // phpcs:ignore WordPress.WP.AlternativeFunctions
 	$up = wp_upload_bits( 'masar-demo-' . sanitize_file_name( (string) $seed ) . '-' . wp_rand( 1000, 9999 ) . '.jpg', null, $data );
 	if ( ! empty( $up['error'] ) ) { return 0; }
 	$att = wp_insert_attachment( array( 'post_mime_type' => 'image/jpeg', 'post_title' => 'masar demo ' . $seed, 'post_status' => 'inherit' ), $up['file'] );

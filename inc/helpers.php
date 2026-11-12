@@ -18,7 +18,10 @@ function masar_media( $src, $emoji = '✦', $cls = '' ) {
 	if ( $src ) {
 		return '<img class="' . esc_attr( $cls ) . '" src="' . esc_url( $src ) . '" alt="" loading="lazy">';
 	}
-	return '<span class="ph-box ' . esc_attr( $cls ) . '" aria-hidden="true">' . esc_html( $emoji ) . '</span>';
+	static $n = 0;
+	$n++;
+	$tone = ( $n - 1 ) % 8 + 1;
+	return '<span class="ph-box tone-' . $tone . ' ' . esc_attr( $cls ) . '" aria-hidden="true">' . masar_icon( $emoji ) . '</span>';
 }
 
 /** عرض سكشن من template-parts/sections */
@@ -112,7 +115,7 @@ function masar_social_links( $class = 'socials' ) {
 	$out = '';
 	foreach ( $soc as $k => $l ) {
 		$u = get_theme_mod( 'masar_social_' . $k, '' );
-		if ( $u ) { $out .= '<a href="' . esc_url( $u ) . '" target="_blank" rel="noopener">' . esc_html( $l ) . '</a>'; }
+		if ( $u ) { $out .= '<a href="' . esc_url( $u ) . '" target="_blank" rel="noopener" aria-label="' . esc_attr( $l ) . '" title="' . esc_attr( $l ) . '">' . masar_icon( $k ) . '</a>'; }
 	}
 	if ( $out ) { echo '<div class="' . esc_attr( $class ) . '">' . $out . '</div>'; } // phpcs:ignore WordPress.Security.EscapeOutput
 }

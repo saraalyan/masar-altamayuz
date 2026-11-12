@@ -9,7 +9,7 @@
 		var t = root.getAttribute('data-theme');
 		return t === 'dark';
 	}
-	function paint() { if (tbtn) { tbtn.textContent = isDark() ? '☀️' : '🌙'; } }
+	function paint() { if (tbtn) { tbtn.setAttribute('aria-pressed', isDark() ? 'true' : 'false'); } }
 	if (tbtn) {
 		tbtn.addEventListener('click', function () {
 			var next = isDark() ? 'light' : 'dark';

@@ -4,8 +4,9 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'MASAR_VER', '2.1.0' );
+define( 'MASAR_VER', '2.2.0' );
 
+require get_template_directory() . '/inc/icons.php';
 require get_template_directory() . '/inc/helpers.php';
 require get_template_directory() . '/inc/presets.php';
 require get_template_directory() . '/inc/customizer.php';
@@ -54,18 +55,41 @@ function masar_widgets() {
 }
 add_action( 'widgets_init', 'masar_widgets' );
 
+/** الخطوط المضمّنة داخل الثيم (woff2 محلية، بدون Google Fonts) */
 function masar_fonts_map() {
+	// الخطوط مضمّنة داخل الثيم (assets/fonts) — اسم الخط => اسم الملف
 	return array(
-		'Cairo'                => 'Cairo:wght@400;600;700;800',
-		'Tajawal'              => 'Tajawal:wght@400;500;700;800',
-		'Almarai'              => 'Almarai:wght@400;700;800',
-		'IBM Plex Sans Arabic' => 'IBM+Plex+Sans+Arabic:wght@400;500;700',
-		'Amiri'                => 'Amiri:wght@400;700',
-		'Noto Naskh Arabic'    => 'Noto+Naskh+Arabic:wght@400;700',
-		'Reem Kufi'            => 'Reem+Kufi:wght@400;600;700',
-		'Aref Ruqaa'           => 'Aref+Ruqaa:wght@400;700',
-		'Harmattan'            => 'Harmattan:wght@400;600;700',
+		'Cairo'                => 'cairo',
+		'Tajawal'              => 'tajawal',
+		'Almarai'              => 'almarai',
+		'IBM Plex Sans Arabic' => 'ibm-plex-sans-arabic',
+		'Amiri'                => 'amiri',
+		'Noto Naskh Arabic'    => 'noto-naskh-arabic',
+		'Reem Kufi'            => 'reem-kufi',
 	);
+}
+
+/** تنسيقات خطوط جاهزة: عناوين + نصوص */
+function masar_font_pairs() {
+	return array(
+		'elegant' => array( 'label' => 'أنيق: عناوين أميري + نصوص القاهرة', 'head' => 'Amiri', 'body' => 'Cairo' ),
+		'modern'  => array( 'label' => 'عصري: تجوال', 'head' => 'Tajawal', 'body' => 'Tajawal' ),
+		'classic' => array( 'label' => 'كلاسيك: نسخ + IBM بلكس', 'head' => 'Noto Naskh Arabic', 'body' => 'IBM Plex Sans Arabic' ),
+		'bold'    => array( 'label' => 'جريء: ريم كوفي + المراعي', 'head' => 'Reem Kufi', 'body' => 'Almarai' ),
+		'clean'   => array( 'label' => 'نظيف: القاهرة', 'head' => 'Cairo', 'body' => 'Cairo' ),
+		'custom'  => array( 'label' => 'مخصص (اختاري الخطين بنفسك)', 'head' => '', 'body' => '' ),
+	);
+}
+
+/** الخطين الفعليين (عناوين / نصوص) */
+function masar_fonts_in_use() {
+	$pairs = masar_font_pairs();
+	$k     = get_theme_mod( 'masar_font_pair', 'elegant' );
+	if ( isset( $pairs[ $k ] ) && 'custom' !== $k ) { return array( $pairs[ $k ]['head'], $pairs[ $k ]['body'] ); }
+	$fonts = masar_fonts_map();
+	$head  = get_theme_mod( 'masar_font_head', 'Amiri' );
+	$body  = get_theme_mod( 'masar_font_body', 'Cairo' );
+	return array( isset( $fonts[ $head ] ) ? $head : 'Amiri', isset( $fonts[ $body ] ) ? $body : 'Cairo' );
 }
 
 function masar_palettes() {
@@ -92,15 +116,12 @@ function masar_palette_data() {
 
 function masar_enqueue() {
 	$fonts = masar_fonts_map();
-	$body  = get_theme_mod( 'masar_font_body', 'Cairo' );
-	$head  = get_theme_mod( 'masar_font_head', 'Amiri' );
-	$fams  = array();
-	foreach ( array_unique( array( $body, $head ) ) as $f ) {
-		if ( isset( $fonts[ $f ] ) ) { $fams[] = 'family=' . $fonts[ $f ]; }
+	list( $head, $body ) = masar_fonts_in_use();
+	foreach ( array_unique( array( $head, $body ) ) as $fam ) {
+		wp_enqueue_style( 'masar-font-' . $fonts[ $fam ], get_template_directory_uri() . '/assets/fonts/' . $fonts[ $fam ] . '.css', array(), MASAR_VER );
 	}
-	if ( $fams ) {
-		wp_enqueue_style( 'masar-fonts', 'https://fonts.googleapis.com/css2?' . implode( '&', $fams ) . '&display=swap', array(), null );
-	}
+	// خط لاتيني أنيق للعناوين والأرقام والأسماء الإنجليزية
+	wp_enqueue_style( 'masar-font-playfair', get_template_directory_uri() . '/assets/fonts/playfair-display.css', array(), MASAR_VER );
 	wp_enqueue_style( 'masar-main', get_template_directory_uri() . '/assets/css/main.css', array(), MASAR_VER );
 	wp_enqueue_style( 'masar-style', get_stylesheet_uri(), array( 'masar-main' ), MASAR_VER );
 	wp_add_inline_style( 'masar-main', masar_dynamic_css() );
@@ -120,15 +141,14 @@ function masar_dynamic_css() {
 	$p    = masar_palette_data();
 	$prim = get_theme_mod( 'masar_custom_primary', '' ) ?: $p['primary'];
 	$acc  = get_theme_mod( 'masar_custom_accent', '' ) ?: $p['accent'];
-	$body = get_theme_mod( 'masar_font_body', 'Cairo' );
-	$head = get_theme_mod( 'masar_font_head', 'Amiri' );
+	list( $head, $body ) = masar_fonts_in_use();
 	$rad  = (int) get_theme_mod( 'masar_radius', 18 );
 	$wid  = (int) get_theme_mod( 'masar_width', 1180 );
 	$hh   = (int) get_theme_mod( 'masar_hero_height', 78 );
 	$ov   = (int) get_theme_mod( 'masar_hero_overlay', 35 );
 	$css  = ':root{--primary:' . esc_attr( $prim ) . ';--accent:' . esc_attr( $acc ) . ';--soft:' . esc_attr( $p['soft'] ) . ';--ink:' . esc_attr( $p['ink'] ) . ';';
 	$css .= '--radius:' . $rad . 'px;--wrap:' . $wid . 'px;--hero-h:' . $hh . 'vh;--overlay:' . ( $ov / 100 ) . ';';
-	$css .= '--font-body:"' . esc_attr( $body ) . '",system-ui,sans-serif;--font-head:"' . esc_attr( $head ) . '",serif;}';
+	$css .= '--font-body:"' . esc_attr( $body ) . '",system-ui,sans-serif;--font-head:"Playfair Display","' . esc_attr( $head ) . '",serif;}';
 	return $css;
 }
 

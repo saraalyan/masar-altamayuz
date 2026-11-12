@@ -22,7 +22,7 @@ $demo = array( array( 'قطعة مميزة 1', '490 ج.م', '🛍️' ), array( 
 				while ( $q->have_posts() ) : $q->the_post();
 					$p = $shop ? wc_get_product( get_the_ID() ) : null; ?>
 					<article class="pcard">
-						<a class="pcard-img" href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'masar-tall' ); } else { echo '<span class="ph-box">✦</span>'; } ?></a>
+						<a class="pcard-img" href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'masar-tall' ); } else { echo masar_media( '', 'sparkle' ); } ?></a>
 						<h3 class="pcard-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 						<?php if ( $p ) : ?><div class="price"><?php echo wp_kses_post( $p->get_price_html() ); ?></div><?php endif; ?>
 					</article>
@@ -30,7 +30,7 @@ $demo = array( array( 'قطعة مميزة 1', '490 ج.م', '🛍️' ), array( 
 			else :
 				foreach ( array_slice( $demo, 0, $n ) as $d ) : ?>
 					<article class="pcard">
-						<a class="pcard-img" href="#"><span class="ph-box"><?php echo esc_html( $d[2] ); ?></span></a>
+						<a class="pcard-img" href="#"><?php echo masar_media( '', $d[2] ); // phpcs:ignore ?></a>
 						<h3 class="pcard-title"><a href="#"><?php echo esc_html( $d[0] ); ?></a></h3>
 						<div class="price"><?php echo esc_html( $d[1] ); ?></div>
 					</article>

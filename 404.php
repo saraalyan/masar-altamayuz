@@ -2,7 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 get_header(); ?>
 <div class="wrap page-pad notfound">
-	<div class="big">🥀</div>
+	<div class="big"><?php echo masar_icon( 'flower' ); ?></div>
 	<h1 class="page-title">الصفحة دي دبلت!</h1>
 	<p>الرابط ده مش موجود أو اتنقل. جرّب البحث أو ارجع للرئيسية.</p>
 	<?php get_search_form(); ?>

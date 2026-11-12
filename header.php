@@ -51,16 +51,16 @@ $hs = get_theme_mod( 'masar_header_style', 'split' );
 		</nav>
 		<div class="hdr-actions">
 			<?php if ( get_theme_mod( 'masar_show_search', 1 ) ) : ?>
-				<button class="icon-btn search-toggle" aria-label="بحث" aria-expanded="false">🔍</button>
+				<button class="icon-btn search-toggle" aria-label="بحث" aria-expanded="false"><?php echo masar_icon( 'search' ); ?></button>
 			<?php endif; ?>
 			<?php if ( get_theme_mod( 'masar_show_account', 1 ) ) : ?>
-				<a class="icon-btn" href="<?php echo esc_url( masar_account_url() ); ?>" aria-label="حسابي">👤</a>
+				<a class="icon-btn" href="<?php echo esc_url( masar_account_url() ); ?>" aria-label="حسابي"><?php echo masar_icon( 'user' ); ?></a>
 			<?php endif; ?>
 			<?php if ( get_theme_mod( 'masar_show_theme_toggle', 1 ) ) : ?>
-				<button class="icon-btn theme-toggle" aria-label="تبديل الوضع الليلي" title="الوضع الليلي">🌙</button>
+				<button class="icon-btn theme-toggle" aria-label="تبديل الوضع الليلي" title="الوضع الليلي"><?php echo masar_icon( 'moon', 'ico-dark' ); echo masar_icon( 'sun', 'ico-light' ); ?></button>
 			<?php endif; ?>
 			<?php if ( function_exists( 'WC' ) && WC()->cart ) : ?>
-				<a class="icon-btn cart-link" href="<?php echo esc_url( wc_get_cart_url() ); ?>" aria-label="السلة">🛒<span class="cart-count"><?php echo (int) WC()->cart->get_cart_contents_count(); ?></span></a>
+				<a class="icon-btn cart-link" href="<?php echo esc_url( wc_get_cart_url() ); ?>" aria-label="السلة"><?php echo masar_icon( 'cart' ); ?><span class="cart-count"><?php echo (int) WC()->cart->get_cart_contents_count(); ?></span></a>
 			<?php endif; ?>
 			<?php $cta = get_theme_mod( 'masar_header_cta', '' ); if ( $cta ) : ?>
 				<a class="btn btn-sm hdr-cta" href="<?php echo esc_url( get_theme_mod( 'masar_header_cta_url', '' ) ?: '#' ); ?>"><?php echo esc_html( $cta ); ?></a>

@@ -1,7 +1,7 @@
 <?php if ( ! defined( 'ABSPATH' ) ) { exit; } ?>
 <article <?php post_class( 'card' ); ?>>
 	<a class="card-img" href="<?php the_permalink(); ?>">
-		<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'masar-card' ); } else { echo '<span class="ph">🌸</span>'; } ?>
+		<?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'masar-card' ); } else { echo '<span class="ph">' . masar_icon( 'flower' ) . '</span>'; } ?>
 	</a>
 	<div class="card-body">
 		<div class="meta"><?php echo esc_html( get_the_date() ); ?> · <?php echo (int) masar_reading_time(); ?> د قراءة</div>

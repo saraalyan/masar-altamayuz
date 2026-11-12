@@ -66,6 +66,11 @@ function masar_fonts_map() {
 		'Amiri'                => 'amiri',
 		'Noto Naskh Arabic'    => 'noto-naskh-arabic',
 		'Reem Kufi'            => 'reem-kufi',
+		'El Messiri'           => 'el-messiri',
+		'Aref Ruqaa'           => 'aref-ruqaa',
+		'Lalezar'              => 'lalezar',
+		'Readex Pro'           => 'readex-pro',
+		'Markazi Text'         => 'markazi-text',
 	);
 }
 
@@ -76,6 +81,10 @@ function masar_font_pairs() {
 		'modern'  => array( 'label' => 'عصري: تجوال', 'head' => 'Tajawal', 'body' => 'Tajawal' ),
 		'classic' => array( 'label' => 'كلاسيك: نسخ + IBM بلكس', 'head' => 'Noto Naskh Arabic', 'body' => 'IBM Plex Sans Arabic' ),
 		'bold'    => array( 'label' => 'جريء: ريم كوفي + المراعي', 'head' => 'Reem Kufi', 'body' => 'Almarai' ),
+		'messiri' => array( 'label' => 'مميز: المسيري (عناوين وجسم)', 'head' => 'El Messiri', 'body' => 'El Messiri' ),
+		'ruqaa'   => array( 'label' => 'خط يد: عارف رقعة + ريدكس', 'head' => 'Aref Ruqaa', 'body' => 'Readex Pro' ),
+		'display' => array( 'label' => 'عناوين ضخمة: لاليزار + القاهرة', 'head' => 'Lalezar', 'body' => 'Cairo' ),
+		'literary' => array( 'label' => 'أدبي: مركزي', 'head' => 'Markazi Text', 'body' => 'Markazi Text' ),
 		'clean'   => array( 'label' => 'نظيف: القاهرة', 'head' => 'Cairo', 'body' => 'Cairo' ),
 		'custom'  => array( 'label' => 'مخصص (اختاري الخطين بنفسك)', 'head' => '', 'body' => '' ),
 	);
@@ -84,7 +93,7 @@ function masar_font_pairs() {
 /** الخطين الفعليين (عناوين / نصوص) */
 function masar_fonts_in_use() {
 	$pairs = masar_font_pairs();
-	$k     = get_theme_mod( 'masar_font_pair', 'elegant' );
+	$k     = get_theme_mod( 'masar_font_pair', 'messiri' );
 	if ( isset( $pairs[ $k ] ) && 'custom' !== $k ) { return array( $pairs[ $k ]['head'], $pairs[ $k ]['body'] ); }
 	$fonts = masar_fonts_map();
 	$head  = get_theme_mod( 'masar_font_head', 'Amiri' );

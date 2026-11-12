@@ -41,9 +41,11 @@ function masar_customize_register( $wp_customize ) {
 	$add( 'masar_palette', 'beige', array( 'label' => 'لوحة الألوان الجاهزة', 'choices' => $palettes ), 'masar_sanitize_choice', 'select', 'masar_look' );
 	$color( 'masar_custom_primary', 'لون رئيسي مخصص (اختياري)', 'masar_look' );
 	$color( 'masar_custom_accent', 'لون ثانوي مخصص (اختياري)', 'masar_look' );
-	$fonts = array( '' => 'حسب القالب (موصى به)' ) + $fonts;
-	$add( 'masar_font_body', '', array( 'label' => 'خط النصوص', 'choices' => $fonts ), 'masar_sanitize_choice', 'select', 'masar_look' );
-	$add( 'masar_font_head', '', array( 'label' => 'خط العناوين', 'choices' => $fonts ), 'masar_sanitize_choice', 'select', 'masar_look' );
+	$pairs = array();
+	foreach ( masar_font_pairs() as $k => $v ) { $pairs[ $k ] = $v['label']; }
+	$add( 'masar_font_pair', 'messiri', array( 'label' => 'تنسيق الخطوط', 'description' => 'اختاري «مخصص» لو عايزة تحددي الخطين بنفسك.', 'choices' => $pairs ), 'masar_sanitize_choice', 'select', 'masar_look' );
+	$add( 'masar_font_body', '', array( 'label' => 'خط النصوص (للتنسيق المخصص)', 'choices' => $fonts ), 'masar_sanitize_choice', 'select', 'masar_look' );
+	$add( 'masar_font_head', '', array( 'label' => 'خط العناوين (للتنسيق المخصص)', 'choices' => $fonts ), 'masar_sanitize_choice', 'select', 'masar_look' );
 
 	/* ---------- الهيدر ---------- */
 	$wp_customize->add_section( 'masar_header', array( 'title' => 'الهيدر', 'panel' => 'masar_panel' ) );

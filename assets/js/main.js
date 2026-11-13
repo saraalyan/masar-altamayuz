@@ -28,6 +28,13 @@
 			var open = nav.classList.toggle('open');
 			nt.setAttribute('aria-expanded', open ? 'true' : 'false');
 		});
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape' && nav.classList.contains('open')) {
+				nav.classList.remove('open');
+				nt.setAttribute('aria-expanded', 'false');
+				nt.focus();
+			}
+		});
 	}
 
 	/* لوحة البحث */
@@ -39,7 +46,13 @@
 			if (show) { sp.removeAttribute('hidden'); var i = sp.querySelector('input'); if (i) { i.focus(); } } else { sp.setAttribute('hidden', ''); }
 			sb.setAttribute('aria-expanded', show ? 'true' : 'false');
 		});
-		document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { sp.setAttribute('hidden', ''); } });
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape' && !sp.hasAttribute('hidden')) {
+				sp.setAttribute('hidden', '');
+				sb.setAttribute('aria-expanded', 'false');
+				sb.focus();
+			}
+		});
 	}
 
 	/* النشرة البريدية: لو مفيش رابط معالجة نعرض شكراً بدون إرسال */

@@ -12,6 +12,7 @@ require get_template_directory() . '/inc/presets.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/studio.php';
 require get_template_directory() . '/inc/demo.php';
+require get_template_directory() . '/inc/seo.php';
 
 function masar_setup() {
 	load_theme_textdomain( 'masar-altamayuz', get_template_directory() . '/languages' );
@@ -238,8 +239,19 @@ function masar_footer_extras() {
 }
 add_action( 'wp_footer', 'masar_footer_extras' );
 
-/* تعديلات WooCommerce */
-add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+/* تعديلات WooCommerce
+   ستايل ووكومرس الأساسي (التخطيط والموبايل والعام) بيفضل شغال عشان السلة والدفع وصفحة المنتج،
+   وتنسيقات الثيم بتتحمل بعده (أولوية 20) وبتلوّنه. */
+function masar_woocommerce_styles() {
+	if ( ! class_exists( 'WooCommerce' ) ) { return; }
+	wp_enqueue_style( 'masar-woocommerce', get_template_directory_uri() . '/assets/css/woocommerce.css', array( 'masar-main' ), MASAR_VER );
+}
+add_action( 'wp_enqueue_scripts', 'masar_woocommerce_styles', 20 );
+add_filter( 'woocommerce_output_related_products_args', function ( $args ) {
+	$args['posts_per_page'] = 3;
+	$args['columns']        = 3;
+	return $args;
+} );
 add_filter( 'loop_shop_columns', function () { return 3; } );
 add_filter( 'woocommerce_add_to_cart_fragments', function ( $f ) {
 	if ( function_exists( 'WC' ) ) {

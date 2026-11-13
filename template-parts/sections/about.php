@@ -3,7 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 ?>
 <section class="sec"<?php if ( ! empty( $args['id'] ) ) { echo ' id="' . esc_attr( $args['id'] ) . '"'; } ?>>
 	<div class="wrap about">
-		<div class="about-media"><?php echo masar_media( masar_arg( $args, 'image', '' ), masar_arg( $args, 'emoji', '✦' ) ); // phpcs:ignore ?></div>
+		<div class="about-media"><?php echo masar_media( masar_arg( $args, 'image', '' ), masar_arg( $args, 'emoji', '✦' ), '', masar_arg( $args, 'title', '' ) ); // phpcs:ignore ?></div>
 		<div class="about-text">
 			<?php if ( ! empty( $args['kicker'] ) ) : ?><span class="kicker"><?php echo esc_html( $args['kicker'] ); ?></span><?php endif; ?>
 			<h2><?php echo esc_html( masar_arg( $args, 'title', 'من نحن' ) ); ?></h2>

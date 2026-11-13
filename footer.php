@@ -22,7 +22,7 @@ $addr  = get_theme_mod( 'masar_contact_address', '' );
 				<?php if ( $phone || $mail || $addr ) : ?>
 				<ul class="contact-list">
 					<?php if ( $phone ) { echo '<li>' . masar_icon( 'phone' ) . ' <a dir="ltr" href="tel:' . esc_attr( preg_replace( '/[^\d+]/', '', $phone ) ) . '">' . esc_html( $phone ) . '</a></li>'; } ?>
-					<?php if ( $mail ) { echo '<li>' . masar_icon( 'mail' ) . ' <a href="mailto:' . esc_attr( $mail ) . '">' . esc_html( $mail ) . '</a></li>'; } ?>
+					<?php if ( $mail ) { echo '<li>' . masar_icon( 'mail' ) . ' <a dir="ltr" href="mailto:' . esc_attr( $mail ) . '">' . esc_html( $mail ) . '</a></li>'; } ?>
 					<?php if ( $addr ) { echo '<li>' . masar_icon( 'pin' ) . ' ' . esc_html( $addr ) . '</li>'; } ?>
 				</ul>
 				<?php endif; ?>

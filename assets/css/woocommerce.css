@@ -1,0 +1,208 @@
+/* مسار التميز — تنسيقات WooCommerce
+   بتتحمّل بعد ستايل ووكومرس الأساسي (التخطيط + الموبايل + العام) وبتلوّنه بألوان الثيم. */
+
+/* الشبكة: ستايل ووكومرس بيستخدم floats وعروض بالنسبة، والثيم بيستخدم grid */
+.woocommerce ul.products::before,
+.woocommerce ul.products::after,
+.woocommerce-page ul.products::before,
+.woocommerce-page ul.products::after { content: none; display: none; }
+.woocommerce ul.products[class*="columns-"] li.product,
+.woocommerce-page ul.products[class*="columns-"] li.product {
+	float: none;
+	width: auto;
+	margin: 0;
+	clear: none;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+	font-family: var(--font-head);
+	font-size: 1.15rem;
+	color: var(--ink);
+	padding: .3rem 0;
+}
+.woocommerce ul.products li.product .price del,
+.woocommerce div.product .price del { color: var(--muted); font-weight: 400; }
+.woocommerce .price ins,
+.woocommerce ul.products li.product .price ins { text-decoration: none; background: none; }
+.woocommerce .woocommerce-result-count { color: var(--muted); }
+
+/* مسار التنقل والإشعارات */
+.woocommerce .woocommerce-breadcrumb { color: var(--muted); font-size: .9rem; margin-bottom: 1.2rem; }
+.woocommerce .woocommerce-breadcrumb a { color: var(--primary); }
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-error,
+.woocommerce-noreviews,
+p.no-comments {
+	background: var(--soft);
+	color: var(--ink);
+	border-top: 3px solid var(--primary);
+	border-radius: var(--radius);
+}
+.woocommerce-error { border-top-color: #b3261e; }
+.woocommerce-message::before,
+.woocommerce-info::before { color: var(--primary); }
+.woocommerce-error::before { color: #b3261e; }
+
+/* الأزرار */
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce #payment #place_order {
+	background: var(--primary);
+	color: #fff;
+	border-radius: 999px;
+	font-family: inherit;
+	font-weight: 700;
+	padding: .7rem 1.5rem;
+	border: 0;
+}
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover,
+.woocommerce #payment #place_order:hover { background: var(--primary); color: #fff; opacity: .9; }
+.woocommerce #payment #place_order { width: 100%; float: none; }
+
+/* صفحة المنتج */
+.woocommerce div.product .product_title { font-family: var(--font-head); color: var(--ink); }
+.woocommerce div.product p.price,
+.woocommerce div.product span.price { color: var(--primary); font-size: 1.4rem; font-weight: 800; }
+.woocommerce div.product div.images img { border-radius: var(--radius); }
+.woocommerce .star-rating span::before { color: var(--primary); }
+.woocommerce .quantity .qty {
+	width: 4.5rem;
+	padding: .55rem;
+	border: 1.5px solid var(--line);
+	border-radius: 10px;
+	background: var(--surface);
+	color: var(--ink);
+	font-family: inherit;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs::before { border-color: var(--line); }
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+	background: var(--soft);
+	border-color: var(--line);
+	border-radius: var(--radius) var(--radius) 0 0;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active { background: var(--surface); border-bottom-color: var(--surface); }
+.woocommerce div.product .woocommerce-tabs ul.tabs li a { color: var(--ink); font-weight: 700; }
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before,
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after { display: none; }
+
+/* شارة التخفيض: ثبّتها من جهة واحدة بس (ووكومرس والثيم كانوا بيحددوا الجهتين فبتتمدد على العرض كله) */
+html body.woocommerce div.product,
+html body.woocommerce ul.products li.product { position: relative; }
+html body.woocommerce span.onsale,
+html body.woocommerce-page span.onsale {
+	left: auto;
+	right: auto;
+	inset-inline-start: .8rem;
+	inset-inline-end: auto;
+	top: .8rem;
+	margin: 0;
+	min-width: 3.2em;
+	min-height: 3.2em;
+	padding: 0 .7rem;
+	line-height: 3.2em;
+	width: auto;
+	border-radius: 99px;
+	background: var(--primary);
+	color: #fff;
+	z-index: 2;
+}
+
+/* بلوكات السلة والدفع الجديدة */
+.wc-block-components-button:not(.is-link) {
+	background: var(--primary);
+	color: #fff;
+	border-radius: 999px;
+	font-family: inherit;
+	font-weight: 700;
+}
+.wc-block-components-button:not(.is-link):hover { background: var(--primary); color: #fff; opacity: .9; }
+.wc-block-components-button:not(.is-link):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wc-block-components-text-input input,
+.wc-block-components-textarea,
+.wc-block-components-combobox .components-combobox-control__input,
+.wc-block-components-select .wc-blocks-components-select__select {
+	border-radius: 10px;
+	font-family: inherit;
+}
+.wc-block-components-checkbox__input[type="checkbox"]:checked,
+.wc-block-components-radio-control__input:checked { accent-color: var(--primary); }
+.wc-block-cart .wc-block-cart__totals-title,
+.wc-block-checkout .wc-block-components-title { font-family: var(--font-head); color: var(--ink); }
+.wc-block-components-sidebar-layout .wc-block-components-main { color: var(--ink); }
+
+/* الترقيم */
+.woocommerce nav.woocommerce-pagination ul,
+.woocommerce nav.woocommerce-pagination ul li { border: 0; }
+.woocommerce nav.woocommerce-pagination ul li { margin: 0 .15rem; }
+.woocommerce nav.woocommerce-pagination ul li a,
+.woocommerce nav.woocommerce-pagination ul li span {
+	background: var(--soft);
+	color: var(--ink);
+	border-radius: 10px;
+	padding: .4rem .9rem;
+}
+.woocommerce nav.woocommerce-pagination ul li a:hover,
+.woocommerce nav.woocommerce-pagination ul li span.current { background: var(--primary); color: #fff; }
+
+/* السلة والدفع */
+.woocommerce table.shop_table {
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	border-collapse: separate;
+	border-spacing: 0;
+	overflow: hidden;
+}
+.woocommerce table.shop_table th { background: var(--soft); color: var(--ink); }
+.woocommerce-cart .cart_totals,
+.woocommerce-checkout #order_review {
+	background: var(--soft);
+	border-radius: var(--radius);
+	padding: 1.2rem;
+}
+.woocommerce form .form-row textarea,
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row select {
+	border: 1.5px solid var(--line);
+	border-radius: 10px;
+	background: var(--surface);
+	color: var(--ink);
+	font-family: inherit;
+	padding: .6rem .9rem;
+}
+.woocommerce-checkout #payment { background: var(--soft); border-radius: var(--radius); }
+.woocommerce-checkout #payment div.payment_box { background: var(--surface); color: var(--ink); }
+.woocommerce-checkout #payment div.payment_box::before { border-bottom-color: var(--surface); }
+.woocommerce-checkout #payment ul.payment_methods { border-bottom-color: var(--line); }
+
+/* حقل مخفي في بلوك الدفع: ووكومرس بيزحزحه 20000px على اليسار في RTL فبيعمل تمرير أفقي للصفحة كلها */
+html body .wc-block-components-address-form__address_2-hidden-input {
+	left: auto;
+	right: auto;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+/* حسابي */
+.woocommerce-MyAccount-navigation ul { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+.woocommerce-MyAccount-navigation ul li a {
+	display: block;
+	padding: .6rem 1rem;
+	border-radius: 12px;
+	color: var(--ink);
+	font-weight: 600;
+}
+.woocommerce-MyAccount-navigation ul li.is-active a,
+.woocommerce-MyAccount-navigation ul li a:hover { background: var(--primary); color: #fff; opacity: 1; }

@@ -14,7 +14,7 @@ $emo   = ( 'projects' === $var ) ? array( '🛋️', '🍳', '🏡', '🛁', '�
 				<?php endforeach; ?>
 			</div>
 		<?php else : ?>
-			<?php if ( ! empty( $args['handle'] ) ) : ?><p class="sec-sub"><?php echo esc_html( $args['handle'] ); ?></p><?php endif; ?>
+			<?php if ( ! empty( $args['handle'] ) ) : ?><p class="sec-sub"><bdi dir="ltr"><?php echo esc_html( $args['handle'] ); ?></bdi></p><?php endif; ?>
 			<div class="insta">
 				<?php for ( $i = 0; $i < 6; $i++ ) { echo '<span class="insta-i">' . masar_media( '', $emo[ $i ] ) . '</span>'; } // phpcs:ignore ?>
 			</div>

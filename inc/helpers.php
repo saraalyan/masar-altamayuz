@@ -13,10 +13,10 @@ function masar_override( $mod, $default = '' ) {
 }
 
 /** صورة أو مكان صورة جميل لو مفيش صورة */
-function masar_media( $src, $emoji = '✦', $cls = '' ) {
+function masar_media( $src, $emoji = '✦', $cls = '', $alt = '' ) {
 	if ( is_numeric( $src ) ) { $src = wp_get_attachment_image_url( (int) $src, 'large' ); }
 	if ( $src ) {
-		return '<img class="' . esc_attr( $cls ) . '" src="' . esc_url( $src ) . '" alt="" loading="lazy">';
+		return '<img class="' . esc_attr( $cls ) . '" src="' . esc_url( $src ) . '" alt="' . esc_attr( $alt ) . '" loading="lazy">';
 	}
 	static $n = 0;
 	$n++;

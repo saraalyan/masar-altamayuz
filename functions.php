@@ -264,3 +264,15 @@ function masar_reading_time() {
 	$w = str_word_count( wp_strip_all_tags( get_the_content() ) );
 	return max( 1, (int) ceil( $w / 180 ) );
 }
+
+/**
+ * الثيم عربي RTL بطبيعته: نفرض الاتجاه RTL في الواجهة حتى لو لغة الموقع مش عربية،
+ * عشان ووردبريس وووكومرس ما يعكسوش التخطيط. لإلغاء الفرض:
+ * add_filter( 'masar_force_rtl', '__return_false' );
+ */
+function masar_force_rtl() {
+	global $wp_locale;
+	if ( is_admin() || ! is_object( $wp_locale ) || 'rtl' === $wp_locale->text_direction ) { return; }
+	if ( apply_filters( 'masar_force_rtl', true ) ) { $wp_locale->text_direction = 'rtl'; }
+}
+add_action( 'after_setup_theme', 'masar_force_rtl', 20 );

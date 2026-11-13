@@ -24,6 +24,9 @@ function masar_setup() {
 	add_theme_support( 'responsive-embeds' );
 	add_theme_support( 'align-wide' );
 	add_theme_support( 'wp-block-styles' );
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'assets/css/editor-style.css' );
+	add_theme_support( 'editor-color-palette', masar_editor_palette() );
 	add_theme_support( 'woocommerce' );
 	add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
@@ -145,6 +148,43 @@ function masar_enqueue() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'masar_enqueue' );
+
+/** ألوان الثيم في باليت المحرر (تتبع اللوحة والألوان المخصصة من التخصيص) */
+function masar_editor_palette() {
+	$p    = masar_palette_data();
+	$prim = sanitize_hex_color( get_theme_mod( 'masar_custom_primary', '' ) ) ?: $p['primary'];
+	$acc  = sanitize_hex_color( get_theme_mod( 'masar_custom_accent', '' ) ) ?: $p['accent'];
+	return array(
+		array( 'name' => __( 'اللون الرئيسي', 'masar-altamayuz' ), 'slug' => 'masar-primary', 'color' => $prim ),
+		array( 'name' => __( 'اللون الثانوي', 'masar-altamayuz' ), 'slug' => 'masar-accent', 'color' => $acc ),
+		array( 'name' => __( 'خلفية ناعمة', 'masar-altamayuz' ), 'slug' => 'masar-soft', 'color' => $p['soft'] ),
+		array( 'name' => __( 'لون النص', 'masar-altamayuz' ), 'slug' => 'masar-ink', 'color' => $p['ink'] ),
+		array( 'name' => __( 'أبيض', 'masar-altamayuz' ), 'slug' => 'masar-white', 'color' => '#ffffff' ),
+	);
+}
+
+/** خطوط الثيم المحلية بروابط كاملة عشان تشتغل جوه المحرر */
+function masar_editor_fonts_css() {
+	$fonts = masar_fonts_map();
+	list( $head, $body ) = masar_fonts_in_use();
+	$names = array( 'playfair-display' );
+	foreach ( array_unique( array( $head, $body ) ) as $fam ) { $names[] = $fonts[ $fam ]; }
+	$dir = get_template_directory() . '/assets/fonts/';
+	$uri = get_template_directory_uri() . '/assets/fonts/';
+	$css = '';
+	foreach ( $names as $n ) {
+		$file = $dir . sanitize_file_name( $n ) . '.css';
+		if ( ! is_readable( $file ) ) { continue; }
+		$css .= preg_replace( '/url\(([^)\'"]+)\)/', 'url(' . $uri . '$1)', (string) file_get_contents( $file ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions
+	}
+	return $css;
+}
+
+function masar_editor_settings( $settings ) {
+	$settings['styles'][] = array( 'css' => masar_dynamic_css() . masar_editor_fonts_css(), '__unstableType' => 'theme' );
+	return $settings;
+}
+add_filter( 'block_editor_settings_all', 'masar_editor_settings' );
 
 function masar_dynamic_css() {
 	$p    = masar_palette_data();

@@ -58,139 +58,139 @@ msgstr ""
 msgid "فوري"
 msgstr ""
 
-#: functions.php:39 header.php:40
+#: functions.php:40 header.php:40
 msgid "القائمة الرئيسية"
 msgstr ""
 
-#: functions.php:40
+#: functions.php:41
 msgid "قائمة الفوتر"
 msgstr ""
 
-#: functions.php:47
+#: functions.php:48
 msgid "السايدبار"
 msgstr ""
 
-#: functions.php:54
+#: functions.php:55
 msgid "الفوتر %d"
 msgstr ""
 
-#: functions.php:85
+#: functions.php:86
 msgid "أنيق: عناوين أميري + نصوص القاهرة"
 msgstr ""
 
-#: functions.php:86
+#: functions.php:87
 msgid "عصري: تجوال"
 msgstr ""
 
-#: functions.php:87
+#: functions.php:88
 msgid "كلاسيك: نسخ + IBM بلكس"
 msgstr ""
 
-#: functions.php:88
+#: functions.php:89
 msgid "جريء: ريم كوفي + المراعي"
 msgstr ""
 
-#: functions.php:89
+#: functions.php:90
 msgid "مميز: المسيري (عناوين وجسم)"
 msgstr ""
 
-#: functions.php:90
+#: functions.php:91
 msgid "خط يد: عارف رقعة + ريدكس"
 msgstr ""
 
-#: functions.php:91
+#: functions.php:92
 msgid "عناوين ضخمة: لاليزار + القاهرة"
 msgstr ""
 
-#: functions.php:92
+#: functions.php:93
 msgid "أدبي: مركزي"
 msgstr ""
 
-#: functions.php:93
+#: functions.php:94
 msgid "نظيف: القاهرة"
 msgstr ""
 
-#: functions.php:94
+#: functions.php:95
 msgid "مخصص (اختاري الخطين بنفسك)"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:112
 msgid "بيج أنيق"
 msgstr ""
 
-#: functions.php:112
+#: functions.php:113
 msgid "تيراكوتا دافئ"
 msgstr ""
 
-#: functions.php:113
+#: functions.php:114
 msgid "ذهبي داكن فاخر"
 msgstr ""
 
-#: functions.php:114
+#: functions.php:115
 msgid "زيتوني طبيعي"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:116
 msgid "خريفي بني"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:117
 msgid "وردي رومانسي"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:118
 msgid "أحمر ملكي"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:119
 msgid "ليلكي حالم"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:120
 msgid "ذهبي مشرق"
 msgstr ""
 
-#: functions.php:120
+#: functions.php:121
 msgid "أخضر ناعم"
 msgstr ""
 
-#: functions.php:121
+#: functions.php:122
 msgid "أزرق هادئ"
 msgstr ""
 
-#: functions.php:146
+#: functions.php:147
 msgid "شكراً لاشتراكك 💌"
 msgstr ""
 
-#: functions.php:160
+#: functions.php:161
 msgid "اللون الرئيسي"
 msgstr ""
 
-#: functions.php:161
+#: functions.php:162
 msgid "اللون الثانوي"
 msgstr ""
 
-#: functions.php:162
+#: functions.php:163
 msgid "خلفية ناعمة"
 msgstr ""
 
-#: functions.php:163
+#: functions.php:164
 msgid "لون النص"
 msgstr ""
 
-#: functions.php:164
+#: functions.php:165
 msgid "أبيض"
 msgstr ""
 
-#: functions.php:236 inc/customizer.php:121
+#: functions.php:237 inc/customizer.php:127
 msgid "أهلاً، عايز أستفسر عن المنتجات"
 msgstr ""
 
-#: functions.php:237 inc/blog.php:119 template-parts/sections/contact.php:15
+#: functions.php:238 inc/blog.php:119 template-parts/sections/contact.php:15
 msgid "واتساب"
 msgstr ""
 
-#: functions.php:239
+#: functions.php:240
 msgid "للأعلى"
 msgstr ""
 
@@ -258,7 +258,7 @@ msgstr ""
 msgid "كتبه"
 msgstr ""
 
-#: inc/blog.php:117 inc/customizer.php:122 inc/helpers.php:114
+#: inc/blog.php:117 inc/customizer.php:128 inc/helpers.php:114
 msgid "فيسبوك"
 msgstr ""
 
@@ -467,198 +467,218 @@ msgid "نص الحقوق"
 msgstr ""
 
 #: inc/customizer.php:89
-msgid "المدونة والمقالات"
+msgid "المتجر (WooCommerce)"
+msgstr ""
+
+#: inc/customizer.php:89
+msgid "بتشتغل لما تفعّلي ووكومرس."
 msgstr ""
 
 #: inc/customizer.php:90
-msgid "مسار التنقل (الرئيسية › القسم › الصفحة)"
+msgid "زر «نظرة سريعة» على المنتجات"
 msgstr ""
 
 #: inc/customizer.php:91
-msgid "مقالات ذات صلة تحت المقال"
+msgid "الإضافة للسلة بدون تحميل الصفحة (المنتج البسيط)"
 msgstr ""
 
 #: inc/customizer.php:92
-msgid "صندوق الكاتب تحت المقال"
+msgid "شريط «أضف للسلة» الثابت في صفحة المنتج"
 msgstr ""
 
-#: inc/customizer.php:93
-msgid "أزرار مشاركة المقال"
+#: inc/customizer.php:95
+msgid "المدونة والمقالات"
 msgstr ""
 
 #: inc/customizer.php:96
-msgid "الشكل والتخطيط"
+msgid "مسار التنقل (الرئيسية › القسم › الصفحة)"
 msgstr ""
 
 #: inc/customizer.php:97
-msgid "شكل الكروت"
-msgstr ""
-
-#: inc/customizer.php:97
-msgid "ظل ناعم"
-msgstr ""
-
-#: inc/customizer.php:97
-msgid "إطار خفيف"
-msgstr ""
-
-#: inc/customizer.php:97
-msgid "زجاجي"
-msgstr ""
-
-#: inc/customizer.php:97
-msgid "مسطح ملوّن"
+msgid "مقالات ذات صلة تحت المقال"
 msgstr ""
 
 #: inc/customizer.php:98
-msgid "شكل الأزرار"
-msgstr ""
-
-#: inc/customizer.php:98
-msgid "كبسولة"
-msgstr ""
-
-#: inc/customizer.php:98
-msgid "حواف مدورة"
-msgstr ""
-
-#: inc/customizer.php:98
-msgid "مربع"
+msgid "صندوق الكاتب تحت المقال"
 msgstr ""
 
 #: inc/customizer.php:99
-msgid "عرض المقالات"
-msgstr ""
-
-#: inc/customizer.php:99
-msgid "شبكة"
-msgstr ""
-
-#: inc/customizer.php:99
-msgid "قائمة"
-msgstr ""
-
-#: inc/customizer.php:99 inc/customizer.php:122 inc/helpers.php:114
-msgid "بنترست"
-msgstr ""
-
-#: inc/customizer.php:100
-msgid "استدارة الحواف (px)"
-msgstr ""
-
-#: inc/customizer.php:101
-msgid "عرض المحتوى (px)"
+msgid "أزرار مشاركة المقال"
 msgstr ""
 
 #: inc/customizer.php:102
-msgid "🌸 تأثير بتلات متساقطة"
+msgid "الشكل والتخطيط"
 msgstr ""
 
 #: inc/customizer.php:103
+msgid "شكل الكروت"
+msgstr ""
+
+#: inc/customizer.php:103
+msgid "ظل ناعم"
+msgstr ""
+
+#: inc/customizer.php:103
+msgid "إطار خفيف"
+msgstr ""
+
+#: inc/customizer.php:103
+msgid "زجاجي"
+msgstr ""
+
+#: inc/customizer.php:103
+msgid "مسطح ملوّن"
+msgstr ""
+
+#: inc/customizer.php:104
+msgid "شكل الأزرار"
+msgstr ""
+
+#: inc/customizer.php:104
+msgid "كبسولة"
+msgstr ""
+
+#: inc/customizer.php:104
+msgid "حواف مدورة"
+msgstr ""
+
+#: inc/customizer.php:104
+msgid "مربع"
+msgstr ""
+
+#: inc/customizer.php:105
+msgid "عرض المقالات"
+msgstr ""
+
+#: inc/customizer.php:105
+msgid "شبكة"
+msgstr ""
+
+#: inc/customizer.php:105
+msgid "قائمة"
+msgstr ""
+
+#: inc/customizer.php:105 inc/customizer.php:128 inc/helpers.php:114
+msgid "بنترست"
+msgstr ""
+
+#: inc/customizer.php:106
+msgid "استدارة الحواف (px)"
+msgstr ""
+
+#: inc/customizer.php:107
+msgid "عرض المحتوى (px)"
+msgstr ""
+
+#: inc/customizer.php:108
+msgid "🌸 تأثير بتلات متساقطة"
+msgstr ""
+
+#: inc/customizer.php:109
 msgid "عدد البتلات"
 msgstr ""
 
-#: inc/customizer.php:106
+#: inc/customizer.php:112
 msgid "الهيرو (يغيّر نص القالب)"
 msgstr ""
 
-#: inc/customizer.php:106
+#: inc/customizer.php:112
 msgid "اترك أي حقل فاضي ليظهر النص الافتراضي للقالب."
 msgstr ""
 
-#: inc/customizer.php:107
+#: inc/customizer.php:113
 msgid "نمط الهيرو"
 msgstr ""
 
-#: inc/customizer.php:107
+#: inc/customizer.php:113
 msgid "حسب القالب"
 msgstr ""
 
-#: inc/customizer.php:107
+#: inc/customizer.php:113
 msgid "صورة خلفية ونص بالمنتصف"
 msgstr ""
 
-#: inc/customizer.php:107
+#: inc/customizer.php:113
 msgid "نص وصورة جنب بعض"
 msgstr ""
 
-#: inc/customizer.php:107
+#: inc/customizer.php:113
 msgid "صورة داخل قوس"
 msgstr ""
 
-#: inc/customizer.php:107
+#: inc/customizer.php:113
 msgid "صورة كبيرة بحافة الشاشة"
 msgstr ""
 
-#: inc/customizer.php:108 inc/customizer.php:127 inc/studio.php:12 inc/studio.php:14 inc/studio.php:15 inc/studio.php:16 inc/studio.php:18 inc/studio.php:19 inc/studio.php:20 inc/studio.php:21 inc/studio.php:22 inc/studio.php:23 inc/studio.php:24 inc/studio.php:25 inc/studio.php:27 inc/studio.php:28 inc/studio.php:29 inc/studio.php:30 template-parts/sections/contact.php:14
+#: inc/customizer.php:114 inc/customizer.php:133 inc/studio.php:12 inc/studio.php:14 inc/studio.php:15 inc/studio.php:16 inc/studio.php:18 inc/studio.php:19 inc/studio.php:20 inc/studio.php:21 inc/studio.php:22 inc/studio.php:23 inc/studio.php:24 inc/studio.php:25 inc/studio.php:27 inc/studio.php:28 inc/studio.php:29 inc/studio.php:30 template-parts/sections/contact.php:14
 msgid "العنوان"
 msgstr ""
 
-#: inc/customizer.php:109 inc/studio.php:12 inc/studio.php:16
+#: inc/customizer.php:115 inc/studio.php:12 inc/studio.php:16
 msgid "النص الفرعي"
 msgstr ""
 
-#: inc/customizer.php:110
+#: inc/customizer.php:116
 msgid "زر 1: النص"
 msgstr ""
 
-#: inc/customizer.php:111
+#: inc/customizer.php:117
 msgid "زر 1: الرابط"
 msgstr ""
 
-#: inc/customizer.php:112
+#: inc/customizer.php:118
 msgid "زر 2: النص"
 msgstr ""
 
-#: inc/customizer.php:113
+#: inc/customizer.php:119
 msgid "زر 2: الرابط"
 msgstr ""
 
-#: inc/customizer.php:114
+#: inc/customizer.php:120
 msgid "صورة الهيرو"
 msgstr ""
 
-#: inc/customizer.php:115
+#: inc/customizer.php:121
 msgid "ارتفاع الهيرو (% من الشاشة)"
 msgstr ""
 
-#: inc/customizer.php:116
+#: inc/customizer.php:122
 msgid "عتامة الطبقة فوق الصورة (%)"
 msgstr ""
 
-#: inc/customizer.php:119
+#: inc/customizer.php:125
 msgid "التواصل والسوشيال"
 msgstr ""
 
-#: inc/customizer.php:120
+#: inc/customizer.php:126
 msgid "رقم واتساب (بصيغة دولية 2010xxxxxxxx)"
 msgstr ""
 
-#: inc/customizer.php:121
+#: inc/customizer.php:127
 msgid "رسالة واتساب الجاهزة"
 msgstr ""
 
-#: inc/customizer.php:122 inc/helpers.php:114
+#: inc/customizer.php:128 inc/helpers.php:114
 msgid "إنستجرام"
 msgstr ""
 
-#: inc/customizer.php:122 inc/helpers.php:114
+#: inc/customizer.php:128 inc/helpers.php:114
 msgid "تيك توك"
 msgstr ""
 
-#: inc/customizer.php:122 inc/helpers.php:114
+#: inc/customizer.php:128 inc/helpers.php:114
 msgid "يوتيوب"
 msgstr ""
 
-#: inc/customizer.php:123
+#: inc/customizer.php:129
 msgid "رابط %s"
 msgstr ""
 
-#: inc/customizer.php:125
+#: inc/customizer.php:131
 msgid "رقم التليفون (يظهر في الفوتر وصفحة التواصل)"
 msgstr ""
 
-#: inc/customizer.php:126 template-parts/sections/newsletter.php:12
+#: inc/customizer.php:132 template-parts/sections/newsletter.php:12
 msgid "البريد الإلكتروني"
 msgstr ""
 
@@ -1400,6 +1420,50 @@ msgstr ""
 
 #: inc/presets.php:113 inc/studio.php:19 template-parts/sections/testimonials.php:8
 msgid "آراء العملاء"
+msgstr ""
+
+#: inc/shop.php:15
+msgid "نظرة سريعة"
+msgstr ""
+
+#: inc/shop.php:37 inc/shop.php:58
+msgid "أضف إلى السلة"
+msgstr ""
+
+#: inc/shop.php:39
+msgid "غير متوفر حالياً"
+msgstr ""
+
+#: inc/shop.php:41 inc/shop.php:58
+msgid "اختيار الخيارات"
+msgstr ""
+
+#: inc/shop.php:43
+msgid "عرض المنتج كاملاً"
+msgstr ""
+
+#: inc/shop.php:74
+msgid "إغلاق"
+msgstr ""
+
+#: inc/shop.php:75
+msgid "جاري التحميل…"
+msgstr ""
+
+#: inc/shop.php:76
+msgid "حصلت مشكلة، جرّبي تاني."
+msgstr ""
+
+#: inc/shop.php:77
+msgid "تمت الإضافة للسلة ✓"
+msgstr ""
+
+#: inc/shop.php:78
+msgid "عرض السلة"
+msgstr ""
+
+#: inc/shop.php:79
+msgid "جاري الإضافة…"
 msgstr ""
 
 #: inc/studio.php:12

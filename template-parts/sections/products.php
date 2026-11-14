@@ -24,7 +24,7 @@ $demo = array( array( __( 'قطعة مميزة 1', 'masar-altamayuz' ), __( '490
 					<article class="pcard">
 						<a class="pcard-img" href="<?php the_permalink(); ?>"><?php if ( has_post_thumbnail() ) { the_post_thumbnail( 'masar-tall' ); } else { echo masar_media( '', 'sparkle' ); } ?></a>
 						<h3 class="pcard-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						<?php if ( $p ) : ?><div class="price"><?php echo wp_kses_post( $p->get_price_html() ); ?></div><?php endif; ?>
+						<?php if ( $p ) : ?><div class="price"><?php echo wp_kses_post( $p->get_price_html() ); ?></div><?php echo function_exists( 'masar_quickview_button' ) ? masar_quickview_button( $p->get_id() ) : ''; // phpcs:ignore ?><?php endif; ?>
 					</article>
 				<?php endwhile; wp_reset_postdata();
 			else :

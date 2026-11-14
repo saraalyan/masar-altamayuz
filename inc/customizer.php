@@ -85,6 +85,12 @@ function masar_customize_register( $wp_customize ) {
 	$add( 'masar_footer_payments', 1, array( 'label' => __( 'عرض شعارات وسائل الدفع', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_footer' );
 	$add( 'masar_footer_text', __( 'جميع الحقوق محفوظة', 'masar-altamayuz' ), array( 'label' => __( 'نص الحقوق', 'masar-altamayuz' ) ), 'sanitize_text_field', 'text', 'masar_footer' );
 
+	/* ---------- المتجر ---------- */
+	$wp_customize->add_section( 'masar_shop', array( 'title' => __( 'المتجر (WooCommerce)', 'masar-altamayuz' ), 'panel' => 'masar_panel', 'description' => __( 'بتشتغل لما تفعّلي ووكومرس.', 'masar-altamayuz' ) ) );
+	$add( 'masar_quick_view', 1, array( 'label' => __( 'زر «نظرة سريعة» على المنتجات', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_shop' );
+	$add( 'masar_ajax_single', 1, array( 'label' => __( 'الإضافة للسلة بدون تحميل الصفحة (المنتج البسيط)', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_shop' );
+	$add( 'masar_sticky_atc', 1, array( 'label' => __( 'شريط «أضف للسلة» الثابت في صفحة المنتج', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_shop' );
+
 	/* ---------- المدونة والمقالات ---------- */
 	$wp_customize->add_section( 'masar_blogx', array( 'title' => __( 'المدونة والمقالات', 'masar-altamayuz' ), 'panel' => 'masar_panel' ) );
 	$add( 'masar_breadcrumbs', 1, array( 'label' => __( 'مسار التنقل (الرئيسية › القسم › الصفحة)', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_blogx' );

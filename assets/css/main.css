@@ -466,3 +466,15 @@ html[dir=rtl] .svc-ico{transform:translateX(50%)}
 
 @media (max-width:900px){.layout.side-start>.sidebar{order:0}.layout.side-start,.layout.side-end{grid-template-columns:1fr}}
 .wrap:not(.narrow)>.single-img img{width:100%;max-height:460px;object-fit:cover}
+
+/* تخطيطات الموقع */
+html:has(body.layout-boxed),html:has(body.layout-padded){background:color-mix(in srgb,var(--primary) 14%,var(--bg))}
+body.layout-boxed{position:relative;max-width:calc(var(--wrap) + 8rem);margin-inline:auto;box-shadow:0 0 70px rgba(0,0,0,.14)}
+body.layout-padded{position:relative;margin:clamp(.4rem,1.6vw,1.4rem)}
+body.layout-padded .site-header{border-radius:var(--radius) var(--radius) 0 0}
+body.layout-padded .topbar{border-radius:var(--radius) var(--radius) 0 0}
+body.layout-padded .topbar+.site-header{border-radius:0}
+body.layout-padded .site-footer{border-radius:0 0 var(--radius) var(--radius)}
+.layout-fluid .wrap{width:calc(100% - clamp(2rem,6vw,5rem))}
+.layout-fluid .wrap.narrow{width:min(100% - 2rem,780px)}
+@media(max-width:700px){body.layout-boxed{box-shadow:none}}

@@ -222,6 +222,8 @@ function masar_body_classes( $c ) {
 		// الهيدر الشفاف يناسب هيرو الصورة الخلفية الداكنة فقط
 		if ( get_theme_mod( 'masar_header_overlay', 0 ) && 'center' === $hero ) { $c[] = 'hdr-over'; }
 	}
+	$lay = get_theme_mod( 'masar_site_layout', 'full' );
+	$c[] = 'layout-' . ( in_array( $lay, array( 'full', 'boxed', 'padded', 'fluid' ), true ) ? $lay : 'full' );
 	$c[] = 'card-' . get_theme_mod( 'masar_card_style', 'soft' );
 	$c[] = 'btn-' . get_theme_mod( 'masar_btn_style', 'pill' );
 	$c[] = 'blog-' . get_theme_mod( 'masar_blog_layout', 'grid' );

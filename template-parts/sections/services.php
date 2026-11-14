@@ -5,10 +5,10 @@ if ( ! $items ) { return; }
 ?>
 <section class="sec">
 	<div class="wrap">
-		<?php masar_sec_head( $args, 'خدماتنا' ); ?>
+		<?php masar_sec_head( $args, __( 'خدماتنا', 'masar-altamayuz' ) ); ?>
 		<div class="svc-grid">
 			<?php foreach ( $items as $it ) : ?>
-				<div class="svc"><span class="svc-ico"><?php echo masar_icon( $it[0] ); // phpcs:ignore ?></span><h3><?php echo esc_html( $it[1] ); ?></h3><p><?php echo esc_html( $it[2] ); ?></p><a class="link-arrow" href="#">اعرف أكثر ←</a></div>
+				<div class="svc"><span class="svc-ico"><?php echo masar_icon( $it[0] ); // phpcs:ignore ?></span><h3><?php echo esc_html( $it[1] ); ?></h3><p><?php echo esc_html( $it[2] ); ?></p><a class="link-arrow" href="#"><?php esc_html_e( 'اعرف أكثر ←', 'masar-altamayuz' ); ?></a></div>
 			<?php endforeach; ?>
 		</div>
 	</div>

@@ -5,11 +5,11 @@ if ( ! $items ) { return; }
 ?>
 <section class="sec">
 	<div class="wrap">
-		<?php masar_sec_head( $args, 'آراء العملاء' ); ?>
+		<?php masar_sec_head( $args, __( 'آراء العملاء', 'masar-altamayuz' ) ); ?>
 		<div class="testi-grid">
 			<?php foreach ( $items as $it ) : ?>
 				<blockquote class="testi">
-					<div class="stars" aria-label="5 نجوم"><?php for ( $i = 0; $i < 5; $i++ ) { echo masar_icon( 'star' ); } ?></div>
+					<div class="stars" aria-label="<?php esc_attr_e( '5 نجوم', 'masar-altamayuz' ); ?>"><?php for ( $i = 0; $i < 5; $i++ ) { echo masar_icon( 'star' ); } ?></div>
 					<p>“<?php echo esc_html( $it[1] ); ?>”</p>
 					<cite><span class="avatar"><?php echo esc_html( mb_substr( $it[0], 0, 1 ) ); ?></span><?php echo esc_html( $it[0] ); ?></cite>
 				</blockquote>

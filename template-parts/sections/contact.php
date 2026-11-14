@@ -7,12 +7,12 @@ $wa    = preg_replace( '/\D/', '', (string) get_theme_mod( 'masar_whatsapp', '' 
 ?>
 <section class="sec">
 	<div class="wrap">
-		<?php masar_sec_head( $args, 'تواصل معنا', 'يسعدنا نسمع منك، اختار الوسيلة الأنسب.' ); ?>
+		<?php masar_sec_head( $args, __( 'تواصل معنا', 'masar-altamayuz' ), __( 'يسعدنا نسمع منك، اختار الوسيلة الأنسب.', 'masar-altamayuz' ) ); ?>
 		<div class="svc-grid">
-			<div class="svc"><span class="svc-ico"><?php echo masar_icon( 'phone' ); ?></span><h3>اتصل بنا</h3><p><?php echo esc_html( $phone ?: 'أضف الرقم من التخصيص ← التواصل' ); ?></p></div>
-			<div class="svc"><span class="svc-ico"><?php echo masar_icon( 'mail' ); ?></span><h3>البريد</h3><p><?php echo esc_html( $mail ?: 'أضف البريد من التخصيص ← التواصل' ); ?></p></div>
-			<div class="svc"><span class="svc-ico"><?php echo masar_icon( 'pin' ); ?></span><h3>العنوان</h3><p><?php echo esc_html( $addr ?: 'أضف العنوان من التخصيص ← التواصل' ); ?></p></div>
-			<div class="svc"><span class="svc-ico"><?php echo masar_icon( 'chat' ); ?></span><h3>واتساب</h3><p><?php if ( $wa ) { echo '<a href="https://wa.me/' . esc_attr( $wa ) . '" target="_blank" rel="noopener">ابدأ محادثة</a>'; } else { echo 'أضف الرقم من التخصيص'; } ?></p></div>
+			<div class="svc"><span class="svc-ico"><?php echo masar_icon( 'phone' ); ?></span><h3><?php esc_html_e( 'اتصل بنا', 'masar-altamayuz' ); ?></h3><p><?php echo esc_html( $phone ?: __( 'أضف الرقم من التخصيص ← التواصل', 'masar-altamayuz' ) ); ?></p></div>
+			<div class="svc"><span class="svc-ico"><?php echo masar_icon( 'mail' ); ?></span><h3><?php esc_html_e( 'البريد', 'masar-altamayuz' ); ?></h3><p><?php echo esc_html( $mail ?: __( 'أضف البريد من التخصيص ← التواصل', 'masar-altamayuz' ) ); ?></p></div>
+			<div class="svc"><span class="svc-ico"><?php echo masar_icon( 'pin' ); ?></span><h3><?php esc_html_e( 'العنوان', 'masar-altamayuz' ); ?></h3><p><?php echo esc_html( $addr ?: __( 'أضف العنوان من التخصيص ← التواصل', 'masar-altamayuz' ) ); ?></p></div>
+			<div class="svc"><span class="svc-ico"><?php echo masar_icon( 'chat' ); ?></span><h3><?php esc_html_e( 'واتساب', 'masar-altamayuz' ); ?></h3><p><?php if ( $wa ) { echo '<a href="https://wa.me/' . esc_attr( $wa ) . '" target="_blank" rel="noopener">' . esc_html__( 'ابدأ محادثة', 'masar-altamayuz' ) . '</a>'; } else { echo __( 'أضف الرقم من التخصيص', 'masar-altamayuz' ); } ?></p></div>
 		</div>
 	</div>
 </section>

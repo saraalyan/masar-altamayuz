@@ -5,17 +5,17 @@ $cols = (int) masar_arg( $args, 'cols', 4 );
 $var  = masar_arg( $args, 'variant', 'grid' );
 $q    = masar_query_items( $n );
 $shop = (bool) $q && function_exists( 'wc_get_product' );
-$demo = array( array( 'قطعة مميزة 1', '490 ج.م', '🛍️' ), array( 'قطعة مميزة 2', '350 ج.م', '👜' ), array( 'قطعة مميزة 3', '620 ج.م', '🧥' ), array( 'قطعة مميزة 4', '280 ج.م', '👟' ), array( 'قطعة مميزة 5', '540 ج.م', '⌚' ), array( 'قطعة مميزة 6', '410 ج.م', '🕶️' ) );
+$demo = array( array( __( 'قطعة مميزة 1', 'masar-altamayuz' ), __( '490 ج.م', 'masar-altamayuz' ), '🛍️' ), array( __( 'قطعة مميزة 2', 'masar-altamayuz' ), __( '350 ج.م', 'masar-altamayuz' ), '👜' ), array( __( 'قطعة مميزة 3', 'masar-altamayuz' ), __( '620 ج.م', 'masar-altamayuz' ), '🧥' ), array( __( 'قطعة مميزة 4', 'masar-altamayuz' ), __( '280 ج.م', 'masar-altamayuz' ), '👟' ), array( __( 'قطعة مميزة 5', 'masar-altamayuz' ), __( '540 ج.م', 'masar-altamayuz' ), '⌚' ), array( __( 'قطعة مميزة 6', 'masar-altamayuz' ), __( '410 ج.م', 'masar-altamayuz' ), '🕶️' ) );
 ?>
 <section class="sec sec-tight products-sec products-<?php echo esc_attr( $var ); ?>"<?php if ( ! empty( $args['id'] ) ) { echo ' id="' . esc_attr( $args['id'] ) . '"'; } ?>>
 	<div class="wrap<?php echo 'side' === $var ? ' side-layout' : ''; ?>">
 		<?php if ( 'side' === $var ) : ?>
 			<div class="side-head">
-				<h2 class="sec-title"><?php echo esc_html( masar_arg( $args, 'title', 'وصل حديثاً' ) ); ?></h2>
+				<h2 class="sec-title"><?php echo esc_html( masar_arg( $args, 'title', __( 'وصل حديثاً', 'masar-altamayuz' ) ) ); ?></h2>
 				<p><?php echo esc_html( masar_arg( $args, 'subtitle', '' ) ); ?></p>
 				<?php if ( ! empty( $args['btn'] ) ) : ?><a class="btn btn-sm" href="<?php echo esc_url( $shop ? wc_get_page_permalink( 'shop' ) : '#' ); ?>"><?php echo esc_html( $args['btn'] ); ?></a><?php endif; ?>
 			</div>
-		<?php else : masar_sec_head( $args, 'منتجاتنا' ); endif; ?>
+		<?php else : masar_sec_head( $args, __( 'منتجاتنا', 'masar-altamayuz' ) ); endif; ?>
 
 		<div class="pgrid cols-<?php echo (int) $cols; ?>">
 			<?php if ( $q && $q->have_posts() ) :

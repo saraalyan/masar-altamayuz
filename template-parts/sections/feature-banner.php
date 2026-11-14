@@ -10,7 +10,7 @@ $bg = masar_arg( $args, 'image', '' );
 				<span class="kicker"><?php echo esc_html( masar_arg( $args, 'kicker', '' ) ); ?></span>
 				<h2><?php echo esc_html( masar_arg( $args, 'title', '' ) ); ?></h2>
 				<p><?php echo esc_html( masar_arg( $args, 'text', '' ) ); ?></p>
-				<a class="btn btn-light" href="<?php echo esc_url( masar_arg( $args, 'url', '#' ) ); ?>"><?php echo esc_html( masar_arg( $args, 'btn', 'اكتشف' ) ); ?></a>
+				<a class="btn btn-light" href="<?php echo esc_url( masar_arg( $args, 'url', '#' ) ); ?>"><?php echo esc_html( masar_arg( $args, 'btn', __( 'اكتشف', 'masar-altamayuz' ) ) ); ?></a>
 			</div>
 		</div>
 	</div>

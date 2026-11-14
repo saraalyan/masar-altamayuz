@@ -111,7 +111,7 @@ function masar_real_terms( $n = 8 ) {
 
 /** روابط السوشيال */
 function masar_social_links( $class = 'socials' ) {
-	$soc = array( 'facebook' => 'فيسبوك', 'instagram' => 'إنستجرام', 'tiktok' => 'تيك توك', 'youtube' => 'يوتيوب', 'pinterest' => 'بنترست' );
+	$soc = array( 'facebook' => __( 'فيسبوك', 'masar-altamayuz' ), 'instagram' => __( 'إنستجرام', 'masar-altamayuz' ), 'tiktok' => __( 'تيك توك', 'masar-altamayuz' ), 'youtube' => __( 'يوتيوب', 'masar-altamayuz' ), 'pinterest' => __( 'بنترست', 'masar-altamayuz' ) );
 	$out = '';
 	foreach ( $soc as $k => $l ) {
 		$u = get_theme_mod( 'masar_social_' . $k, '' );
@@ -137,9 +137,9 @@ function masar_preset_has( $section ) {
 /** أسئلة شائعة افتراضية */
 function masar_faq_defaults() {
 	return array(
-		array( 'كم يستغرق التوصيل؟', 'من 1 إلى 3 أيام عمل داخل المدن الكبرى، وحتى 5 أيام للمحافظات.' ),
-		array( 'هل يمكنني استرجاع المنتج؟', 'نعم، خلال 14 يوم من الاستلام بشرط أن يكون بحالته الأصلية.' ),
-		array( 'ما وسائل الدفع المتاحة؟', 'الدفع عند الاستلام، بطاقات الائتمان، والمحافظ الإلكترونية.' ),
-		array( 'كيف أتواصل معكم؟', 'عبر واتساب أو الهاتف أو البريد، وبنرد خلال ساعات العمل.' ),
+		array( __( 'كم يستغرق التوصيل؟', 'masar-altamayuz' ), __( 'من 1 إلى 3 أيام عمل داخل المدن الكبرى، وحتى 5 أيام للمحافظات.', 'masar-altamayuz' ) ),
+		array( __( 'هل يمكنني استرجاع المنتج؟', 'masar-altamayuz' ), __( 'نعم، خلال 14 يوم من الاستلام بشرط أن يكون بحالته الأصلية.', 'masar-altamayuz' ) ),
+		array( __( 'ما وسائل الدفع المتاحة؟', 'masar-altamayuz' ), __( 'الدفع عند الاستلام، بطاقات الائتمان، والمحافظ الإلكترونية.', 'masar-altamayuz' ) ),
+		array( __( 'كيف أتواصل معكم؟', 'masar-altamayuz' ), __( 'عبر واتساب أو الهاتف أو البريد، وبنرد خلال ساعات العمل.', 'masar-altamayuz' ) ),
 	);
 }

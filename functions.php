@@ -81,16 +81,16 @@ function masar_fonts_map() {
 /** تنسيقات خطوط جاهزة: عناوين + نصوص */
 function masar_font_pairs() {
 	return array(
-		'elegant' => array( 'label' => 'أنيق: عناوين أميري + نصوص القاهرة', 'head' => 'Amiri', 'body' => 'Cairo' ),
-		'modern'  => array( 'label' => 'عصري: تجوال', 'head' => 'Tajawal', 'body' => 'Tajawal' ),
-		'classic' => array( 'label' => 'كلاسيك: نسخ + IBM بلكس', 'head' => 'Noto Naskh Arabic', 'body' => 'IBM Plex Sans Arabic' ),
-		'bold'    => array( 'label' => 'جريء: ريم كوفي + المراعي', 'head' => 'Reem Kufi', 'body' => 'Almarai' ),
-		'messiri' => array( 'label' => 'مميز: المسيري (عناوين وجسم)', 'head' => 'El Messiri', 'body' => 'El Messiri' ),
-		'ruqaa'   => array( 'label' => 'خط يد: عارف رقعة + ريدكس', 'head' => 'Aref Ruqaa', 'body' => 'Readex Pro' ),
-		'display' => array( 'label' => 'عناوين ضخمة: لاليزار + القاهرة', 'head' => 'Lalezar', 'body' => 'Cairo' ),
-		'literary' => array( 'label' => 'أدبي: مركزي', 'head' => 'Markazi Text', 'body' => 'Markazi Text' ),
-		'clean'   => array( 'label' => 'نظيف: القاهرة', 'head' => 'Cairo', 'body' => 'Cairo' ),
-		'custom'  => array( 'label' => 'مخصص (اختاري الخطين بنفسك)', 'head' => '', 'body' => '' ),
+		'elegant' => array( 'label' => __( 'أنيق: عناوين أميري + نصوص القاهرة', 'masar-altamayuz' ), 'head' => 'Amiri', 'body' => 'Cairo' ),
+		'modern'  => array( 'label' => __( 'عصري: تجوال', 'masar-altamayuz' ), 'head' => 'Tajawal', 'body' => 'Tajawal' ),
+		'classic' => array( 'label' => __( 'كلاسيك: نسخ + IBM بلكس', 'masar-altamayuz' ), 'head' => 'Noto Naskh Arabic', 'body' => 'IBM Plex Sans Arabic' ),
+		'bold'    => array( 'label' => __( 'جريء: ريم كوفي + المراعي', 'masar-altamayuz' ), 'head' => 'Reem Kufi', 'body' => 'Almarai' ),
+		'messiri' => array( 'label' => __( 'مميز: المسيري (عناوين وجسم)', 'masar-altamayuz' ), 'head' => 'El Messiri', 'body' => 'El Messiri' ),
+		'ruqaa'   => array( 'label' => __( 'خط يد: عارف رقعة + ريدكس', 'masar-altamayuz' ), 'head' => 'Aref Ruqaa', 'body' => 'Readex Pro' ),
+		'display' => array( 'label' => __( 'عناوين ضخمة: لاليزار + القاهرة', 'masar-altamayuz' ), 'head' => 'Lalezar', 'body' => 'Cairo' ),
+		'literary' => array( 'label' => __( 'أدبي: مركزي', 'masar-altamayuz' ), 'head' => 'Markazi Text', 'body' => 'Markazi Text' ),
+		'clean'   => array( 'label' => __( 'نظيف: القاهرة', 'masar-altamayuz' ), 'head' => 'Cairo', 'body' => 'Cairo' ),
+		'custom'  => array( 'label' => __( 'مخصص (اختاري الخطين بنفسك)', 'masar-altamayuz' ), 'head' => '', 'body' => '' ),
 	);
 }
 
@@ -107,17 +107,17 @@ function masar_fonts_in_use() {
 
 function masar_palettes() {
 	return array(
-		'beige'  => array( 'label' => 'بيج أنيق',        'primary' => '#3b2f27', 'accent' => '#c9ad8f', 'soft' => '#f6f0e8', 'ink' => '#2a211c' ),
-		'terra'  => array( 'label' => 'تيراكوتا دافئ',   'primary' => '#e0592a', 'accent' => '#f2a37f', 'soft' => '#fbf1ea', 'ink' => '#231a15' ),
-		'luxe'   => array( 'label' => 'ذهبي داكن فاخر',  'primary' => '#c9a063', 'accent' => '#e3c590', 'soft' => '#1f1913', 'ink' => '#f3e9da', 'dark' => true ),
-		'olive'  => array( 'label' => 'زيتوني طبيعي',    'primary' => '#5b6b3a', 'accent' => '#a9b57e', 'soft' => '#f4efe4', 'ink' => '#2b2a1c' ),
-		'autumn' => array( 'label' => 'خريفي بني',       'primary' => '#a8612f', 'accent' => '#d9a679', 'soft' => '#f5ede6', 'ink' => '#2a1b12' ),
-		'rose'   => array( 'label' => 'وردي رومانسي',    'primary' => '#d6336c', 'accent' => '#f783ac', 'soft' => '#fff0f5', 'ink' => '#3b1a2b' ),
-		'royal'  => array( 'label' => 'أحمر ملكي',       'primary' => '#b0132b', 'accent' => '#e8a0a8', 'soft' => '#fff4f4', 'ink' => '#2a0f14' ),
-		'lilac'  => array( 'label' => 'ليلكي حالم',      'primary' => '#7c4dbb', 'accent' => '#c8a8ef', 'soft' => '#f6f0ff', 'ink' => '#24153a' ),
-		'gold'   => array( 'label' => 'ذهبي مشرق',       'primary' => '#b8893b', 'accent' => '#e9c98a', 'soft' => '#fffaf0', 'ink' => '#2e2410' ),
-		'sage'   => array( 'label' => 'أخضر ناعم',       'primary' => '#3f7d5c', 'accent' => '#a8d5b9', 'soft' => '#f2faf5', 'ink' => '#14291f' ),
-		'ocean'  => array( 'label' => 'أزرق هادئ',       'primary' => '#2b6a8f', 'accent' => '#9cc9de', 'soft' => '#eff7fb', 'ink' => '#10232e' ),
+		'beige'  => array( 'label' => __( 'بيج أنيق', 'masar-altamayuz' ),        'primary' => '#3b2f27', 'accent' => '#c9ad8f', 'soft' => '#f6f0e8', 'ink' => '#2a211c' ),
+		'terra'  => array( 'label' => __( 'تيراكوتا دافئ', 'masar-altamayuz' ),   'primary' => '#e0592a', 'accent' => '#f2a37f', 'soft' => '#fbf1ea', 'ink' => '#231a15' ),
+		'luxe'   => array( 'label' => __( 'ذهبي داكن فاخر', 'masar-altamayuz' ),  'primary' => '#c9a063', 'accent' => '#e3c590', 'soft' => '#1f1913', 'ink' => '#f3e9da', 'dark' => true ),
+		'olive'  => array( 'label' => __( 'زيتوني طبيعي', 'masar-altamayuz' ),    'primary' => '#5b6b3a', 'accent' => '#a9b57e', 'soft' => '#f4efe4', 'ink' => '#2b2a1c' ),
+		'autumn' => array( 'label' => __( 'خريفي بني', 'masar-altamayuz' ),       'primary' => '#a8612f', 'accent' => '#d9a679', 'soft' => '#f5ede6', 'ink' => '#2a1b12' ),
+		'rose'   => array( 'label' => __( 'وردي رومانسي', 'masar-altamayuz' ),    'primary' => '#d6336c', 'accent' => '#f783ac', 'soft' => '#fff0f5', 'ink' => '#3b1a2b' ),
+		'royal'  => array( 'label' => __( 'أحمر ملكي', 'masar-altamayuz' ),       'primary' => '#b0132b', 'accent' => '#e8a0a8', 'soft' => '#fff4f4', 'ink' => '#2a0f14' ),
+		'lilac'  => array( 'label' => __( 'ليلكي حالم', 'masar-altamayuz' ),      'primary' => '#7c4dbb', 'accent' => '#c8a8ef', 'soft' => '#f6f0ff', 'ink' => '#24153a' ),
+		'gold'   => array( 'label' => __( 'ذهبي مشرق', 'masar-altamayuz' ),       'primary' => '#b8893b', 'accent' => '#e9c98a', 'soft' => '#fffaf0', 'ink' => '#2e2410' ),
+		'sage'   => array( 'label' => __( 'أخضر ناعم', 'masar-altamayuz' ),       'primary' => '#3f7d5c', 'accent' => '#a8d5b9', 'soft' => '#f2faf5', 'ink' => '#14291f' ),
+		'ocean'  => array( 'label' => __( 'أزرق هادئ', 'masar-altamayuz' ),       'primary' => '#2b6a8f', 'accent' => '#9cc9de', 'soft' => '#eff7fb', 'ink' => '#10232e' ),
 	);
 }
 
@@ -232,10 +232,10 @@ add_filter( 'excerpt_length', function () { return 24; } );
 function masar_footer_extras() {
 	$wa = preg_replace( '/\D/', '', (string) get_theme_mod( 'masar_whatsapp', '' ) );
 	if ( $wa ) {
-		$msg = rawurlencode( get_theme_mod( 'masar_whatsapp_msg', 'أهلاً، عايز أستفسر عن المنتجات' ) );
-		echo '<a class="wa-float" href="https://wa.me/' . esc_attr( $wa ) . '?text=' . $msg . '" target="_blank" rel="noopener" aria-label="واتساب"><svg viewBox="0 0 32 32" width="28" height="28" fill="#fff"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.8 2 6.8L3 29l6.6-2c1.9 1 4 1.6 6.4 1.6 7.2 0 13-5.7 13-12.8S23.200 3 16 3zm0 23.200c-2.100 0-4.100-.6-5.800-1.700l-.4-.2-3.900 1.200 1.200-3.800-.3-.4A10.200 10.200 0 0 1 5.800 15.800C5.800 10.200 10.400 5.700 16 5.700s10.200 4.500 10.200 10.100S21.600 26.200 16 26.200zm5.600-7.600c-.3-.2-1.800-.9-2.100-1-.3-.1-.5-.2-.7.200s-.8 1-1 1.200c-.2.200-.4.200-.7.100-.3-.2-1.300-.5-2.500-1.500-.9-.8-1.500-1.800-1.700-2.100-.2-.3 0-.5.100-.6l.5-.5c.1-.2.200-.3.300-.5.100-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1.100 1.100-1.100 2.600s1.100 3 1.300 3.200c.2.200 2.200 3.400 5.400 4.700 3.200 1.300 3.200.9 3.800.8.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.2-.3-.2-.6-.4z"/></svg></a>';
+		$msg = rawurlencode( get_theme_mod( 'masar_whatsapp_msg', __( 'أهلاً، عايز أستفسر عن المنتجات', 'masar-altamayuz' ) ) );
+		echo '<a class="wa-float" href="https://wa.me/' . esc_attr( $wa ) . '?text=' . $msg . '" target="_blank" rel="noopener" aria-label="' . esc_attr__( 'واتساب', 'masar-altamayuz' ) . '"><svg viewBox="0 0 32 32" width="28" height="28" fill="#fff"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.8 2 6.8L3 29l6.6-2c1.9 1 4 1.6 6.4 1.6 7.2 0 13-5.7 13-12.8S23.200 3 16 3zm0 23.200c-2.100 0-4.100-.6-5.800-1.700l-.4-.2-3.900 1.200 1.200-3.800-.3-.4A10.200 10.200 0 0 1 5.800 15.800C5.800 10.200 10.400 5.700 16 5.700s10.200 4.500 10.200 10.100S21.600 26.200 16 26.200zm5.600-7.600c-.3-.2-1.800-.9-2.100-1-.3-.1-.5-.2-.7.200s-.8 1-1 1.200c-.2.200-.4.200-.7.100-.3-.2-1.300-.5-2.500-1.500-.9-.8-1.500-1.800-1.700-2.100-.2-.3 0-.5.100-.6l.5-.5c.1-.2.200-.3.300-.5.100-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1.100 1.100-1.100 2.600s1.100 3 1.300 3.200c.2.200 2.200 3.400 5.400 4.700 3.200 1.300 3.200.9 3.800.8.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.2-.3-.2-.6-.4z"/></svg></a>';
 	}
-	echo '<button class="to-top" aria-label="للأعلى" hidden>↑</button>';
+	echo '<button class="to-top" aria-label="' . esc_attr__( 'للأعلى', 'masar-altamayuz' ) . '" hidden>↑</button>';
 }
 add_action( 'wp_footer', 'masar_footer_extras' );
 

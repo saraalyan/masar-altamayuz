@@ -1,0 +1,1836 @@
+# Copyright (C) 2026 مسار التميز
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Masar Altamayuz\n"
+"Report-Msgid-Bugs-To: https://github.com/saraalyan/masar-altamayuz/issues\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Domain: masar-altamayuz\n"
+
+#: 404.php:6
+msgid "الصفحة دي دبلت!"
+msgstr ""
+
+#: 404.php:7
+msgid "الرابط ده مش موجود أو اتنقل. جرّب البحث أو ارجع للرئيسية."
+msgstr ""
+
+#: 404.php:9 footer.php:34 header.php:47 inc/demo.php:65
+msgid "الرئيسية"
+msgstr ""
+
+#: archive.php:17
+msgid "لا توجد نتائج."
+msgstr ""
+
+#: comments.php:6
+msgid "%d تعليق"
+msgstr ""
+
+#: comments.php:10
+msgid "اترك تعليقك"
+msgstr ""
+
+#: comments.php:10
+msgid "إرسال"
+msgstr ""
+
+#: footer.php:20 inc/customizer.php:84
+msgid "نقدّم لك تجربة تسوّق راقية بجودة تدوم وخدمة تستاهلها."
+msgstr ""
+
+#: footer.php:33
+msgid "روابط سريعة"
+msgstr ""
+
+#: footer.php:43 inc/customizer.php:86
+msgid "جميع الحقوق محفوظة"
+msgstr ""
+
+#: footer.php:46
+msgid "وسائل الدفع"
+msgstr ""
+
+#: footer.php:46
+msgid "فوري"
+msgstr ""
+
+#: functions.php:38 header.php:40
+msgid "القائمة الرئيسية"
+msgstr ""
+
+#: functions.php:39
+msgid "قائمة الفوتر"
+msgstr ""
+
+#: functions.php:46
+msgid "السايدبار"
+msgstr ""
+
+#: functions.php:53
+msgid "الفوتر %d"
+msgstr ""
+
+#: functions.php:84
+msgid "أنيق: عناوين أميري + نصوص القاهرة"
+msgstr ""
+
+#: functions.php:85
+msgid "عصري: تجوال"
+msgstr ""
+
+#: functions.php:86
+msgid "كلاسيك: نسخ + IBM بلكس"
+msgstr ""
+
+#: functions.php:87
+msgid "جريء: ريم كوفي + المراعي"
+msgstr ""
+
+#: functions.php:88
+msgid "مميز: المسيري (عناوين وجسم)"
+msgstr ""
+
+#: functions.php:89
+msgid "خط يد: عارف رقعة + ريدكس"
+msgstr ""
+
+#: functions.php:90
+msgid "عناوين ضخمة: لاليزار + القاهرة"
+msgstr ""
+
+#: functions.php:91
+msgid "أدبي: مركزي"
+msgstr ""
+
+#: functions.php:92
+msgid "نظيف: القاهرة"
+msgstr ""
+
+#: functions.php:93
+msgid "مخصص (اختاري الخطين بنفسك)"
+msgstr ""
+
+#: functions.php:110
+msgid "بيج أنيق"
+msgstr ""
+
+#: functions.php:111
+msgid "تيراكوتا دافئ"
+msgstr ""
+
+#: functions.php:112
+msgid "ذهبي داكن فاخر"
+msgstr ""
+
+#: functions.php:113
+msgid "زيتوني طبيعي"
+msgstr ""
+
+#: functions.php:114
+msgid "خريفي بني"
+msgstr ""
+
+#: functions.php:115
+msgid "وردي رومانسي"
+msgstr ""
+
+#: functions.php:116
+msgid "أحمر ملكي"
+msgstr ""
+
+#: functions.php:117
+msgid "ليلكي حالم"
+msgstr ""
+
+#: functions.php:118
+msgid "ذهبي مشرق"
+msgstr ""
+
+#: functions.php:119
+msgid "أخضر ناعم"
+msgstr ""
+
+#: functions.php:120
+msgid "أزرق هادئ"
+msgstr ""
+
+#: functions.php:145
+msgid "شكراً لاشتراكك 💌"
+msgstr ""
+
+#: functions.php:159
+msgid "اللون الرئيسي"
+msgstr ""
+
+#: functions.php:160
+msgid "اللون الثانوي"
+msgstr ""
+
+#: functions.php:161
+msgid "خلفية ناعمة"
+msgstr ""
+
+#: functions.php:162
+msgid "لون النص"
+msgstr ""
+
+#: functions.php:163
+msgid "أبيض"
+msgstr ""
+
+#: functions.php:235 inc/customizer.php:114
+msgid "أهلاً، عايز أستفسر عن المنتجات"
+msgstr ""
+
+#: functions.php:236 template-parts/sections/contact.php:15
+msgid "واتساب"
+msgstr ""
+
+#: functions.php:238
+msgid "للأعلى"
+msgstr ""
+
+#: header.php:14
+msgid "تخطي إلى المحتوى"
+msgstr ""
+
+#: header.php:19 inc/customizer.php:66
+msgid "شحن مجاني للطلبات فوق 500 جنيه  |  استرجاع سهل خلال 14 يوم"
+msgstr ""
+
+#: header.php:23 inc/customizer.php:67
+msgid "تتبّع طلبك"
+msgstr ""
+
+#: header.php:23 inc/customizer.php:69
+msgid "مركز المساعدة"
+msgstr ""
+
+#: header.php:39
+msgid "القائمة"
+msgstr ""
+
+#: header.php:54 searchform.php:3 searchform.php:4
+msgid "بحث"
+msgstr ""
+
+#: header.php:57
+msgid "حسابي"
+msgstr ""
+
+#: header.php:60
+msgid "تبديل الوضع الليلي"
+msgstr ""
+
+#: header.php:60
+msgid "الوضع الليلي"
+msgstr ""
+
+#: header.php:63
+msgid "السلة"
+msgstr ""
+
+#: inc/customizer.php:33
+msgid "✨ إعدادات مسار التميز"
+msgstr ""
+
+#: inc/customizer.php:36
+msgid "القالب الرئيسي للموقع"
+msgstr ""
+
+#: inc/customizer.php:36
+msgid "اختار تصميم الصفحة الرئيسية الجاهز. كمان تقدر تعمل صفحة جديدة وتختار لها \"قالب\" من إعدادات الصفحة."
+msgstr ""
+
+#: inc/customizer.php:37
+msgid "تصميم الصفحة الرئيسية"
+msgstr ""
+
+#: inc/customizer.php:40
+msgid "الألوان والخطوط"
+msgstr ""
+
+#: inc/customizer.php:41
+msgid "لوحة الألوان الجاهزة"
+msgstr ""
+
+#: inc/customizer.php:42
+msgid "لون رئيسي مخصص (اختياري)"
+msgstr ""
+
+#: inc/customizer.php:43
+msgid "لون ثانوي مخصص (اختياري)"
+msgstr ""
+
+#: inc/customizer.php:46
+msgid "تنسيق الخطوط"
+msgstr ""
+
+#: inc/customizer.php:46
+msgid "اختاري «مخصص» لو عايزة تحددي الخطين بنفسك."
+msgstr ""
+
+#: inc/customizer.php:47
+msgid "خط النصوص (للتنسيق المخصص)"
+msgstr ""
+
+#: inc/customizer.php:48
+msgid "خط العناوين (للتنسيق المخصص)"
+msgstr ""
+
+#: inc/customizer.php:51
+msgid "الهيدر"
+msgstr ""
+
+#: inc/customizer.php:52
+msgid "شكل الهيدر"
+msgstr ""
+
+#: inc/customizer.php:53
+msgid "كلاسيك: لوجو يمين وقائمة"
+msgstr ""
+
+#: inc/customizer.php:54
+msgid "لوجو بالمنتصف والقائمة تحته"
+msgstr ""
+
+#: inc/customizer.php:55
+msgid "فاخر: قائمة — لوجو بالمنتصف — أيقونات"
+msgstr ""
+
+#: inc/customizer.php:56
+msgid "بسيط شفاف"
+msgstr ""
+
+#: inc/customizer.php:58
+msgid "تثبيت الهيدر عند التمرير"
+msgstr ""
+
+#: inc/customizer.php:59
+msgid "هيدر شفاف فوق الهيرو (يعمل مع هيرو الصورة الخلفية فقط)"
+msgstr ""
+
+#: inc/customizer.php:60
+msgid "أيقونة البحث"
+msgstr ""
+
+#: inc/customizer.php:61
+msgid "أيقونة حسابي"
+msgstr ""
+
+#: inc/customizer.php:62
+msgid "زر الوضع الليلي"
+msgstr ""
+
+#: inc/customizer.php:63
+msgid "نص زر الهيدر (اتركه فاضي لإخفائه)"
+msgstr ""
+
+#: inc/customizer.php:64
+msgid "رابط زر الهيدر"
+msgstr ""
+
+#: inc/customizer.php:65
+msgid "شريط علوي (إعلان + روابط)"
+msgstr ""
+
+#: inc/customizer.php:66
+msgid "نص الشريط العلوي"
+msgstr ""
+
+#: inc/customizer.php:67
+msgid "رابط الشريط 1: النص"
+msgstr ""
+
+#: inc/customizer.php:68
+msgid "رابط الشريط 1: العنوان"
+msgstr ""
+
+#: inc/customizer.php:69
+msgid "رابط الشريط 2: النص"
+msgstr ""
+
+#: inc/customizer.php:70
+msgid "رابط الشريط 2: العنوان"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "الفوتر"
+msgstr ""
+
+#: inc/customizer.php:74
+msgid "شكل الفوتر"
+msgstr ""
+
+#: inc/customizer.php:75
+msgid "أعمدة (تعريف + ويدجت)"
+msgstr ""
+
+#: inc/customizer.php:76
+msgid "مركّز بالمنتصف"
+msgstr ""
+
+#: inc/customizer.php:77
+msgid "داكن فاخر"
+msgstr ""
+
+#: inc/customizer.php:78
+msgid "سطر واحد بسيط"
+msgstr ""
+
+#: inc/customizer.php:80
+msgid "شريط الاشتراك بالنشرة"
+msgstr ""
+
+#: inc/customizer.php:81 template-parts/sections/newsletter.php:4
+msgid "انضم لقائمتنا"
+msgstr ""
+
+#: inc/customizer.php:81
+msgid "عنوان الاشتراك"
+msgstr ""
+
+#: inc/customizer.php:82 template-parts/sections/newsletter.php:5
+msgid "اشترك ليوصلك كل جديد وعروض حصرية."
+msgstr ""
+
+#: inc/customizer.php:82
+msgid "نص الاشتراك"
+msgstr ""
+
+#: inc/customizer.php:83
+msgid "رابط معالجة النموذج (Mailchimp / Formspree...)"
+msgstr ""
+
+#: inc/customizer.php:84
+msgid "نبذة عن الموقع في الفوتر"
+msgstr ""
+
+#: inc/customizer.php:85
+msgid "عرض شعارات وسائل الدفع"
+msgstr ""
+
+#: inc/customizer.php:86
+msgid "نص الحقوق"
+msgstr ""
+
+#: inc/customizer.php:89
+msgid "الشكل والتخطيط"
+msgstr ""
+
+#: inc/customizer.php:90
+msgid "شكل الكروت"
+msgstr ""
+
+#: inc/customizer.php:90
+msgid "ظل ناعم"
+msgstr ""
+
+#: inc/customizer.php:90
+msgid "إطار خفيف"
+msgstr ""
+
+#: inc/customizer.php:90
+msgid "زجاجي"
+msgstr ""
+
+#: inc/customizer.php:90
+msgid "مسطح ملوّن"
+msgstr ""
+
+#: inc/customizer.php:91
+msgid "شكل الأزرار"
+msgstr ""
+
+#: inc/customizer.php:91
+msgid "كبسولة"
+msgstr ""
+
+#: inc/customizer.php:91
+msgid "حواف مدورة"
+msgstr ""
+
+#: inc/customizer.php:91
+msgid "مربع"
+msgstr ""
+
+#: inc/customizer.php:92
+msgid "عرض المقالات"
+msgstr ""
+
+#: inc/customizer.php:92
+msgid "شبكة"
+msgstr ""
+
+#: inc/customizer.php:92
+msgid "قائمة"
+msgstr ""
+
+#: inc/customizer.php:92 inc/customizer.php:115 inc/helpers.php:114
+msgid "بنترست"
+msgstr ""
+
+#: inc/customizer.php:93
+msgid "استدارة الحواف (px)"
+msgstr ""
+
+#: inc/customizer.php:94
+msgid "عرض المحتوى (px)"
+msgstr ""
+
+#: inc/customizer.php:95
+msgid "🌸 تأثير بتلات متساقطة"
+msgstr ""
+
+#: inc/customizer.php:96
+msgid "عدد البتلات"
+msgstr ""
+
+#: inc/customizer.php:99
+msgid "الهيرو (يغيّر نص القالب)"
+msgstr ""
+
+#: inc/customizer.php:99
+msgid "اترك أي حقل فاضي ليظهر النص الافتراضي للقالب."
+msgstr ""
+
+#: inc/customizer.php:100
+msgid "نمط الهيرو"
+msgstr ""
+
+#: inc/customizer.php:100
+msgid "حسب القالب"
+msgstr ""
+
+#: inc/customizer.php:100
+msgid "صورة خلفية ونص بالمنتصف"
+msgstr ""
+
+#: inc/customizer.php:100
+msgid "نص وصورة جنب بعض"
+msgstr ""
+
+#: inc/customizer.php:100
+msgid "صورة داخل قوس"
+msgstr ""
+
+#: inc/customizer.php:100
+msgid "صورة كبيرة بحافة الشاشة"
+msgstr ""
+
+#: inc/customizer.php:101 inc/customizer.php:120 inc/studio.php:12 inc/studio.php:14 inc/studio.php:15 inc/studio.php:16 inc/studio.php:18 inc/studio.php:19 inc/studio.php:20 inc/studio.php:21 inc/studio.php:22 inc/studio.php:23 inc/studio.php:24 inc/studio.php:25 inc/studio.php:27 inc/studio.php:28 inc/studio.php:29 inc/studio.php:30 template-parts/sections/contact.php:14
+msgid "العنوان"
+msgstr ""
+
+#: inc/customizer.php:102 inc/studio.php:12 inc/studio.php:16
+msgid "النص الفرعي"
+msgstr ""
+
+#: inc/customizer.php:103
+msgid "زر 1: النص"
+msgstr ""
+
+#: inc/customizer.php:104
+msgid "زر 1: الرابط"
+msgstr ""
+
+#: inc/customizer.php:105
+msgid "زر 2: النص"
+msgstr ""
+
+#: inc/customizer.php:106
+msgid "زر 2: الرابط"
+msgstr ""
+
+#: inc/customizer.php:107
+msgid "صورة الهيرو"
+msgstr ""
+
+#: inc/customizer.php:108
+msgid "ارتفاع الهيرو (% من الشاشة)"
+msgstr ""
+
+#: inc/customizer.php:109
+msgid "عتامة الطبقة فوق الصورة (%)"
+msgstr ""
+
+#: inc/customizer.php:112
+msgid "التواصل والسوشيال"
+msgstr ""
+
+#: inc/customizer.php:113
+msgid "رقم واتساب (بصيغة دولية 2010xxxxxxxx)"
+msgstr ""
+
+#: inc/customizer.php:114
+msgid "رسالة واتساب الجاهزة"
+msgstr ""
+
+#: inc/customizer.php:115 inc/helpers.php:114
+msgid "فيسبوك"
+msgstr ""
+
+#: inc/customizer.php:115 inc/helpers.php:114
+msgid "إنستجرام"
+msgstr ""
+
+#: inc/customizer.php:115 inc/helpers.php:114
+msgid "تيك توك"
+msgstr ""
+
+#: inc/customizer.php:115 inc/helpers.php:114
+msgid "يوتيوب"
+msgstr ""
+
+#: inc/customizer.php:116
+msgid "رابط %s"
+msgstr ""
+
+#: inc/customizer.php:118
+msgid "رقم التليفون (يظهر في الفوتر وصفحة التواصل)"
+msgstr ""
+
+#: inc/customizer.php:119 template-parts/sections/newsletter.php:12
+msgid "البريد الإلكتروني"
+msgstr ""
+
+#: inc/demo.php:28
+msgid "نصائح وأفكار"
+msgstr ""
+
+#: inc/demo.php:31
+msgid "كيف تختار الإطلالة المناسبة لكل مناسبة"
+msgstr ""
+
+#: inc/demo.php:31
+msgid "أفكار لتنسيق البيت بلمسة دافئة"
+msgstr ""
+
+#: inc/demo.php:31
+msgid "دليلك لاختيار الهدية المثالية"
+msgstr ""
+
+#: inc/demo.php:31
+msgid "ثلاث خطوات لتجديد ديكور غرفتك"
+msgstr ""
+
+#: inc/demo.php:31
+msgid "اتجاهات الموسم الجديد"
+msgstr ""
+
+#: inc/demo.php:31
+msgid "العناية بالقطع لتدوم أطول"
+msgstr ""
+
+#: inc/demo.php:37
+msgid "هذا مقال تجريبي لعرض شكل المدونة في الثيم."
+msgstr ""
+
+#: inc/demo.php:37
+msgid "نص تجريبي يُستبدل بمحتواك الحقيقي لاحقاً، اكتب هنا أفكارك ونصائحك لعملائك. "
+msgstr ""
+
+#: inc/demo.php:37
+msgid "يمكنك حذف هذا المحتوى بضغطة واحدة من استوديو مسار."
+msgstr ""
+
+#: inc/demo.php:49 inc/studio.php:25 template-parts/sections/about.php:9
+msgid "من نحن"
+msgstr ""
+
+#: inc/demo.php:49 inc/studio.php:27
+msgid "الأسئلة الشائعة"
+msgstr ""
+
+#: inc/demo.php:49 template-parts/sections/contact.php:10 template-parts/sections/cta.php:10 templates/page-about.php:15
+msgid "تواصل معنا"
+msgstr ""
+
+#: inc/demo.php:50
+msgid "رئيسية — أزياء"
+msgstr ""
+
+#: inc/demo.php:50
+msgid "رئيسية — فخامة داكنة"
+msgstr ""
+
+#: inc/demo.php:50
+msgid "رئيسية — خدمات"
+msgstr ""
+
+#: inc/demo.php:50
+msgid "رئيسية — ديكور"
+msgstr ""
+
+#: inc/demo.php:62
+msgid "مسار — القائمة الرئيسية"
+msgstr ""
+
+#: inc/demo.php:78 inc/demo.php:87 inc/presets.php:34
+msgid "فساتين"
+msgstr ""
+
+#: inc/demo.php:78 inc/demo.php:87 inc/presets.php:57
+msgid "حقائب"
+msgstr ""
+
+#: inc/demo.php:78 inc/demo.php:87 inc/presets.php:58
+msgid "ساعات"
+msgstr ""
+
+#: inc/demo.php:78 inc/demo.php:87 inc/presets.php:107
+msgid "ديكور"
+msgstr ""
+
+#: inc/demo.php:87
+msgid "فستان صيفي أنيق"
+msgstr ""
+
+#: inc/demo.php:87
+msgid "فستان سهرة"
+msgstr ""
+
+#: inc/demo.php:87
+msgid "حقيبة جلد كلاسيك"
+msgstr ""
+
+#: inc/demo.php:87
+msgid "حقيبة كتف صغيرة"
+msgstr ""
+
+#: inc/demo.php:87
+msgid "ساعة ذهبية"
+msgstr ""
+
+#: inc/demo.php:87
+msgid "ساعة جلد بني"
+msgstr ""
+
+#: inc/demo.php:87
+msgid "مزهرية سيراميك"
+msgstr ""
+
+#: inc/demo.php:87
+msgid "شمعة معطرة"
+msgstr ""
+
+#: inc/demo.php:121 inc/studio.php:110 inc/studio.php:151
+msgid "غير مسموح"
+msgstr ""
+
+#: inc/demo.php:135
+msgid "بضغطة واحدة بنضيف: <b>7 صفحات</b> (من نحن، الأسئلة، تواصل + 4 رئيسيات)، <b>6 مقالات بصور</b>، <b>قائمة رئيسية وقائمة فوتر</b>"
+msgstr ""
+
+#: inc/demo.php:136
+msgid "، و<b>8 منتجات + 4 تصنيفات</b> (WooCommerce)"
+msgstr ""
+
+#: inc/demo.php:136
+msgid " (ولو فعّلتي WooCommerce قبل الاستيراد هنضيف منتجات كمان)"
+msgstr ""
+
+#: inc/demo.php:137
+msgid ". الصور بتتولّد محلياً بألوان هادئة وتقدري تغيريها بعدين."
+msgstr ""
+
+#: inc/demo.php:142
+msgid "تصميم الصفحة الرئيسية: "
+msgstr ""
+
+#: inc/demo.php:144
+msgid "⬇️ استيراد المحتوى التجريبي"
+msgstr ""
+
+#: inc/demo.php:146
+msgid "المحتوى التجريبي مستورد."
+msgstr ""
+
+#: inc/demo.php:146
+msgid " الحذف بيشيل اللي اتضاف بالاستيراد بس (مش أي محتوى كتبتيه إنتي)."
+msgstr ""
+
+#: inc/demo.php:146
+msgid "حذف كل المحتوى التجريبي؟"
+msgstr ""
+
+#: inc/demo.php:146
+msgid "🗑️ حذف المحتوى التجريبي"
+msgstr ""
+
+#: inc/helpers.php:140
+msgid "كم يستغرق التوصيل؟"
+msgstr ""
+
+#: inc/helpers.php:140
+msgid "من 1 إلى 3 أيام عمل داخل المدن الكبرى، وحتى 5 أيام للمحافظات."
+msgstr ""
+
+#: inc/helpers.php:141
+msgid "هل يمكنني استرجاع المنتج؟"
+msgstr ""
+
+#: inc/helpers.php:141
+msgid "نعم، خلال 14 يوم من الاستلام بشرط أن يكون بحالته الأصلية."
+msgstr ""
+
+#: inc/helpers.php:142
+msgid "ما وسائل الدفع المتاحة؟"
+msgstr ""
+
+#: inc/helpers.php:142
+msgid "الدفع عند الاستلام، بطاقات الائتمان، والمحافظ الإلكترونية."
+msgstr ""
+
+#: inc/helpers.php:143
+msgid "كيف أتواصل معكم؟"
+msgstr ""
+
+#: inc/helpers.php:143
+msgid "عبر واتساب أو الهاتف أو البريد، وبنرد خلال ساعات العمل."
+msgstr ""
+
+#: inc/presets.php:12
+msgid "شحن سريع"
+msgstr ""
+
+#: inc/presets.php:12
+msgid "توصيل لحد باب البيت"
+msgstr ""
+
+#: inc/presets.php:13
+msgid "استرجاع سهل"
+msgstr ""
+
+#: inc/presets.php:13
+msgid "خلال 14 يوم"
+msgstr ""
+
+#: inc/presets.php:14
+msgid "دفع آمن"
+msgstr ""
+
+#: inc/presets.php:14
+msgid "بياناتك محمية 100%"
+msgstr ""
+
+#: inc/presets.php:15
+msgid "دعم مباشر"
+msgstr ""
+
+#: inc/presets.php:15
+msgid "على واتساب في أي وقت"
+msgstr ""
+
+#: inc/presets.php:19
+msgid "سارة م."
+msgstr ""
+
+#: inc/presets.php:19
+msgid "الجودة أعلى من توقعي والتغليف شيك جداً. أكيد هطلب تاني."
+msgstr ""
+
+#: inc/presets.php:20
+msgid "كريم ع."
+msgstr ""
+
+#: inc/presets.php:20
+msgid "التوصيل كان قبل الميعاد والخدمة محترمة من أول رسالة."
+msgstr ""
+
+#: inc/presets.php:21
+msgid "ندى ه."
+msgstr ""
+
+#: inc/presets.php:21
+msgid "تشكيلة راقية وأسعار مظبوطة، بقيت عميلة دايمة."
+msgstr ""
+
+#: inc/presets.php:28
+msgid "أزياء وموضة (بيج أنيق)"
+msgstr ""
+
+#: inc/presets.php:32
+msgid "تشكيلة جديدة"
+msgstr ""
+
+#: inc/presets.php:32
+msgid "أناقة تدوم. أسلوب عصري."
+msgstr ""
+
+#: inc/presets.php:32
+msgid "قطع يومية راقية مصممة عشان تحسسك بالثقة في كل مناسبة."
+msgstr ""
+
+#: inc/presets.php:32
+msgid "تسوّقي الجديد"
+msgstr ""
+
+#: inc/presets.php:32
+msgid "استكشفي المجموعات"
+msgstr ""
+
+#: inc/presets.php:34
+msgid "بلوزات"
+msgstr ""
+
+#: inc/presets.php:34
+msgid "بناطيل"
+msgstr ""
+
+#: inc/presets.php:35
+msgid "شنط"
+msgstr ""
+
+#: inc/presets.php:35
+msgid "إكسسوارات"
+msgstr ""
+
+#: inc/presets.php:35
+msgid "جاكيتات"
+msgstr ""
+
+#: inc/presets.php:35 inc/presets.php:58
+msgid "أحذية"
+msgstr ""
+
+#: inc/presets.php:37 inc/presets.php:61 template-parts/sections/products.php:14
+msgid "وصل حديثاً"
+msgstr ""
+
+#: inc/presets.php:37
+msgid "أحدث القطع وصلت. كوني أول من تختار."
+msgstr ""
+
+#: inc/presets.php:37
+msgid "شوفي الكل"
+msgstr ""
+
+#: inc/presets.php:39
+msgid "مجموعة الصيف"
+msgstr ""
+
+#: inc/presets.php:39
+msgid "أساسيات الصيف"
+msgstr ""
+
+#: inc/presets.php:39
+msgid "خفيفة. مريحة. أساسية."
+msgstr ""
+
+#: inc/presets.php:39 inc/presets.php:63
+msgid "خصم حتى 30%"
+msgstr ""
+
+#: inc/presets.php:39
+msgid "تسوّقي الآن"
+msgstr ""
+
+#: inc/presets.php:40
+msgid "لمسة أخيرة"
+msgstr ""
+
+#: inc/presets.php:40
+msgid "اختيارات الإكسسوار"
+msgstr ""
+
+#: inc/presets.php:40
+msgid "التفاصيل اللي تكمّل الإطلالة."
+msgstr ""
+
+#: inc/presets.php:40
+msgid "شوفي الإكسسوارات"
+msgstr ""
+
+#: inc/presets.php:42
+msgid "قالوا عنّا"
+msgstr ""
+
+#: inc/presets.php:43
+msgid "تابعونا على إنستجرام"
+msgstr ""
+
+#: inc/presets.php:50
+msgid "فخامة داكنة (إكسسوارات وساعات)"
+msgstr ""
+
+#: inc/presets.php:54
+msgid "اختاري. عبّري. تألقي."
+msgstr ""
+
+#: inc/presets.php:54
+msgid "إكسسوارات فاخرة"
+msgstr ""
+
+#: inc/presets.php:54
+msgid "قطع تكمّل حكاية أسلوبك الخاص."
+msgstr ""
+
+#: inc/presets.php:54
+msgid "تسوّق الجديد"
+msgstr ""
+
+#: inc/presets.php:57
+msgid "مجوهرات"
+msgstr ""
+
+#: inc/presets.php:57
+msgid "نظارات"
+msgstr ""
+
+#: inc/presets.php:58
+msgid "إيشاربات"
+msgstr ""
+
+#: inc/presets.php:58
+msgid "عطور"
+msgstr ""
+
+#: inc/presets.php:61
+msgid "موسم جديد"
+msgstr ""
+
+#: inc/presets.php:61
+msgid "قطع جديدة بلمسة خالدة."
+msgstr ""
+
+#: inc/presets.php:61
+msgid "تسوّق"
+msgstr ""
+
+#: inc/presets.php:62
+msgid "خالدة"
+msgstr ""
+
+#: inc/presets.php:62
+msgid "الأكثر مبيعاً"
+msgstr ""
+
+#: inc/presets.php:62
+msgid "القطع اللي الكل بيحبها."
+msgstr ""
+
+#: inc/presets.php:62
+msgid "استكشف"
+msgstr ""
+
+#: inc/presets.php:63
+msgid "عرض خاص"
+msgstr ""
+
+#: inc/presets.php:63
+msgid "على تشكيلة مختارة لفترة محدودة."
+msgstr ""
+
+#: inc/presets.php:63
+msgid "تسوّق العروض"
+msgstr ""
+
+#: inc/presets.php:65
+msgid "اختياراتنا المميزة"
+msgstr ""
+
+#: inc/presets.php:66
+msgid "ثقة أشهر العلامات"
+msgstr ""
+
+#: inc/presets.php:67
+msgid "مجلة الأسلوب"
+msgstr ""
+
+#: inc/presets.php:67
+msgid "أفكار واتجاهات وإرشادات لإطلالة أجمل."
+msgstr ""
+
+#: inc/presets.php:74
+msgid "خدمات وتصميم داخلي (طبيعي هادئ)"
+msgstr ""
+
+#: inc/presets.php:78
+msgid "مساحات بروح طبيعية"
+msgstr ""
+
+#: inc/presets.php:78
+msgid "تصميمات جميلة تهدّي الروح وتلهمك."
+msgstr ""
+
+#: inc/presets.php:78
+msgid "بنصمم بيوت تجمع بين الجمال الطبيعي والراحة والوظيفة."
+msgstr ""
+
+#: inc/presets.php:78
+msgid "استكشف أعمالنا"
+msgstr ""
+
+#: inc/presets.php:79
+msgid "تصميم مدروس لطريقة عيشك"
+msgstr ""
+
+#: inc/presets.php:79
+msgid "ماذا نقدّم"
+msgstr ""
+
+#: inc/presets.php:80
+msgid "تصميم داخلي متكامل"
+msgstr ""
+
+#: inc/presets.php:80
+msgid "من الفكرة لحد التسليم بكل تفصيلة."
+msgstr ""
+
+#: inc/presets.php:81
+msgid "مطابخ وحمامات"
+msgstr ""
+
+#: inc/presets.php:81
+msgid "مساحات عملية بروح جميلة."
+msgstr ""
+
+#: inc/presets.php:82
+msgid "تنسيق وديكور"
+msgstr ""
+
+#: inc/presets.php:82
+msgid "قطع مختارة بعناية تكمّل المكان."
+msgstr ""
+
+#: inc/presets.php:83
+msgid "تصميم عن بُعد"
+msgstr ""
+
+#: inc/presets.php:83
+msgid "خدمة أونلاين في أي مكان."
+msgstr ""
+
+#: inc/presets.php:85
+msgid "مساحات تحسّها بيتك"
+msgstr ""
+
+#: inc/presets.php:85
+msgid "أعمالنا"
+msgstr ""
+
+#: inc/presets.php:86
+msgid "مقر الصنوبر"
+msgstr ""
+
+#: inc/presets.php:86
+msgid "القاهرة"
+msgstr ""
+
+#: inc/presets.php:86
+msgid "مطبخ الواحة"
+msgstr ""
+
+#: inc/presets.php:86
+msgid "الإسكندرية"
+msgstr ""
+
+#: inc/presets.php:86
+msgid "بيت الغروب"
+msgstr ""
+
+#: inc/presets.php:86
+msgid "الجونة"
+msgstr ""
+
+#: inc/presets.php:86
+msgid "حمام الندى"
+msgstr ""
+
+#: inc/presets.php:86
+msgid "الشروق"
+msgstr ""
+
+#: inc/presets.php:86
+msgid "ملاذ الزيتون"
+msgstr ""
+
+#: inc/presets.php:86
+msgid "الساحل"
+msgstr ""
+
+#: inc/presets.php:88
+msgid "قابلي المؤسسة"
+msgstr ""
+
+#: inc/presets.php:88
+msgid "نصمّم بنيّة. جذورنا في الطبيعة."
+msgstr ""
+
+#: inc/presets.php:88
+msgid "بدأنا من حبنا للمواد الطبيعية وإيماننا إن البيوت لازم تدعم راحتنا.\n\nكل مشروع هو تعاون؛ بنفهم حكايتك واحتياجك ونصمم مساحة جميلة بقدر ما هي مريحة."
+msgstr ""
+
+#: inc/presets.php:88
+msgid "اعرف أكتر عنّا"
+msgstr ""
+
+#: inc/presets.php:89
+msgid "طريقة شغلنا"
+msgstr ""
+
+#: inc/presets.php:89
+msgid "عملية مدروسة. تجربة سلسة."
+msgstr ""
+
+#: inc/presets.php:90
+msgid "اكتشاف"
+msgstr ""
+
+#: inc/presets.php:90
+msgid "بنتعرف عليك وعلى رؤيتك ومساحتك."
+msgstr ""
+
+#: inc/presets.php:90
+msgid "تصميم"
+msgstr ""
+
+#: inc/presets.php:90
+msgid "بنعمل تصميم مفصّل يعكس أسلوبك."
+msgstr ""
+
+#: inc/presets.php:90
+msgid "تخطيط"
+msgstr ""
+
+#: inc/presets.php:90
+msgid "بنظبط التفاصيل ونجهز الخطة."
+msgstr ""
+
+#: inc/presets.php:90
+msgid "تنفيذ"
+msgstr ""
+
+#: inc/presets.php:90
+msgid "بننسق التنفيذ مع شركاء موثوقين."
+msgstr ""
+
+#: inc/presets.php:90
+msgid "استمتاع"
+msgstr ""
+
+#: inc/presets.php:90
+msgid "تدخل بيتك الجديد وتحبّه."
+msgstr ""
+
+#: inc/presets.php:92
+msgid "كلمات طيبة"
+msgstr ""
+
+#: inc/presets.php:92
+msgid "قصص من عملائنا"
+msgstr ""
+
+#: inc/presets.php:94 template-parts/sections/cta.php:8
+msgid "جاهز نبدأ؟"
+msgstr ""
+
+#: inc/presets.php:94
+msgid "احجز استشارة وخلّينا نصمم مساحة تحسّها إنت."
+msgstr ""
+
+#: inc/presets.php:94
+msgid "احجز استشارة"
+msgstr ""
+
+#: inc/presets.php:100
+msgid "ديكور ومنتجات منزلية (دافئ)"
+msgstr ""
+
+#: inc/presets.php:104
+msgid "بيت يشبهك"
+msgstr ""
+
+#: inc/presets.php:104
+msgid "تصميم. دفء. بيت أجمل."
+msgstr ""
+
+#: inc/presets.php:104
+msgid "أساسيات منزلية مختارة بعناية تجيب الراحة والستايل والهدوء ليومك."
+msgstr ""
+
+#: inc/presets.php:104
+msgid "تسوّق المجموعة"
+msgstr ""
+
+#: inc/presets.php:104 inc/presets.php:111 templates/page-about.php:12
+msgid "حكايتنا"
+msgstr ""
+
+#: inc/presets.php:104 inc/presets.php:112 templates/page-about.php:13
+msgid "عميل سعيد"
+msgstr ""
+
+#: inc/presets.php:104
+msgid "تقييم العملاء"
+msgstr ""
+
+#: inc/presets.php:106
+msgid "تسوّق حسب القسم"
+msgstr ""
+
+#: inc/presets.php:107
+msgid "إضاءة"
+msgstr ""
+
+#: inc/presets.php:107
+msgid "مفروشات"
+msgstr ""
+
+#: inc/presets.php:107
+msgid "أجواء وعطور"
+msgstr ""
+
+#: inc/presets.php:109
+msgid "مجموعة مميزة"
+msgstr ""
+
+#: inc/presets.php:109
+msgid "خريف دافئ"
+msgstr ""
+
+#: inc/presets.php:109
+msgid "شموع وسيراميك ومفروشات لأمسيات أدفأ وأهدى."
+msgstr ""
+
+#: inc/presets.php:109
+msgid "استكشف المجموعة"
+msgstr ""
+
+#: inc/presets.php:110
+msgid "الأكثر طلباً"
+msgstr ""
+
+#: inc/presets.php:111
+msgid "ندخل الدفء كل بيت"
+msgstr ""
+
+#: inc/presets.php:111
+msgid "بنختار كل قطعة بعناية، من خامات طبيعية وحرفية تعيش معاك سنين."
+msgstr ""
+
+#: inc/presets.php:111
+msgid "اقرأ حكايتنا"
+msgstr ""
+
+#: inc/presets.php:112 templates/page-about.php:13
+msgid "منتج مختار"
+msgstr ""
+
+#: inc/presets.php:112 templates/page-about.php:13
+msgid "متوسط التقييم"
+msgstr ""
+
+#: inc/presets.php:112
+msgid "24 س"
+msgstr ""
+
+#: inc/presets.php:112
+msgid "سرعة الرد"
+msgstr ""
+
+#: inc/presets.php:113 inc/studio.php:19 template-parts/sections/testimonials.php:8
+msgid "آراء العملاء"
+msgstr ""
+
+#: inc/studio.php:12
+msgid "الهيرو (الواجهة الرئيسية)"
+msgstr ""
+
+#: inc/studio.php:12
+msgid "عبارة صغيرة"
+msgstr ""
+
+#: inc/studio.php:12
+msgid "نص الزر 1"
+msgstr ""
+
+#: inc/studio.php:12
+msgid "رابط الزر 1"
+msgstr ""
+
+#: inc/studio.php:12
+msgid "نص الزر 2"
+msgstr ""
+
+#: inc/studio.php:12
+msgid "رابط الزر 2"
+msgstr ""
+
+#: inc/studio.php:12 inc/studio.php:25
+msgid "رابط الصورة"
+msgstr ""
+
+#: inc/studio.php:13
+msgid "شريط المميزات"
+msgstr ""
+
+#: inc/studio.php:13
+msgid "إيموجي | العنوان | الوصف"
+msgstr ""
+
+#: inc/studio.php:14
+msgid "تصنيفات دائرية"
+msgstr ""
+
+#: inc/studio.php:14
+msgid "الاسم | إيموجي (يتجاهل لو عندك تصنيفات حقيقية)"
+msgstr ""
+
+#: inc/studio.php:15
+msgid "تصنيفات ككروت"
+msgstr ""
+
+#: inc/studio.php:15
+msgid "الاسم | إيموجي"
+msgstr ""
+
+#: inc/studio.php:16
+msgid "المنتجات"
+msgstr ""
+
+#: inc/studio.php:16 inc/studio.php:18 inc/studio.php:28
+msgid "نص الزر"
+msgstr ""
+
+#: inc/studio.php:16
+msgid "عدد المنتجات"
+msgstr ""
+
+#: inc/studio.php:17
+msgid "بانرات ترويجية"
+msgstr ""
+
+#: inc/studio.php:17
+msgid "عنوان صغير | العنوان | الوصف | شارة | نص الزر | اللون (dark/mocha/sand) | إيموجي | رابط صورة"
+msgstr ""
+
+#: inc/studio.php:18
+msgid "بانر المجموعة الكبير"
+msgstr ""
+
+#: inc/studio.php:18 inc/studio.php:19 inc/studio.php:20 inc/studio.php:23 inc/studio.php:24 inc/studio.php:25
+msgid "عنوان صغير"
+msgstr ""
+
+#: inc/studio.php:18
+msgid "الوصف"
+msgstr ""
+
+#: inc/studio.php:18 inc/studio.php:28
+msgid "رابط الزر"
+msgstr ""
+
+#: inc/studio.php:18
+msgid "رابط صورة الخلفية"
+msgstr ""
+
+#: inc/studio.php:19
+msgid "الاسم | الرأي"
+msgstr ""
+
+#: inc/studio.php:20
+msgid "معرض (إنستجرام/مشاريع)"
+msgstr ""
+
+#: inc/studio.php:20
+msgid "حساب إنستجرام"
+msgstr ""
+
+#: inc/studio.php:20
+msgid "صور المعرض (6 أو 12 صورة، صورة في كل سطر)"
+msgstr ""
+
+#: inc/studio.php:21
+msgid "النشرة البريدية"
+msgstr ""
+
+#: inc/studio.php:21 inc/studio.php:25 inc/studio.php:28 inc/studio.php:29 inc/studio.php:30
+msgid "النص"
+msgstr ""
+
+#: inc/studio.php:22
+msgid "شريط العلامات"
+msgstr ""
+
+#: inc/studio.php:22
+msgid "اسم في كل سطر"
+msgstr ""
+
+#: inc/studio.php:23
+msgid "الخدمات"
+msgstr ""
+
+#: inc/studio.php:23
+msgid "إيموجي | الخدمة | الوصف"
+msgstr ""
+
+#: inc/studio.php:24 template-parts/sections/process.php:8
+msgid "خطوات العمل"
+msgstr ""
+
+#: inc/studio.php:24
+msgid "الخطوة | الوصف"
+msgstr ""
+
+#: inc/studio.php:25
+msgid "نص الرابط"
+msgstr ""
+
+#: inc/studio.php:25
+msgid "رابط"
+msgstr ""
+
+#: inc/studio.php:26
+msgid "الإحصائيات"
+msgstr ""
+
+#: inc/studio.php:26
+msgid "الرقم | الوصف"
+msgstr ""
+
+#: inc/studio.php:27
+msgid "السؤال | الجواب"
+msgstr ""
+
+#: inc/studio.php:28
+msgid "دعوة للتواصل"
+msgstr ""
+
+#: inc/studio.php:29
+msgid "المدونة"
+msgstr ""
+
+#: inc/studio.php:30
+msgid "وسائل التواصل"
+msgstr ""
+
+#: inc/studio.php:98
+msgid "استوديو مسار التميز"
+msgstr ""
+
+#: inc/studio.php:98
+msgid "✨ استوديو مسار"
+msgstr ""
+
+#: inc/studio.php:114
+msgid "قالب غير معروف"
+msgstr ""
+
+#: inc/studio.php:168
+msgid "تم حفظ التعديلات ✅"
+msgstr ""
+
+#: inc/studio.php:168
+msgid "رجّعنا القالب لوضعه الأصلي ✅"
+msgstr ""
+
+#: inc/studio.php:168
+msgid "تم استيراد المحتوى التجريبي ✅"
+msgstr ""
+
+#: inc/studio.php:168
+msgid "تم حذف المحتوى التجريبي ✅"
+msgstr ""
+
+#: inc/studio.php:168
+msgid "المحتوى التجريبي مستورد بالفعل."
+msgstr ""
+
+#: inc/studio.php:169
+msgid "✨ استوديو مسار التميز"
+msgstr ""
+
+#: inc/studio.php:171
+msgid "تعديل السكاشن"
+msgstr ""
+
+#: inc/studio.php:171
+msgid "محتوى تجريبي"
+msgstr ""
+
+#: inc/studio.php:189
+msgid "القالب: "
+msgstr ""
+
+#: inc/studio.php:191
+msgid "كل تعديل هنا بيتطبق على القالب ده سواء كرئيسية أو كصفحة بقالب."
+msgstr ""
+
+#: inc/studio.php:201
+msgid " إظهار"
+msgstr ""
+
+#: inc/studio.php:210
+msgid "روابط الصور، رابط في كل سطر"
+msgstr ""
+
+#: inc/studio.php:211
+msgid "🖼️ إضافة صور من المكتبة"
+msgstr ""
+
+#: inc/studio.php:214
+msgid "🖼️ اختيار صورة"
+msgstr ""
+
+#: inc/studio.php:214
+msgid "حذف"
+msgstr ""
+
+#: inc/studio.php:223
+msgid "العناصر — سطر لكل عنصر: "
+msgstr ""
+
+#: inc/studio.php:225
+msgid "🖼️ إدراج رابط صورة من المكتبة"
+msgstr ""
+
+#: inc/studio.php:225
+msgid "حطي المؤشر مكان خانة الصورة في السطر الأول، واضغطي الزر."
+msgstr ""
+
+#: inc/studio.php:229
+msgid "السكشن ده محتواه تلقائي، تقدري تظهريه/تخفيه وترتبيه بس."
+msgstr ""
+
+#: inc/studio.php:232
+msgid "💾 حفظ التعديلات"
+msgstr ""
+
+#: inc/studio.php:233
+msgid "ترجيع القالب للوضع الأصلي؟"
+msgstr ""
+
+#: inc/studio.php:233
+msgid "↩️ رجوع للأصل"
+msgstr ""
+
+#: index.php:16
+msgid "لا يوجد محتوى هنا حتى الآن 🌱"
+msgstr ""
+
+#: search.php:5
+msgid "نتائج البحث عن: %s"
+msgstr ""
+
+#: search.php:14
+msgid "ما لقيناش نتائج، جرّب كلمات تانية 🌷"
+msgstr ""
+
+#: searchform.php:3
+msgid "ابحث عن منتج أو مقال…"
+msgstr ""
+
+#: single.php:10 template-parts/card.php:7
+msgid "%d د قراءة"
+msgstr ""
+
+#: template-parts/card.php:10
+msgid "اقرأ المزيد ←"
+msgstr ""
+
+#: template-parts/sections/brands.php:8
+msgid "شركاء النجاح"
+msgstr ""
+
+#: template-parts/sections/contact.php:10
+msgid "يسعدنا نسمع منك، اختار الوسيلة الأنسب."
+msgstr ""
+
+#: template-parts/sections/contact.php:12
+msgid "اتصل بنا"
+msgstr ""
+
+#: template-parts/sections/contact.php:12
+msgid "أضف الرقم من التخصيص ← التواصل"
+msgstr ""
+
+#: template-parts/sections/contact.php:13
+msgid "البريد"
+msgstr ""
+
+#: template-parts/sections/contact.php:13
+msgid "أضف البريد من التخصيص ← التواصل"
+msgstr ""
+
+#: template-parts/sections/contact.php:14
+msgid "أضف العنوان من التخصيص ← التواصل"
+msgstr ""
+
+#: template-parts/sections/contact.php:15
+msgid "ابدأ محادثة"
+msgstr ""
+
+#: template-parts/sections/contact.php:15
+msgid "أضف الرقم من التخصيص"
+msgstr ""
+
+#: template-parts/sections/faq.php:7
+msgid "أسئلة شائعة"
+msgstr ""
+
+#: template-parts/sections/feature-banner.php:13
+msgid "اكتشف"
+msgstr ""
+
+#: template-parts/sections/journal.php:8
+msgid "المجلة"
+msgstr ""
+
+#: template-parts/sections/journal.php:9
+msgid "من مدونتنا"
+msgstr ""
+
+#: template-parts/sections/journal.php:11
+msgid "اقرأ المجلة"
+msgstr ""
+
+#: template-parts/sections/journal.php:16
+msgid "مقال قريباً"
+msgstr ""
+
+#: template-parts/sections/newsletter.php:12
+msgid "بريدك الإلكتروني"
+msgstr ""
+
+#: template-parts/sections/newsletter.php:13
+msgid "اشترك"
+msgstr ""
+
+#: template-parts/sections/products.php:8
+msgid "قطعة مميزة 1"
+msgstr ""
+
+#: template-parts/sections/products.php:8
+msgid "490 ج.م"
+msgstr ""
+
+#: template-parts/sections/products.php:8
+msgid "قطعة مميزة 2"
+msgstr ""
+
+#: template-parts/sections/products.php:8
+msgid "350 ج.م"
+msgstr ""
+
+#: template-parts/sections/products.php:8
+msgid "قطعة مميزة 3"
+msgstr ""
+
+#: template-parts/sections/products.php:8
+msgid "620 ج.م"
+msgstr ""
+
+#: template-parts/sections/products.php:8
+msgid "قطعة مميزة 4"
+msgstr ""
+
+#: template-parts/sections/products.php:8
+msgid "280 ج.م"
+msgstr ""
+
+#: template-parts/sections/products.php:8
+msgid "قطعة مميزة 5"
+msgstr ""
+
+#: template-parts/sections/products.php:8
+msgid "540 ج.م"
+msgstr ""
+
+#: template-parts/sections/products.php:8
+msgid "قطعة مميزة 6"
+msgstr ""
+
+#: template-parts/sections/products.php:8
+msgid "410 ج.م"
+msgstr ""
+
+#: template-parts/sections/products.php:18
+msgid "منتجاتنا"
+msgstr ""
+
+#: template-parts/sections/services.php:8
+msgid "خدماتنا"
+msgstr ""
+
+#: template-parts/sections/services.php:11
+msgid "اعرف أكثر ←"
+msgstr ""
+
+#: template-parts/sections/testimonials.php:12
+msgid "5 نجوم"
+msgstr ""
+
+#: templates/page-about.php:12
+msgid "بدأنا بشغف وكبرنا بثقتكم"
+msgstr ""
+
+#: templates/page-about.php:12
+msgid "كل قطعة بنقدمها بتتختار بعناية وبتتراجع قبل ما توصلك.\n\nرسالتنا نخلي تجربتك معانا سهلة وراقية، وجودة بتدوم."
+msgstr ""
+
+#: templates/page-about.php:13
+msgid "سنوات خبرة"
+msgstr ""
+
+#: templates/page-about.php:14
+msgid "قيمنا"
+msgstr ""
+
+#: templates/page-about.php:14
+msgid "جودة"
+msgstr ""
+
+#: templates/page-about.php:14
+msgid "مواد وخامات مختارة."
+msgstr ""
+
+#: templates/page-about.php:14
+msgid "أمانة"
+msgstr ""
+
+#: templates/page-about.php:14
+msgid "شفافية في كل خطوة."
+msgstr ""
+
+#: templates/page-about.php:14
+msgid "اهتمام"
+msgstr ""
+
+#: templates/page-about.php:14
+msgid "بنسمعك وبنتطور."
+msgstr ""
+
+#: templates/page-about.php:14
+msgid "سرعة"
+msgstr ""
+
+#: templates/page-about.php:14
+msgid "التزام بالمواعيد."
+msgstr ""
+
+#: templates/page-about.php:15
+msgid "عايز تعرف أكتر؟"
+msgstr ""
+
+#: templates/page-about.php:15
+msgid "تواصل معانا وهنرد عليك في أقرب وقت."
+msgstr ""
+
+#: templates/page-faq.php:12
+msgid "لسه عندك سؤال؟"
+msgstr ""
+
+#: templates/page-faq.php:12
+msgid "فريقنا جاهز يساعدك."
+msgstr ""
+
+#: templates/page-faq.php:12
+msgid "كلّمنا"
+msgstr ""
+

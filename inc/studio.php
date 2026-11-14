@@ -9,25 +9,25 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 function masar_section_specs() {
 	$t = function ( $n, $hint ) { return array( 'type' => 'tuple', 'n' => $n, 'hint' => $hint ); };
 	return array(
-		'hero'           => array( 'label' => 'الهيرو (الواجهة الرئيسية)', 'fields' => array( 'eyebrow' => 'عبارة صغيرة', 'title' => 'العنوان', 'subtitle' => 'النص الفرعي', 'btn1' => 'نص الزر 1', 'btn1_url' => 'رابط الزر 1', 'btn2' => 'نص الزر 2', 'btn2_url' => 'رابط الزر 2', 'image' => 'رابط الصورة' ) ),
-		'features'       => array( 'label' => 'شريط المميزات', 'fields' => array(), 'items' => $t( 3, 'إيموجي | العنوان | الوصف' ) ),
-		'cats-circles'   => array( 'label' => 'تصنيفات دائرية', 'fields' => array( 'title' => 'العنوان' ), 'items' => array( 'type' => 'assoc', 'keys' => array( 'label', 'emoji' ), 'hint' => 'الاسم | إيموجي (يتجاهل لو عندك تصنيفات حقيقية)' ) ),
-		'cats-cards'     => array( 'label' => 'تصنيفات ككروت', 'fields' => array( 'title' => 'العنوان' ), 'items' => array( 'type' => 'assoc', 'keys' => array( 'label', 'emoji' ), 'hint' => 'الاسم | إيموجي' ) ),
-		'products'       => array( 'label' => 'المنتجات', 'fields' => array( 'title' => 'العنوان', 'subtitle' => 'النص الفرعي', 'btn' => 'نص الزر', 'count' => 'عدد المنتجات' ) ),
-		'promo-banners'  => array( 'label' => 'بانرات ترويجية', 'fields' => array(), 'items' => array( 'type' => 'assoc', 'keys' => array( 'kicker', 'title', 'text', 'badge', 'btn', 'tone', 'emoji', 'image' ), 'hint' => 'عنوان صغير | العنوان | الوصف | شارة | نص الزر | اللون (dark/mocha/sand) | إيموجي | رابط صورة' ) ),
-		'feature-banner' => array( 'label' => 'بانر المجموعة الكبير', 'fields' => array( 'kicker' => 'عنوان صغير', 'title' => 'العنوان', 'text' => 'الوصف', 'btn' => 'نص الزر', 'url' => 'رابط الزر', 'image' => 'رابط صورة الخلفية' ) ),
-		'testimonials'   => array( 'label' => 'آراء العملاء', 'fields' => array( 'title' => 'العنوان', 'kicker' => 'عنوان صغير' ), 'items' => $t( 2, 'الاسم | الرأي' ) ),
-		'gallery'        => array( 'label' => 'معرض (إنستجرام/مشاريع)', 'fields' => array( 'title' => 'العنوان', 'kicker' => 'عنوان صغير', 'handle' => 'حساب إنستجرام', 'images' => 'صور المعرض (6 أو 12 صورة، صورة في كل سطر)' ) ),
-		'newsletter'     => array( 'label' => 'النشرة البريدية', 'fields' => array( 'title' => 'العنوان', 'text' => 'النص' ) ),
-		'brands'         => array( 'label' => 'شريط العلامات', 'fields' => array( 'title' => 'العنوان' ), 'items' => array( 'type' => 'strings', 'hint' => 'اسم في كل سطر' ) ),
-		'services'       => array( 'label' => 'الخدمات', 'fields' => array( 'title' => 'العنوان', 'kicker' => 'عنوان صغير' ), 'items' => $t( 3, 'إيموجي | الخدمة | الوصف' ) ),
-		'process'        => array( 'label' => 'خطوات العمل', 'fields' => array( 'title' => 'العنوان', 'kicker' => 'عنوان صغير' ), 'items' => $t( 2, 'الخطوة | الوصف' ) ),
-		'about'          => array( 'label' => 'من نحن', 'fields' => array( 'kicker' => 'عنوان صغير', 'title' => 'العنوان', 'text' => 'النص', 'btn' => 'نص الرابط', 'url' => 'رابط', 'image' => 'رابط الصورة' ) ),
-		'stats'          => array( 'label' => 'الإحصائيات', 'fields' => array(), 'items' => $t( 2, 'الرقم | الوصف' ) ),
-		'faq'            => array( 'label' => 'الأسئلة الشائعة', 'fields' => array( 'title' => 'العنوان' ), 'items' => $t( 2, 'السؤال | الجواب' ), 'default_items' => 'faq' ),
-		'cta'            => array( 'label' => 'دعوة للتواصل', 'fields' => array( 'title' => 'العنوان', 'text' => 'النص', 'btn' => 'نص الزر', 'url' => 'رابط الزر' ) ),
-		'journal'        => array( 'label' => 'المدونة', 'fields' => array( 'title' => 'العنوان', 'subtitle' => 'النص' ) ),
-		'contact'        => array( 'label' => 'وسائل التواصل', 'fields' => array( 'title' => 'العنوان', 'subtitle' => 'النص' ) ),
+		'hero'           => array( 'label' => __( 'الهيرو (الواجهة الرئيسية)', 'masar-altamayuz' ), 'fields' => array( 'eyebrow' => __( 'عبارة صغيرة', 'masar-altamayuz' ), 'title' => __( 'العنوان', 'masar-altamayuz' ), 'subtitle' => __( 'النص الفرعي', 'masar-altamayuz' ), 'btn1' => __( 'نص الزر 1', 'masar-altamayuz' ), 'btn1_url' => __( 'رابط الزر 1', 'masar-altamayuz' ), 'btn2' => __( 'نص الزر 2', 'masar-altamayuz' ), 'btn2_url' => __( 'رابط الزر 2', 'masar-altamayuz' ), 'image' => __( 'رابط الصورة', 'masar-altamayuz' ) ) ),
+		'features'       => array( 'label' => __( 'شريط المميزات', 'masar-altamayuz' ), 'fields' => array(), 'items' => $t( 3, __( 'إيموجي | العنوان | الوصف', 'masar-altamayuz' ) ) ),
+		'cats-circles'   => array( 'label' => __( 'تصنيفات دائرية', 'masar-altamayuz' ), 'fields' => array( 'title' => __( 'العنوان', 'masar-altamayuz' ) ), 'items' => array( 'type' => 'assoc', 'keys' => array( 'label', 'emoji' ), 'hint' => __( 'الاسم | إيموجي (يتجاهل لو عندك تصنيفات حقيقية)', 'masar-altamayuz' ) ) ),
+		'cats-cards'     => array( 'label' => __( 'تصنيفات ككروت', 'masar-altamayuz' ), 'fields' => array( 'title' => __( 'العنوان', 'masar-altamayuz' ) ), 'items' => array( 'type' => 'assoc', 'keys' => array( 'label', 'emoji' ), 'hint' => __( 'الاسم | إيموجي', 'masar-altamayuz' ) ) ),
+		'products'       => array( 'label' => __( 'المنتجات', 'masar-altamayuz' ), 'fields' => array( 'title' => __( 'العنوان', 'masar-altamayuz' ), 'subtitle' => __( 'النص الفرعي', 'masar-altamayuz' ), 'btn' => __( 'نص الزر', 'masar-altamayuz' ), 'count' => __( 'عدد المنتجات', 'masar-altamayuz' ) ) ),
+		'promo-banners'  => array( 'label' => __( 'بانرات ترويجية', 'masar-altamayuz' ), 'fields' => array(), 'items' => array( 'type' => 'assoc', 'keys' => array( 'kicker', 'title', 'text', 'badge', 'btn', 'tone', 'emoji', 'image' ), 'hint' => __( 'عنوان صغير | العنوان | الوصف | شارة | نص الزر | اللون (dark/mocha/sand) | إيموجي | رابط صورة', 'masar-altamayuz' ) ) ),
+		'feature-banner' => array( 'label' => __( 'بانر المجموعة الكبير', 'masar-altamayuz' ), 'fields' => array( 'kicker' => __( 'عنوان صغير', 'masar-altamayuz' ), 'title' => __( 'العنوان', 'masar-altamayuz' ), 'text' => __( 'الوصف', 'masar-altamayuz' ), 'btn' => __( 'نص الزر', 'masar-altamayuz' ), 'url' => __( 'رابط الزر', 'masar-altamayuz' ), 'image' => __( 'رابط صورة الخلفية', 'masar-altamayuz' ) ) ),
+		'testimonials'   => array( 'label' => __( 'آراء العملاء', 'masar-altamayuz' ), 'fields' => array( 'title' => __( 'العنوان', 'masar-altamayuz' ), 'kicker' => __( 'عنوان صغير', 'masar-altamayuz' ) ), 'items' => $t( 2, __( 'الاسم | الرأي', 'masar-altamayuz' ) ) ),
+		'gallery'        => array( 'label' => __( 'معرض (إنستجرام/مشاريع)', 'masar-altamayuz' ), 'fields' => array( 'title' => __( 'العنوان', 'masar-altamayuz' ), 'kicker' => __( 'عنوان صغير', 'masar-altamayuz' ), 'handle' => __( 'حساب إنستجرام', 'masar-altamayuz' ), 'images' => __( 'صور المعرض (6 أو 12 صورة، صورة في كل سطر)', 'masar-altamayuz' ) ) ),
+		'newsletter'     => array( 'label' => __( 'النشرة البريدية', 'masar-altamayuz' ), 'fields' => array( 'title' => __( 'العنوان', 'masar-altamayuz' ), 'text' => __( 'النص', 'masar-altamayuz' ) ) ),
+		'brands'         => array( 'label' => __( 'شريط العلامات', 'masar-altamayuz' ), 'fields' => array( 'title' => __( 'العنوان', 'masar-altamayuz' ) ), 'items' => array( 'type' => 'strings', 'hint' => __( 'اسم في كل سطر', 'masar-altamayuz' ) ) ),
+		'services'       => array( 'label' => __( 'الخدمات', 'masar-altamayuz' ), 'fields' => array( 'title' => __( 'العنوان', 'masar-altamayuz' ), 'kicker' => __( 'عنوان صغير', 'masar-altamayuz' ) ), 'items' => $t( 3, __( 'إيموجي | الخدمة | الوصف', 'masar-altamayuz' ) ) ),
+		'process'        => array( 'label' => __( 'خطوات العمل', 'masar-altamayuz' ), 'fields' => array( 'title' => __( 'العنوان', 'masar-altamayuz' ), 'kicker' => __( 'عنوان صغير', 'masar-altamayuz' ) ), 'items' => $t( 2, __( 'الخطوة | الوصف', 'masar-altamayuz' ) ) ),
+		'about'          => array( 'label' => __( 'من نحن', 'masar-altamayuz' ), 'fields' => array( 'kicker' => __( 'عنوان صغير', 'masar-altamayuz' ), 'title' => __( 'العنوان', 'masar-altamayuz' ), 'text' => __( 'النص', 'masar-altamayuz' ), 'btn' => __( 'نص الرابط', 'masar-altamayuz' ), 'url' => __( 'رابط', 'masar-altamayuz' ), 'image' => __( 'رابط الصورة', 'masar-altamayuz' ) ) ),
+		'stats'          => array( 'label' => __( 'الإحصائيات', 'masar-altamayuz' ), 'fields' => array(), 'items' => $t( 2, __( 'الرقم | الوصف', 'masar-altamayuz' ) ) ),
+		'faq'            => array( 'label' => __( 'الأسئلة الشائعة', 'masar-altamayuz' ), 'fields' => array( 'title' => __( 'العنوان', 'masar-altamayuz' ) ), 'items' => $t( 2, __( 'السؤال | الجواب', 'masar-altamayuz' ) ), 'default_items' => 'faq' ),
+		'cta'            => array( 'label' => __( 'دعوة للتواصل', 'masar-altamayuz' ), 'fields' => array( 'title' => __( 'العنوان', 'masar-altamayuz' ), 'text' => __( 'النص', 'masar-altamayuz' ), 'btn' => __( 'نص الزر', 'masar-altamayuz' ), 'url' => __( 'رابط الزر', 'masar-altamayuz' ) ) ),
+		'journal'        => array( 'label' => __( 'المدونة', 'masar-altamayuz' ), 'fields' => array( 'title' => __( 'العنوان', 'masar-altamayuz' ), 'subtitle' => __( 'النص', 'masar-altamayuz' ) ) ),
+		'contact'        => array( 'label' => __( 'وسائل التواصل', 'masar-altamayuz' ), 'fields' => array( 'title' => __( 'العنوان', 'masar-altamayuz' ), 'subtitle' => __( 'النص', 'masar-altamayuz' ) ) ),
 	);
 }
 
@@ -95,7 +95,7 @@ add_filter( 'masar_preset_sections', 'masar_apply_layout', 10, 2 );
 if ( is_admin() ) {
 
 	add_action( 'admin_menu', function () {
-		add_theme_page( 'استوديو مسار التميز', '✨ استوديو مسار', 'manage_options', 'masar-studio', 'masar_studio_page' );
+		add_theme_page( __( 'استوديو مسار التميز', 'masar-altamayuz' ), __( '✨ استوديو مسار', 'masar-altamayuz' ), 'manage_options', 'masar-studio', 'masar_studio_page' );
 	} );
 
 	/** مكتبة الوسائط وسكربت اختيار الصور في صفحة الاستوديو بس */
@@ -107,11 +107,11 @@ if ( is_admin() ) {
 
 	/** حفظ ترتيب وتعديلات السكاشن */
 	add_action( 'admin_post_masar_save_layout', function () {
-		if ( ! current_user_can( 'manage_options' ) ) { wp_die( 'غير مسموح' ); }
+		if ( ! current_user_can( 'manage_options' ) ) { wp_die( __( 'غير مسموح', 'masar-altamayuz' ) ); }
 		check_admin_referer( 'masar_layout' );
 		$presets = masar_presets();
 		$key     = isset( $_POST['preset'] ) ? sanitize_key( wp_unslash( $_POST['preset'] ) ) : '';
-		if ( ! isset( $presets[ $key ] ) ) { wp_die( 'قالب غير معروف' ); }
+		if ( ! isset( $presets[ $key ] ) ) { wp_die( __( 'قالب غير معروف', 'masar-altamayuz' ) ); }
 		$specs   = masar_section_specs();
 		$defaults = $presets[ $key ]['sections'];
 		$order   = isset( $_POST['order'] ) ? array_map( 'intval', (array) wp_unslash( $_POST['order'] ) ) : array();
@@ -148,7 +148,7 @@ if ( is_admin() ) {
 	} );
 
 	add_action( 'admin_post_masar_reset_layout', function () {
-		if ( ! current_user_can( 'manage_options' ) ) { wp_die( 'غير مسموح' ); }
+		if ( ! current_user_can( 'manage_options' ) ) { wp_die( __( 'غير مسموح', 'masar-altamayuz' ) ); }
 		check_admin_referer( 'masar_layout' );
 		$key = isset( $_POST['preset'] ) ? sanitize_key( wp_unslash( $_POST['preset'] ) ) : '';
 		delete_option( 'masar_layout_' . $key );
@@ -165,10 +165,10 @@ if ( is_admin() ) {
 		$tab   = ( isset( $_GET['tab'] ) && 'demo' === $_GET['tab'] ) ? 'demo' : 'layout'; // phpcs:ignore WordPress.Security.NonceVerification
 		$msg   = isset( $_GET['msg'] ) ? sanitize_key( wp_unslash( $_GET['msg'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification
 		$base  = admin_url( 'themes.php?page=masar-studio' );
-		$notes = array( 'saved' => 'تم حفظ التعديلات ✅', 'reset' => 'رجّعنا القالب لوضعه الأصلي ✅', 'imported' => 'تم استيراد المحتوى التجريبي ✅', 'removed' => 'تم حذف المحتوى التجريبي ✅', 'exists' => 'المحتوى التجريبي مستورد بالفعل.' );
-		echo '<div class="wrap masar-studio" dir="rtl"><h1>✨ استوديو مسار التميز</h1>';
+		$notes = array( 'saved' => __( 'تم حفظ التعديلات ✅', 'masar-altamayuz' ), 'reset' => __( 'رجّعنا القالب لوضعه الأصلي ✅', 'masar-altamayuz' ), 'imported' => __( 'تم استيراد المحتوى التجريبي ✅', 'masar-altamayuz' ), 'removed' => __( 'تم حذف المحتوى التجريبي ✅', 'masar-altamayuz' ), 'exists' => __( 'المحتوى التجريبي مستورد بالفعل.', 'masar-altamayuz' ) );
+		echo '<div class="wrap masar-studio" dir="rtl"><h1>' . esc_html__( '✨ استوديو مسار التميز', 'masar-altamayuz' ) . '</h1>';
 		if ( isset( $notes[ $msg ] ) ) { echo '<div class="notice notice-success is-dismissible"><p>' . esc_html( $notes[ $msg ] ) . '</p></div>'; }
-		echo '<h2 class="nav-tab-wrapper"><a class="nav-tab ' . ( 'layout' === $tab ? 'nav-tab-active' : '' ) . '" href="' . esc_url( add_query_arg( 'preset', $key, $base ) ) . '">تعديل السكاشن</a><a class="nav-tab ' . ( 'demo' === $tab ? 'nav-tab-active' : '' ) . '" href="' . esc_url( add_query_arg( 'tab', 'demo', $base ) ) . '">محتوى تجريبي</a></h2>';
+		echo '<h2 class="nav-tab-wrapper"><a class="nav-tab ' . ( 'layout' === $tab ? 'nav-tab-active' : '' ) . '" href="' . esc_url( add_query_arg( 'preset', $key, $base ) ) . '">' . esc_html__( 'تعديل السكاشن', 'masar-altamayuz' ) . '</a><a class="nav-tab ' . ( 'demo' === $tab ? 'nav-tab-active' : '' ) . '" href="' . esc_url( add_query_arg( 'tab', 'demo', $base ) ) . '">' . esc_html__( 'محتوى تجريبي', 'masar-altamayuz' ) . '</a></h2>';
 		echo '<style>.masar-studio .mrow{background:#fff;border:1px solid #dcdcde;border-radius:8px;margin:10px 0;padding:0}.masar-studio .mhead{display:flex;gap:10px;align-items:center;padding:10px 14px;background:#f6f7f7;border-radius:8px 8px 0 0}.masar-studio .mhead b{flex:1}.masar-studio .mbody{padding:12px 14px;display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}.masar-studio .mbody label{display:block;font-size:12px;color:#50575e;margin-bottom:3px}.masar-studio .mbody input[type=text],.masar-studio .mbody textarea{width:100%}.masar-studio .mfull{grid-column:1/-1}.masar-studio .off .mbody{opacity:.45}.masar-studio .hint{color:#787c82;font-size:12px}.masar-studio .masar-img{display:flex;gap:6px;align-items:center}.masar-studio .masar-img input{flex:1}.masar-studio .masar-prev{width:44px;height:44px;object-fit:cover;border-radius:6px;border:1px solid #dcdcde}.masar-studio .masar-pick-multi,.masar-studio .masar-pick-ins{margin-top:6px}</style>';
 		if ( 'demo' === $tab ) { masar_studio_demo_tab(); } else { masar_studio_layout_tab( $key, $presets, $base ); }
 		echo '</div>';
@@ -186,9 +186,9 @@ if ( is_admin() ) {
 		} else {
 			foreach ( $defaults as $i => $d ) { $rows[] = array( 'idx' => $i, 'on' => 1, 'args' => array(), 'items' => '' ); }
 		}
-		echo '<form method="get" action="' . esc_url( admin_url( 'themes.php' ) ) . '" style="margin:14px 0"><input type="hidden" name="page" value="masar-studio"><label>القالب: <select name="preset" onchange="this.form.submit()">';
+		echo '<form method="get" action="' . esc_url( admin_url( 'themes.php' ) ) . '" style="margin:14px 0"><input type="hidden" name="page" value="masar-studio"><label>' . esc_html__( 'القالب: ', 'masar-altamayuz' ) . '<select name="preset" onchange="this.form.submit()">';
 		foreach ( $presets as $k => $p ) { echo '<option value="' . esc_attr( $k ) . '"' . selected( $k, $key, false ) . '>' . esc_html( $p['label'] ) . '</option>'; }
-		echo '</select></label> <span class="hint">كل تعديل هنا بيتطبق على القالب ده سواء كرئيسية أو كصفحة بقالب.</span></form>';
+		echo '</select></label> <span class="hint">' . esc_html__( 'كل تعديل هنا بيتطبق على القالب ده سواء كرئيسية أو كصفحة بقالب.', 'masar-altamayuz' ) . '</span></form>';
 		echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '" id="masar-layout-form">';
 		wp_nonce_field( 'masar_layout' );
 		echo '<input type="hidden" name="action" value="masar_save_layout"><input type="hidden" name="preset" value="' . esc_attr( $key ) . '"><div id="masar-rows">';
@@ -198,7 +198,7 @@ if ( is_admin() ) {
 			$dargs = isset( $defaults[ $i ][1] ) ? $defaults[ $i ][1] : array();
 			$spec = isset( $specs[ $name ] ) ? $specs[ $name ] : array( 'label' => $name, 'fields' => array() );
 			echo '<div class="mrow' . ( empty( $r['on'] ) ? ' off' : '' ) . '" data-i="' . (int) $i . '"><input type="hidden" name="order[]" value="' . (int) $i . '">';
-			echo '<div class="mhead"><label><input type="hidden" name="layout[' . (int) $i . '][on]" value="0"><input type="checkbox" class="mon" name="layout[' . (int) $i . '][on]" value="1"' . checked( ! empty( $r['on'] ), true, false ) . '> إظهار</label><b>' . esc_html( $spec['label'] ) . '</b><button type="button" class="button mup">▲</button><button type="button" class="button mdn">▼</button></div>';
+			echo '<div class="mhead"><label><input type="hidden" name="layout[' . (int) $i . '][on]" value="0"><input type="checkbox" class="mon" name="layout[' . (int) $i . '][on]" value="1"' . checked( ! empty( $r['on'] ), true, false ) . '>' . esc_html__( ' إظهار', 'masar-altamayuz' ) . '</label><b>' . esc_html( $spec['label'] ) . '</b><button type="button" class="button mup">▲</button><button type="button" class="button mdn">▼</button></div>';
 			echo '<div class="mbody">';
 			foreach ( $spec['fields'] as $fk => $fl ) {
 				$val = isset( $r['args'][ $fk ] ) ? $r['args'][ $fk ] : '';
@@ -207,11 +207,11 @@ if ( is_admin() ) {
 				echo '<div class="' . esc_attr( trim( $full ) ) . '"><label>' . esc_html( $fl ) . '</label>';
 				if ( 'text' === $fk ) { echo '<textarea rows="3" name="layout[' . (int) $i . '][args][' . esc_attr( $fk ) . ']" placeholder="' . esc_attr( $ph ) . '">' . esc_textarea( $val ) . '</textarea>'; }
 				elseif ( 'images' === $fk ) {
-					echo '<textarea rows="4" name="layout[' . (int) $i . '][args][' . esc_attr( $fk ) . ']" placeholder="' . esc_attr( 'روابط الصور، رابط في كل سطر' ) . '">' . esc_textarea( is_array( $val ) ? implode( "\n", $val ) : $val ) . '</textarea>';
-					echo '<button type="button" class="button masar-pick-multi">🖼️ إضافة صور من المكتبة</button>';
+					echo '<textarea rows="4" name="layout[' . (int) $i . '][args][' . esc_attr( $fk ) . ']" placeholder="' . esc_attr( __( 'روابط الصور، رابط في كل سطر', 'masar-altamayuz' ) ) . '">' . esc_textarea( is_array( $val ) ? implode( "\n", $val ) : $val ) . '</textarea>';
+					echo '<button type="button" class="button masar-pick-multi">' . esc_html__( '🖼️ إضافة صور من المكتبة', 'masar-altamayuz' ) . '</button>';
 				} elseif ( 'image' === $fk ) {
 					echo '<div class="masar-img"><input type="text" class="masar-img-url" name="layout[' . (int) $i . '][args][' . esc_attr( $fk ) . ']" value="' . esc_attr( $val ) . '" placeholder="' . esc_attr( $ph ) . '">';
-					echo '<button type="button" class="button masar-pick">🖼️ اختيار صورة</button><button type="button" class="button masar-clear">حذف</button>';
+					echo '<button type="button" class="button masar-pick">' . esc_html__( '🖼️ اختيار صورة', 'masar-altamayuz' ) . '</button><button type="button" class="button masar-clear">' . esc_html__( 'حذف', 'masar-altamayuz' ) . '</button>';
 					echo '<img class="masar-prev" alt=""' . ( $val ? ' src="' . esc_url( $val ) . '"' : ' hidden' ) . '></div>';
 				}
 				else { echo '<input type="text" name="layout[' . (int) $i . '][args][' . esc_attr( $fk ) . ']" value="' . esc_attr( $val ) . '" placeholder="' . esc_attr( $ph ) . '">'; }
@@ -220,17 +220,17 @@ if ( is_admin() ) {
 			if ( isset( $spec['items'] ) ) {
 				$orig = isset( $dargs['items'] ) ? $dargs['items'] : ( isset( $spec['default_items'] ) ? masar_faq_defaults() : array() );
 				$txt  = ! empty( $r['items'] ) ? $r['items'] : masar_items_to_text( $orig, $spec['items'] );
-				echo '<div class="mfull"><label>العناصر — سطر لكل عنصر: <span class="hint">' . esc_html( $spec['items']['hint'] ) . '</span></label><textarea rows="5" name="layout[' . (int) $i . '][items]">' . esc_textarea( $txt ) . '</textarea>';
+				echo '<div class="mfull"><label>' . esc_html__( 'العناصر — سطر لكل عنصر: ', 'masar-altamayuz' ) . '<span class="hint">' . esc_html( $spec['items']['hint'] ) . '</span></label><textarea rows="5" name="layout[' . (int) $i . '][items]">' . esc_textarea( $txt ) . '</textarea>';
 					if ( isset( $spec['items']['keys'] ) && in_array( 'image', $spec['items']['keys'], true ) ) {
-						echo '<button type="button" class="button masar-pick-ins">🖼️ إدراج رابط صورة من المكتبة</button> <span class="hint">حطي المؤشر مكان خانة الصورة في السطر الأول، واضغطي الزر.</span>';
+						echo '<button type="button" class="button masar-pick-ins">' . esc_html__( '🖼️ إدراج رابط صورة من المكتبة', 'masar-altamayuz' ) . '</button> <span class="hint">' . esc_html__( 'حطي المؤشر مكان خانة الصورة في السطر الأول، واضغطي الزر.', 'masar-altamayuz' ) . '</span>';
 					}
 					echo '</div>';
 			}
-			if ( ! $spec['fields'] && ! isset( $spec['items'] ) ) { echo '<p class="hint mfull">السكشن ده محتواه تلقائي، تقدري تظهريه/تخفيه وترتبيه بس.</p>'; }
+			if ( ! $spec['fields'] && ! isset( $spec['items'] ) ) { echo '<p class="hint mfull">' . esc_html__( 'السكشن ده محتواه تلقائي، تقدري تظهريه/تخفيه وترتبيه بس.', 'masar-altamayuz' ) . '</p>'; }
 			echo '</div></div>';
 		}
-		echo '</div><p><button class="button button-primary button-large">💾 حفظ التعديلات</button> ';
-		echo '<button class="button" type="submit" name="action" value="masar_reset_layout" onclick="return confirm(\'ترجيع القالب للوضع الأصلي؟\')">↩️ رجوع للأصل</button></p></form>';
+		echo '</div><p><button class="button button-primary button-large">' . esc_html__( '💾 حفظ التعديلات', 'masar-altamayuz' ) . '</button> ';
+		echo '<button class="button" type="submit" name="action" value="masar_reset_layout" onclick="return confirm(' . esc_attr( wp_json_encode( __( 'ترجيع القالب للوضع الأصلي؟', 'masar-altamayuz' ) ) ) . ')">' . esc_html__( '↩️ رجوع للأصل', 'masar-altamayuz' ) . '</button></p></form>';
 		echo '<script>(function(){var box=document.getElementById("masar-rows");box.addEventListener("click",function(e){var r=e.target.closest(".mrow");if(!r)return;if(e.target.classList.contains("mup")&&r.previousElementSibling){box.insertBefore(r,r.previousElementSibling)}if(e.target.classList.contains("mdn")&&r.nextElementSibling){box.insertBefore(r.nextElementSibling,r)}});box.addEventListener("change",function(e){if(e.target.classList.contains("mon")){e.target.closest(".mrow").classList.toggle("off",!e.target.checked)}});})();</script>';
 	}
 }

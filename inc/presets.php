@@ -9,108 +9,108 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 function masar_presets() {
 
 	$features = array(
-		array( 'truck', 'شحن سريع', 'توصيل لحد باب البيت' ),
-		array( 'undo-2', 'استرجاع سهل', 'خلال 14 يوم' ),
-		array( 'shield-check', 'دفع آمن', 'بياناتك محمية 100%' ),
-		array( 'message-circle', 'دعم مباشر', 'على واتساب في أي وقت' ),
+		array( 'truck', __( 'شحن سريع', 'masar-altamayuz' ), __( 'توصيل لحد باب البيت', 'masar-altamayuz' ) ),
+		array( 'undo-2', __( 'استرجاع سهل', 'masar-altamayuz' ), __( 'خلال 14 يوم', 'masar-altamayuz' ) ),
+		array( 'shield-check', __( 'دفع آمن', 'masar-altamayuz' ), __( 'بياناتك محمية 100%', 'masar-altamayuz' ) ),
+		array( 'message-circle', __( 'دعم مباشر', 'masar-altamayuz' ), __( 'على واتساب في أي وقت', 'masar-altamayuz' ) ),
 	);
 
 	$testi = array(
-		array( 'سارة م.', 'الجودة أعلى من توقعي والتغليف شيك جداً. أكيد هطلب تاني.' ),
-		array( 'كريم ع.', 'التوصيل كان قبل الميعاد والخدمة محترمة من أول رسالة.' ),
-		array( 'ندى ه.', 'تشكيلة راقية وأسعار مظبوطة، بقيت عميلة دايمة.' ),
+		array( __( 'سارة م.', 'masar-altamayuz' ), __( 'الجودة أعلى من توقعي والتغليف شيك جداً. أكيد هطلب تاني.', 'masar-altamayuz' ) ),
+		array( __( 'كريم ع.', 'masar-altamayuz' ), __( 'التوصيل كان قبل الميعاد والخدمة محترمة من أول رسالة.', 'masar-altamayuz' ) ),
+		array( __( 'ندى ه.', 'masar-altamayuz' ), __( 'تشكيلة راقية وأسعار مظبوطة، بقيت عميلة دايمة.', 'masar-altamayuz' ) ),
 	);
 
 	return array(
 
 		/* ===== 1) أزياء وموضة — بيج دافئ ===== */
 		'fashion' => array(
-			'label'    => 'أزياء وموضة (بيج أنيق)',
+			'label'    => __( 'أزياء وموضة (بيج أنيق)', 'masar-altamayuz' ),
 			'skin'     => null,
 			'fonts'    => array( 'head' => 'Amiri', 'body' => 'Cairo' ),
 			'sections' => array(
-				array( 'hero', array( 'style' => 'full', 'eyebrow' => 'تشكيلة جديدة', 'title' => 'أناقة تدوم. أسلوب عصري.', 'subtitle' => 'قطع يومية راقية مصممة عشان تحسسك بالثقة في كل مناسبة.', 'btn1' => 'تسوّقي الجديد', 'btn1_url' => '#products', 'btn2' => 'استكشفي المجموعات', 'btn2_url' => '#cats', 'emoji' => 'shirt' ) ),
+				array( 'hero', array( 'style' => 'full', 'eyebrow' => __( 'تشكيلة جديدة', 'masar-altamayuz' ), 'title' => __( 'أناقة تدوم. أسلوب عصري.', 'masar-altamayuz' ), 'subtitle' => __( 'قطع يومية راقية مصممة عشان تحسسك بالثقة في كل مناسبة.', 'masar-altamayuz' ), 'btn1' => __( 'تسوّقي الجديد', 'masar-altamayuz' ), 'btn1_url' => '#products', 'btn2' => __( 'استكشفي المجموعات', 'masar-altamayuz' ), 'btn2_url' => '#cats', 'emoji' => 'shirt' ) ),
 				array( 'cats-circles', array( 'id' => 'cats', 'items' => array(
-					array( 'label' => 'فساتين', 'emoji' => 'shirt' ), array( 'label' => 'بلوزات', 'emoji' => 'shirt' ), array( 'label' => 'بناطيل', 'emoji' => 'ruler' ),
-					array( 'label' => 'شنط', 'emoji' => 'handbag' ), array( 'label' => 'إكسسوارات', 'emoji' => 'gem' ), array( 'label' => 'جاكيتات', 'emoji' => 'briefcase' ), array( 'label' => 'أحذية', 'emoji' => 'footprints' ),
+					array( 'label' => __( 'فساتين', 'masar-altamayuz' ), 'emoji' => 'shirt' ), array( 'label' => __( 'بلوزات', 'masar-altamayuz' ), 'emoji' => 'shirt' ), array( 'label' => __( 'بناطيل', 'masar-altamayuz' ), 'emoji' => 'ruler' ),
+					array( 'label' => __( 'شنط', 'masar-altamayuz' ), 'emoji' => 'handbag' ), array( 'label' => __( 'إكسسوارات', 'masar-altamayuz' ), 'emoji' => 'gem' ), array( 'label' => __( 'جاكيتات', 'masar-altamayuz' ), 'emoji' => 'briefcase' ), array( 'label' => __( 'أحذية', 'masar-altamayuz' ), 'emoji' => 'footprints' ),
 				) ) ),
-				array( 'products', array( 'id' => 'products', 'variant' => 'side', 'title' => 'وصل حديثاً', 'subtitle' => 'أحدث القطع وصلت. كوني أول من تختار.', 'btn' => 'شوفي الكل', 'count' => 4 ) ),
+				array( 'products', array( 'id' => 'products', 'variant' => 'side', 'title' => __( 'وصل حديثاً', 'masar-altamayuz' ), 'subtitle' => __( 'أحدث القطع وصلت. كوني أول من تختار.', 'masar-altamayuz' ), 'btn' => __( 'شوفي الكل', 'masar-altamayuz' ), 'count' => 4 ) ),
 				array( 'promo-banners', array( 'items' => array(
-					array( 'kicker' => 'مجموعة الصيف', 'title' => 'أساسيات الصيف', 'text' => 'خفيفة. مريحة. أساسية.', 'badge' => 'خصم حتى 30%', 'btn' => 'تسوّقي الآن', 'tone' => 'dark', 'emoji' => 'sun' ),
-					array( 'kicker' => 'لمسة أخيرة', 'title' => 'اختيارات الإكسسوار', 'text' => 'التفاصيل اللي تكمّل الإطلالة.', 'btn' => 'شوفي الإكسسوارات', 'tone' => 'mocha', 'emoji' => 'handbag' ),
+					array( 'kicker' => __( 'مجموعة الصيف', 'masar-altamayuz' ), 'title' => __( 'أساسيات الصيف', 'masar-altamayuz' ), 'text' => __( 'خفيفة. مريحة. أساسية.', 'masar-altamayuz' ), 'badge' => __( 'خصم حتى 30%', 'masar-altamayuz' ), 'btn' => __( 'تسوّقي الآن', 'masar-altamayuz' ), 'tone' => 'dark', 'emoji' => 'sun' ),
+					array( 'kicker' => __( 'لمسة أخيرة', 'masar-altamayuz' ), 'title' => __( 'اختيارات الإكسسوار', 'masar-altamayuz' ), 'text' => __( 'التفاصيل اللي تكمّل الإطلالة.', 'masar-altamayuz' ), 'btn' => __( 'شوفي الإكسسوارات', 'masar-altamayuz' ), 'tone' => 'mocha', 'emoji' => 'handbag' ),
 				) ) ),
-				array( 'testimonials', array( 'title' => 'قالوا عنّا', 'items' => $testi ) ),
-				array( 'gallery', array( 'title' => 'تابعونا على إنستجرام', 'handle' => '@masar.style' ) ),
+				array( 'testimonials', array( 'title' => __( 'قالوا عنّا', 'masar-altamayuz' ), 'items' => $testi ) ),
+				array( 'gallery', array( 'title' => __( 'تابعونا على إنستجرام', 'masar-altamayuz' ), 'handle' => '@masar.style' ) ),
 				array( 'newsletter', array() ),
 			),
 		),
 
 		/* ===== 2) فخامة داكنة — إكسسوارات ===== */
 		'luxe' => array(
-			'label'    => 'فخامة داكنة (إكسسوارات وساعات)',
+			'label'    => __( 'فخامة داكنة (إكسسوارات وساعات)', 'masar-altamayuz' ),
 			'skin'     => 'dark',
 			'fonts'    => array( 'head' => 'Noto Naskh Arabic', 'body' => 'IBM Plex Sans Arabic' ),
 			'sections' => array(
-				array( 'hero', array( 'style' => 'center', 'eyebrow' => 'اختاري. عبّري. تألقي.', 'title' => 'إكسسوارات فاخرة', 'subtitle' => 'قطع تكمّل حكاية أسلوبك الخاص.', 'btn1' => 'تسوّق الجديد', 'btn1_url' => '#picks', 'emoji' => 'watch' ) ),
+				array( 'hero', array( 'style' => 'center', 'eyebrow' => __( 'اختاري. عبّري. تألقي.', 'masar-altamayuz' ), 'title' => __( 'إكسسوارات فاخرة', 'masar-altamayuz' ), 'subtitle' => __( 'قطع تكمّل حكاية أسلوبك الخاص.', 'masar-altamayuz' ), 'btn1' => __( 'تسوّق الجديد', 'masar-altamayuz' ), 'btn1_url' => '#picks', 'emoji' => 'watch' ) ),
 				array( 'features', array( 'variant' => 'dark', 'items' => $features ) ),
 				array( 'cats-circles', array( 'items' => array(
-					array( 'label' => 'حقائب', 'emoji' => 'handbag' ), array( 'label' => 'مجوهرات', 'emoji' => 'gem' ), array( 'label' => 'نظارات', 'emoji' => 'glasses' ),
-					array( 'label' => 'ساعات', 'emoji' => 'watch' ), array( 'label' => 'أحذية', 'emoji' => 'footprints' ), array( 'label' => 'إيشاربات', 'emoji' => 'ribbon' ), array( 'label' => 'عطور', 'emoji' => 'spray-can' ),
+					array( 'label' => __( 'حقائب', 'masar-altamayuz' ), 'emoji' => 'handbag' ), array( 'label' => __( 'مجوهرات', 'masar-altamayuz' ), 'emoji' => 'gem' ), array( 'label' => __( 'نظارات', 'masar-altamayuz' ), 'emoji' => 'glasses' ),
+					array( 'label' => __( 'ساعات', 'masar-altamayuz' ), 'emoji' => 'watch' ), array( 'label' => __( 'أحذية', 'masar-altamayuz' ), 'emoji' => 'footprints' ), array( 'label' => __( 'إيشاربات', 'masar-altamayuz' ), 'emoji' => 'ribbon' ), array( 'label' => __( 'عطور', 'masar-altamayuz' ), 'emoji' => 'spray-can' ),
 				) ) ),
 				array( 'promo-banners', array( 'cols' => 3, 'items' => array(
-					array( 'kicker' => 'موسم جديد', 'title' => 'وصل حديثاً', 'text' => 'قطع جديدة بلمسة خالدة.', 'btn' => 'تسوّق', 'tone' => 'mocha', 'emoji' => 'handbag' ),
-					array( 'kicker' => 'خالدة', 'title' => 'الأكثر مبيعاً', 'text' => 'القطع اللي الكل بيحبها.', 'btn' => 'استكشف', 'tone' => 'dark', 'emoji' => 'watch' ),
-					array( 'kicker' => 'عرض خاص', 'title' => 'خصم حتى 30%', 'text' => 'على تشكيلة مختارة لفترة محدودة.', 'btn' => 'تسوّق العروض', 'tone' => 'sand', 'emoji' => 'glasses' ),
+					array( 'kicker' => __( 'موسم جديد', 'masar-altamayuz' ), 'title' => __( 'وصل حديثاً', 'masar-altamayuz' ), 'text' => __( 'قطع جديدة بلمسة خالدة.', 'masar-altamayuz' ), 'btn' => __( 'تسوّق', 'masar-altamayuz' ), 'tone' => 'mocha', 'emoji' => 'handbag' ),
+					array( 'kicker' => __( 'خالدة', 'masar-altamayuz' ), 'title' => __( 'الأكثر مبيعاً', 'masar-altamayuz' ), 'text' => __( 'القطع اللي الكل بيحبها.', 'masar-altamayuz' ), 'btn' => __( 'استكشف', 'masar-altamayuz' ), 'tone' => 'dark', 'emoji' => 'watch' ),
+					array( 'kicker' => __( 'عرض خاص', 'masar-altamayuz' ), 'title' => __( 'خصم حتى 30%', 'masar-altamayuz' ), 'text' => __( 'على تشكيلة مختارة لفترة محدودة.', 'masar-altamayuz' ), 'btn' => __( 'تسوّق العروض', 'masar-altamayuz' ), 'tone' => 'sand', 'emoji' => 'glasses' ),
 				) ) ),
-				array( 'products', array( 'id' => 'picks', 'variant' => 'grid', 'title' => 'اختياراتنا المميزة', 'count' => 6, 'cols' => 6 ) ),
-				array( 'brands', array( 'title' => 'ثقة أشهر العلامات', 'items' => array( 'COACH', 'MICHAEL KORS', 'GUCCI', 'FOSSIL', 'PRADA', 'BURBERRY' ) ) ),
-				array( 'journal', array( 'variant' => 'dark', 'title' => 'مجلة الأسلوب', 'subtitle' => 'أفكار واتجاهات وإرشادات لإطلالة أجمل.' ) ),
+				array( 'products', array( 'id' => 'picks', 'variant' => 'grid', 'title' => __( 'اختياراتنا المميزة', 'masar-altamayuz' ), 'count' => 6, 'cols' => 6 ) ),
+				array( 'brands', array( 'title' => __( 'ثقة أشهر العلامات', 'masar-altamayuz' ), 'items' => array( 'COACH', 'MICHAEL KORS', 'GUCCI', 'FOSSIL', 'PRADA', 'BURBERRY' ) ) ),
+				array( 'journal', array( 'variant' => 'dark', 'title' => __( 'مجلة الأسلوب', 'masar-altamayuz' ), 'subtitle' => __( 'أفكار واتجاهات وإرشادات لإطلالة أجمل.', 'masar-altamayuz' ) ) ),
 				array( 'newsletter', array( 'variant' => 'inline' ) ),
 			),
 		),
 
 		/* ===== 3) خدمات وتصميم داخلي — أخضر زيتوني ===== */
 		'services' => array(
-			'label'    => 'خدمات وتصميم داخلي (طبيعي هادئ)',
+			'label'    => __( 'خدمات وتصميم داخلي (طبيعي هادئ)', 'masar-altamayuz' ),
 			'skin'     => null,
 			'fonts'    => array( 'head' => 'El Messiri', 'body' => 'Tajawal' ),
 			'sections' => array(
-				array( 'hero', array( 'style' => 'arch', 'eyebrow' => 'مساحات بروح طبيعية', 'title' => 'تصميمات جميلة تهدّي الروح وتلهمك.', 'subtitle' => 'بنصمم بيوت تجمع بين الجمال الطبيعي والراحة والوظيفة.', 'btn1' => 'استكشف أعمالنا', 'btn1_url' => '#projects', 'emoji' => 'sofa' ) ),
-				array( 'services', array( 'title' => 'تصميم مدروس لطريقة عيشك', 'kicker' => 'ماذا نقدّم', 'items' => array(
-					array( 'sofa', 'تصميم داخلي متكامل', 'من الفكرة لحد التسليم بكل تفصيلة.' ),
-					array( 'cooking-pot', 'مطابخ وحمامات', 'مساحات عملية بروح جميلة.' ),
-					array( 'frame', 'تنسيق وديكور', 'قطع مختارة بعناية تكمّل المكان.' ),
-					array( 'laptop', 'تصميم عن بُعد', 'خدمة أونلاين في أي مكان.' ),
+				array( 'hero', array( 'style' => 'arch', 'eyebrow' => __( 'مساحات بروح طبيعية', 'masar-altamayuz' ), 'title' => __( 'تصميمات جميلة تهدّي الروح وتلهمك.', 'masar-altamayuz' ), 'subtitle' => __( 'بنصمم بيوت تجمع بين الجمال الطبيعي والراحة والوظيفة.', 'masar-altamayuz' ), 'btn1' => __( 'استكشف أعمالنا', 'masar-altamayuz' ), 'btn1_url' => '#projects', 'emoji' => 'sofa' ) ),
+				array( 'services', array( 'title' => __( 'تصميم مدروس لطريقة عيشك', 'masar-altamayuz' ), 'kicker' => __( 'ماذا نقدّم', 'masar-altamayuz' ), 'items' => array(
+					array( 'sofa', __( 'تصميم داخلي متكامل', 'masar-altamayuz' ), __( 'من الفكرة لحد التسليم بكل تفصيلة.', 'masar-altamayuz' ) ),
+					array( 'cooking-pot', __( 'مطابخ وحمامات', 'masar-altamayuz' ), __( 'مساحات عملية بروح جميلة.', 'masar-altamayuz' ) ),
+					array( 'frame', __( 'تنسيق وديكور', 'masar-altamayuz' ), __( 'قطع مختارة بعناية تكمّل المكان.', 'masar-altamayuz' ) ),
+					array( 'laptop', __( 'تصميم عن بُعد', 'masar-altamayuz' ), __( 'خدمة أونلاين في أي مكان.', 'masar-altamayuz' ) ),
 				) ) ),
-				array( 'gallery', array( 'id' => 'projects', 'variant' => 'projects', 'title' => 'مساحات تحسّها بيتك', 'kicker' => 'أعمالنا', 'items' => array(
-					array( 'مقر الصنوبر', 'القاهرة' ), array( 'مطبخ الواحة', 'الإسكندرية' ), array( 'بيت الغروب', 'الجونة' ), array( 'حمام الندى', 'الشروق' ), array( 'ملاذ الزيتون', 'الساحل' ),
+				array( 'gallery', array( 'id' => 'projects', 'variant' => 'projects', 'title' => __( 'مساحات تحسّها بيتك', 'masar-altamayuz' ), 'kicker' => __( 'أعمالنا', 'masar-altamayuz' ), 'items' => array(
+					array( __( 'مقر الصنوبر', 'masar-altamayuz' ), __( 'القاهرة', 'masar-altamayuz' ) ), array( __( 'مطبخ الواحة', 'masar-altamayuz' ), __( 'الإسكندرية', 'masar-altamayuz' ) ), array( __( 'بيت الغروب', 'masar-altamayuz' ), __( 'الجونة', 'masar-altamayuz' ) ), array( __( 'حمام الندى', 'masar-altamayuz' ), __( 'الشروق', 'masar-altamayuz' ) ), array( __( 'ملاذ الزيتون', 'masar-altamayuz' ), __( 'الساحل', 'masar-altamayuz' ) ),
 				) ) ),
-				array( 'about', array( 'kicker' => 'قابلي المؤسسة', 'title' => 'نصمّم بنيّة. جذورنا في الطبيعة.', 'text' => "بدأنا من حبنا للمواد الطبيعية وإيماننا إن البيوت لازم تدعم راحتنا.\n\nكل مشروع هو تعاون؛ بنفهم حكايتك واحتياجك ونصمم مساحة جميلة بقدر ما هي مريحة.", 'btn' => 'اعرف أكتر عنّا', 'emoji' => 'leaf' ) ),
-				array( 'process', array( 'kicker' => 'طريقة شغلنا', 'title' => 'عملية مدروسة. تجربة سلسة.', 'items' => array(
-					array( 'اكتشاف', 'بنتعرف عليك وعلى رؤيتك ومساحتك.' ), array( 'تصميم', 'بنعمل تصميم مفصّل يعكس أسلوبك.' ), array( 'تخطيط', 'بنظبط التفاصيل ونجهز الخطة.' ), array( 'تنفيذ', 'بننسق التنفيذ مع شركاء موثوقين.' ), array( 'استمتاع', 'تدخل بيتك الجديد وتحبّه.' ),
+				array( 'about', array( 'kicker' => __( 'قابلي المؤسسة', 'masar-altamayuz' ), 'title' => __( 'نصمّم بنيّة. جذورنا في الطبيعة.', 'masar-altamayuz' ), 'text' => __( "بدأنا من حبنا للمواد الطبيعية وإيماننا إن البيوت لازم تدعم راحتنا.\n\nكل مشروع هو تعاون؛ بنفهم حكايتك واحتياجك ونصمم مساحة جميلة بقدر ما هي مريحة.", 'masar-altamayuz' ), 'btn' => __( 'اعرف أكتر عنّا', 'masar-altamayuz' ), 'emoji' => 'leaf' ) ),
+				array( 'process', array( 'kicker' => __( 'طريقة شغلنا', 'masar-altamayuz' ), 'title' => __( 'عملية مدروسة. تجربة سلسة.', 'masar-altamayuz' ), 'items' => array(
+					array( __( 'اكتشاف', 'masar-altamayuz' ), __( 'بنتعرف عليك وعلى رؤيتك ومساحتك.', 'masar-altamayuz' ) ), array( __( 'تصميم', 'masar-altamayuz' ), __( 'بنعمل تصميم مفصّل يعكس أسلوبك.', 'masar-altamayuz' ) ), array( __( 'تخطيط', 'masar-altamayuz' ), __( 'بنظبط التفاصيل ونجهز الخطة.', 'masar-altamayuz' ) ), array( __( 'تنفيذ', 'masar-altamayuz' ), __( 'بننسق التنفيذ مع شركاء موثوقين.', 'masar-altamayuz' ) ), array( __( 'استمتاع', 'masar-altamayuz' ), __( 'تدخل بيتك الجديد وتحبّه.', 'masar-altamayuz' ) ),
 				) ) ),
-				array( 'testimonials', array( 'kicker' => 'كلمات طيبة', 'title' => 'قصص من عملائنا', 'items' => $testi ) ),
+				array( 'testimonials', array( 'kicker' => __( 'كلمات طيبة', 'masar-altamayuz' ), 'title' => __( 'قصص من عملائنا', 'masar-altamayuz' ), 'items' => $testi ) ),
 				array( 'faq', array() ),
-				array( 'cta', array( 'title' => 'جاهز نبدأ؟', 'text' => 'احجز استشارة وخلّينا نصمم مساحة تحسّها إنت.', 'btn' => 'احجز استشارة' ) ),
+				array( 'cta', array( 'title' => __( 'جاهز نبدأ؟', 'masar-altamayuz' ), 'text' => __( 'احجز استشارة وخلّينا نصمم مساحة تحسّها إنت.', 'masar-altamayuz' ), 'btn' => __( 'احجز استشارة', 'masar-altamayuz' ) ) ),
 			),
 		),
 
 		/* ===== 4) ديكور ومنتجات المنزل — خريفي دافئ ===== */
 		'decor' => array(
-			'label'    => 'ديكور ومنتجات منزلية (دافئ)',
+			'label'    => __( 'ديكور ومنتجات منزلية (دافئ)', 'masar-altamayuz' ),
 			'skin'     => null,
 			'fonts'    => array( 'head' => 'Readex Pro', 'body' => 'Cairo' ),
 			'sections' => array(
-				array( 'hero', array( 'style' => 'split', 'eyebrow' => 'بيت يشبهك', 'title' => 'تصميم. دفء. بيت أجمل.', 'subtitle' => 'أساسيات منزلية مختارة بعناية تجيب الراحة والستايل والهدوء ليومك.', 'btn1' => 'تسوّق المجموعة', 'btn1_url' => '#products', 'btn2' => 'حكايتنا', 'btn2_url' => '#about', 'emoji' => 'flame', 'stats' => array( array( '+10K', 'عميل سعيد' ), array( '4.9', 'تقييم العملاء' ) ) ) ),
+				array( 'hero', array( 'style' => 'split', 'eyebrow' => __( 'بيت يشبهك', 'masar-altamayuz' ), 'title' => __( 'تصميم. دفء. بيت أجمل.', 'masar-altamayuz' ), 'subtitle' => __( 'أساسيات منزلية مختارة بعناية تجيب الراحة والستايل والهدوء ليومك.', 'masar-altamayuz' ), 'btn1' => __( 'تسوّق المجموعة', 'masar-altamayuz' ), 'btn1_url' => '#products', 'btn2' => __( 'حكايتنا', 'masar-altamayuz' ), 'btn2_url' => '#about', 'emoji' => 'flame', 'stats' => array( array( '+10K', __( 'عميل سعيد', 'masar-altamayuz' ) ), array( '4.9', __( 'تقييم العملاء', 'masar-altamayuz' ) ) ) ) ),
 				array( 'features', array( 'items' => $features ) ),
-				array( 'cats-cards', array( 'title' => 'تسوّق حسب القسم', 'items' => array(
-					array( 'label' => 'إضاءة', 'emoji' => 'lamp' ), array( 'label' => 'مفروشات', 'emoji' => 'bed-double' ), array( 'label' => 'ديكور', 'emoji' => 'frame' ), array( 'label' => 'أجواء وعطور', 'emoji' => 'flame' ),
+				array( 'cats-cards', array( 'title' => __( 'تسوّق حسب القسم', 'masar-altamayuz' ), 'items' => array(
+					array( 'label' => __( 'إضاءة', 'masar-altamayuz' ), 'emoji' => 'lamp' ), array( 'label' => __( 'مفروشات', 'masar-altamayuz' ), 'emoji' => 'bed-double' ), array( 'label' => __( 'ديكور', 'masar-altamayuz' ), 'emoji' => 'frame' ), array( 'label' => __( 'أجواء وعطور', 'masar-altamayuz' ), 'emoji' => 'flame' ),
 				) ) ),
-				array( 'feature-banner', array( 'kicker' => 'مجموعة مميزة', 'title' => 'خريف دافئ', 'text' => 'شموع وسيراميك ومفروشات لأمسيات أدفأ وأهدى.', 'btn' => 'استكشف المجموعة', 'emoji' => 'leaf' ) ),
-				array( 'products', array( 'id' => 'products', 'variant' => 'grid', 'title' => 'الأكثر طلباً', 'count' => 4, 'cols' => 4 ) ),
-				array( 'about', array( 'id' => 'about', 'kicker' => 'حكايتنا', 'title' => 'ندخل الدفء كل بيت', 'text' => 'بنختار كل قطعة بعناية، من خامات طبيعية وحرفية تعيش معاك سنين.', 'btn' => 'اقرأ حكايتنا', 'emoji' => 'house' ) ),
-				array( 'stats', array( 'items' => array( array( '+10K', 'عميل سعيد' ), array( '+500', 'منتج مختار' ), array( '4.9', 'متوسط التقييم' ), array( '24 س', 'سرعة الرد' ) ) ) ),
-				array( 'testimonials', array( 'title' => 'آراء العملاء', 'items' => $testi ) ),
+				array( 'feature-banner', array( 'kicker' => __( 'مجموعة مميزة', 'masar-altamayuz' ), 'title' => __( 'خريف دافئ', 'masar-altamayuz' ), 'text' => __( 'شموع وسيراميك ومفروشات لأمسيات أدفأ وأهدى.', 'masar-altamayuz' ), 'btn' => __( 'استكشف المجموعة', 'masar-altamayuz' ), 'emoji' => 'leaf' ) ),
+				array( 'products', array( 'id' => 'products', 'variant' => 'grid', 'title' => __( 'الأكثر طلباً', 'masar-altamayuz' ), 'count' => 4, 'cols' => 4 ) ),
+				array( 'about', array( 'id' => 'about', 'kicker' => __( 'حكايتنا', 'masar-altamayuz' ), 'title' => __( 'ندخل الدفء كل بيت', 'masar-altamayuz' ), 'text' => __( 'بنختار كل قطعة بعناية، من خامات طبيعية وحرفية تعيش معاك سنين.', 'masar-altamayuz' ), 'btn' => __( 'اقرأ حكايتنا', 'masar-altamayuz' ), 'emoji' => 'house' ) ),
+				array( 'stats', array( 'items' => array( array( '+10K', __( 'عميل سعيد', 'masar-altamayuz' ) ), array( '+500', __( 'منتج مختار', 'masar-altamayuz' ) ), array( '4.9', __( 'متوسط التقييم', 'masar-altamayuz' ) ), array( __( '24 س', 'masar-altamayuz' ), __( 'سرعة الرد', 'masar-altamayuz' ) ) ) ) ),
+				array( 'testimonials', array( 'title' => __( 'آراء العملاء', 'masar-altamayuz' ), 'items' => $testi ) ),
 				array( 'newsletter', array() ),
 			),
 		),

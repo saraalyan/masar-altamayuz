@@ -25,16 +25,16 @@ function masar_demo_import( $preset = 'fashion' ) {
 	$ids = array( 'posts' => array(), 'pages' => array(), 'att' => array(), 'terms' => array(), 'menus' => array() );
 
 	/* مقالات */
-	$cat = wp_insert_term( 'نصائح وأفكار', 'category' );
+	$cat = wp_insert_term( __( 'نصائح وأفكار', 'masar-altamayuz' ), 'category' );
 	$cid = is_wp_error( $cat ) ? 0 : (int) $cat['term_id'];
 	if ( $cid ) { $ids['terms'][] = array( $cid, 'category' ); }
-	$titles = array( 'كيف تختار الإطلالة المناسبة لكل مناسبة', 'أفكار لتنسيق البيت بلمسة دافئة', 'دليلك لاختيار الهدية المثالية', 'ثلاث خطوات لتجديد ديكور غرفتك', 'اتجاهات الموسم الجديد', 'العناية بالقطع لتدوم أطول' );
+	$titles = array( __( 'كيف تختار الإطلالة المناسبة لكل مناسبة', 'masar-altamayuz' ), __( 'أفكار لتنسيق البيت بلمسة دافئة', 'masar-altamayuz' ), __( 'دليلك لاختيار الهدية المثالية', 'masar-altamayuz' ), __( 'ثلاث خطوات لتجديد ديكور غرفتك', 'masar-altamayuz' ), __( 'اتجاهات الموسم الجديد', 'masar-altamayuz' ), __( 'العناية بالقطع لتدوم أطول', 'masar-altamayuz' ) );
 	foreach ( $titles as $n => $t ) {
 		$img = masar_demo_image( 'post' . $n, 1200, 900 );
 		$pid = wp_insert_post( array(
 			'post_title'    => $t,
 			'post_status'   => 'publish',
-			'post_content'  => "هذا مقال تجريبي لعرض شكل المدونة في الثيم.\n\n" . str_repeat( 'نص تجريبي يُستبدل بمحتواك الحقيقي لاحقاً، اكتب هنا أفكارك ونصائحك لعملائك. ', 6 ) . "\n\nيمكنك حذف هذا المحتوى بضغطة واحدة من استوديو مسار.",
+			'post_content'  => __( 'هذا مقال تجريبي لعرض شكل المدونة في الثيم.', 'masar-altamayuz' ) . "\n\n" . str_repeat( __( 'نص تجريبي يُستبدل بمحتواك الحقيقي لاحقاً، اكتب هنا أفكارك ونصائحك لعملائك. ', 'masar-altamayuz' ), 6 ) . "\n\n" . __( 'يمكنك حذف هذا المحتوى بضغطة واحدة من استوديو مسار.', 'masar-altamayuz' ),
 			'post_category' => $cid ? array( $cid ) : array(),
 			'post_date'     => gmdate( 'Y-m-d H:i:s', time() - $n * DAY_IN_SECONDS ),
 		) );
@@ -46,8 +46,8 @@ function masar_demo_import( $preset = 'fashion' ) {
 
 	/* صفحات */
 	$pages = array(
-		array( 'من نحن', 'page-about' ), array( 'الأسئلة الشائعة', 'page-faq' ), array( 'تواصل معنا', 'page-contact' ),
-		array( 'رئيسية — أزياء', 'home-fashion' ), array( 'رئيسية — فخامة داكنة', 'home-luxe' ), array( 'رئيسية — خدمات', 'home-services' ), array( 'رئيسية — ديكور', 'home-decor' ),
+		array( __( 'من نحن', 'masar-altamayuz' ), 'page-about' ), array( __( 'الأسئلة الشائعة', 'masar-altamayuz' ), 'page-faq' ), array( __( 'تواصل معنا', 'masar-altamayuz' ), 'page-contact' ),
+		array( __( 'رئيسية — أزياء', 'masar-altamayuz' ), 'home-fashion' ), array( __( 'رئيسية — فخامة داكنة', 'masar-altamayuz' ), 'home-luxe' ), array( __( 'رئيسية — خدمات', 'masar-altamayuz' ), 'home-services' ), array( __( 'رئيسية — ديكور', 'masar-altamayuz' ), 'home-decor' ),
 	);
 	$menu_pages = array();
 	foreach ( $pages as $i => $p ) {
@@ -59,10 +59,10 @@ function masar_demo_import( $preset = 'fashion' ) {
 	}
 
 	/* قائمة */
-	$mid = wp_create_nav_menu( 'مسار — القائمة الرئيسية' );
+	$mid = wp_create_nav_menu( __( 'مسار — القائمة الرئيسية', 'masar-altamayuz' ) );
 	if ( $mid && ! is_wp_error( $mid ) ) {
 		$ids['menus'][] = (int) $mid;
-		wp_update_nav_menu_item( $mid, 0, array( 'menu-item-title' => 'الرئيسية', 'menu-item-url' => home_url( '/' ), 'menu-item-type' => 'custom', 'menu-item-status' => 'publish' ) );
+		wp_update_nav_menu_item( $mid, 0, array( 'menu-item-title' => __( 'الرئيسية', 'masar-altamayuz' ), 'menu-item-url' => home_url( '/' ), 'menu-item-type' => 'custom', 'menu-item-status' => 'publish' ) );
 		foreach ( $menu_pages as $mp ) {
 			wp_update_nav_menu_item( $mid, 0, array( 'menu-item-title' => $mp[1], 'menu-item-object' => 'page', 'menu-item-object-id' => $mp[0], 'menu-item-type' => 'post_type', 'menu-item-status' => 'publish' ) );
 		}
@@ -75,7 +75,7 @@ function masar_demo_import( $preset = 'fashion' ) {
 	/* منتجات WooCommerce */
 	if ( class_exists( 'WC_Product_Simple' ) && taxonomy_exists( 'product_cat' ) ) {
 		$cats = array();
-		foreach ( array( 'فساتين', 'حقائب', 'ساعات', 'ديكور' ) as $cn ) {
+		foreach ( array( __( 'فساتين', 'masar-altamayuz' ), __( 'حقائب', 'masar-altamayuz' ), __( 'ساعات', 'masar-altamayuz' ), __( 'ديكور', 'masar-altamayuz' ) ) as $cn ) {
 			$t = wp_insert_term( $cn, 'product_cat' );
 			if ( ! is_wp_error( $t ) ) {
 				$cats[ $cn ] = (int) $t['term_id'];
@@ -84,7 +84,7 @@ function masar_demo_import( $preset = 'fashion' ) {
 				if ( $tm ) { update_term_meta( $t['term_id'], 'thumbnail_id', $tm ); $ids['att'][] = $tm; }
 			}
 		}
-		$prods = array( array( 'فستان صيفي أنيق', 690, 'فساتين' ), array( 'فستان سهرة', 1290, 'فساتين' ), array( 'حقيبة جلد كلاسيك', 890, 'حقائب' ), array( 'حقيبة كتف صغيرة', 540, 'حقائب' ), array( 'ساعة ذهبية', 1490, 'ساعات' ), array( 'ساعة جلد بني', 990, 'ساعات' ), array( 'مزهرية سيراميك', 320, 'ديكور' ), array( 'شمعة معطرة', 180, 'ديكور' ) );
+		$prods = array( array( __( 'فستان صيفي أنيق', 'masar-altamayuz' ), 690, __( 'فساتين', 'masar-altamayuz' ) ), array( __( 'فستان سهرة', 'masar-altamayuz' ), 1290, __( 'فساتين', 'masar-altamayuz' ) ), array( __( 'حقيبة جلد كلاسيك', 'masar-altamayuz' ), 890, __( 'حقائب', 'masar-altamayuz' ) ), array( __( 'حقيبة كتف صغيرة', 'masar-altamayuz' ), 540, __( 'حقائب', 'masar-altamayuz' ) ), array( __( 'ساعة ذهبية', 'masar-altamayuz' ), 1490, __( 'ساعات', 'masar-altamayuz' ) ), array( __( 'ساعة جلد بني', 'masar-altamayuz' ), 990, __( 'ساعات', 'masar-altamayuz' ) ), array( __( 'مزهرية سيراميك', 'masar-altamayuz' ), 320, __( 'ديكور', 'masar-altamayuz' ) ), array( __( 'شمعة معطرة', 'masar-altamayuz' ), 180, __( 'ديكور', 'masar-altamayuz' ) ) );
 		foreach ( $prods as $n => $pr ) {
 			$p = new WC_Product_Simple();
 			$p->set_name( $pr[0] );
@@ -118,7 +118,7 @@ function masar_demo_remove() {
 
 if ( is_admin() ) {
 	add_action( 'admin_post_masar_demo', function () {
-		if ( ! current_user_can( 'manage_options' ) ) { wp_die( 'غير مسموح' ); }
+		if ( ! current_user_can( 'manage_options' ) ) { wp_die( __( 'غير مسموح', 'masar-altamayuz' ) ); }
 		check_admin_referer( 'masar_demo' );
 		$do  = isset( $_POST['do'] ) ? sanitize_key( wp_unslash( $_POST['do'] ) ) : '';
 		$pre = isset( $_POST['preset'] ) ? sanitize_key( wp_unslash( $_POST['preset'] ) ) : 'fashion';
@@ -131,16 +131,19 @@ if ( is_admin() ) {
 	function masar_studio_demo_tab() {
 		$has = (bool) get_option( 'masar_demo_ids' );
 		echo '<div style="max-width:680px;margin-top:16px">';
-		echo '<p>بضغطة واحدة بنضيف: <b>7 صفحات</b> (من نحن، الأسئلة، تواصل + 4 رئيسيات)، <b>6 مقالات بصور</b>، <b>قائمة رئيسية وقائمة فوتر</b>' . ( class_exists( 'WC_Product_Simple' ) ? '، و<b>8 منتجات + 4 تصنيفات</b> (WooCommerce)' : ' (ولو فعّلتي WooCommerce قبل الاستيراد هنضيف منتجات كمان)' ) . '. الصور بتتولّد محلياً بألوان هادئة وتقدري تغيريها بعدين.</p>';
+		$b = array( 'b' => array() );
+		echo '<p>' . wp_kses( __( 'بضغطة واحدة بنضيف: <b>7 صفحات</b> (من نحن، الأسئلة، تواصل + 4 رئيسيات)، <b>6 مقالات بصور</b>، <b>قائمة رئيسية وقائمة فوتر</b>', 'masar-altamayuz' ), $b )
+			. ( class_exists( 'WC_Product_Simple' ) ? wp_kses( __( '، و<b>8 منتجات + 4 تصنيفات</b> (WooCommerce)', 'masar-altamayuz' ), $b ) : esc_html__( ' (ولو فعّلتي WooCommerce قبل الاستيراد هنضيف منتجات كمان)', 'masar-altamayuz' ) )
+			. esc_html__( '. الصور بتتولّد محلياً بألوان هادئة وتقدري تغيريها بعدين.', 'masar-altamayuz' ) . '</p>';
 		echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '">';
 		wp_nonce_field( 'masar_demo' );
 		echo '<input type="hidden" name="action" value="masar_demo">';
 		if ( ! $has ) {
-			echo '<p><label>تصميم الصفحة الرئيسية: <select name="preset">';
+			echo '<p><label>' . esc_html__( 'تصميم الصفحة الرئيسية: ', 'masar-altamayuz' ) . '<select name="preset">';
 			foreach ( masar_presets() as $k => $p ) { echo '<option value="' . esc_attr( $k ) . '">' . esc_html( $p['label'] ) . '</option>'; }
-			echo '</select></label></p><p><button class="button button-primary button-large" name="do" value="import">⬇️ استيراد المحتوى التجريبي</button></p>';
+			echo '</select></label></p><p><button class="button button-primary button-large" name="do" value="import">' . esc_html__( '⬇️ استيراد المحتوى التجريبي', 'masar-altamayuz' ) . '</button></p>';
 		} else {
-			echo '<p><b>المحتوى التجريبي مستورد.</b> الحذف بيشيل اللي اتضاف بالاستيراد بس (مش أي محتوى كتبتيه إنتي).</p><p><button class="button button-large" name="do" value="remove" onclick="return confirm(\'حذف كل المحتوى التجريبي؟\')">🗑️ حذف المحتوى التجريبي</button></p>';
+			echo '<p><b>' . esc_html__( 'المحتوى التجريبي مستورد.', 'masar-altamayuz' ) . '</b>' . esc_html__( ' الحذف بيشيل اللي اتضاف بالاستيراد بس (مش أي محتوى كتبتيه إنتي).', 'masar-altamayuz' ) . '</p><p><button class="button button-large" name="do" value="remove" onclick="return confirm(' . esc_attr( wp_json_encode( __( 'حذف كل المحتوى التجريبي؟', 'masar-altamayuz' ) ) ) . ')">' . esc_html__( '🗑️ حذف المحتوى التجريبي', 'masar-altamayuz' ) . '</button></p>';
 		}
 		echo '</form></div>';
 	}

@@ -66,6 +66,16 @@
 		}
 	});
 
+	/* نسخ رابط المقال */
+	document.querySelectorAll('.share-copy').forEach(function (b) {
+		b.addEventListener('click', function () {
+			var url = b.getAttribute('data-url'), old = b.textContent;
+			function done() { b.textContent = b.getAttribute('data-done') || old; setTimeout(function () { b.textContent = old; }, 2000); }
+			if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(url).then(done, function () { window.prompt('', url); }); }
+			else { window.prompt('', url); }
+		});
+	});
+
 	/* زر للأعلى */
 	var up = document.querySelector('.to-top');
 	if (up) {

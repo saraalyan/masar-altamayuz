@@ -2,6 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 get_header(); ?>
 <div class="wrap page-pad">
+	<?php echo masar_breadcrumbs(); // phpcs:ignore ?>
 	<?php if ( is_home() && ! is_front_page() ) : ?>
 		<h1 class="page-title"><?php single_post_title(); ?></h1>
 	<?php endif; ?>

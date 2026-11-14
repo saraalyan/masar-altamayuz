@@ -85,6 +85,13 @@ function masar_customize_register( $wp_customize ) {
 	$add( 'masar_footer_payments', 1, array( 'label' => __( 'عرض شعارات وسائل الدفع', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_footer' );
 	$add( 'masar_footer_text', __( 'جميع الحقوق محفوظة', 'masar-altamayuz' ), array( 'label' => __( 'نص الحقوق', 'masar-altamayuz' ) ), 'sanitize_text_field', 'text', 'masar_footer' );
 
+	/* ---------- المدونة والمقالات ---------- */
+	$wp_customize->add_section( 'masar_blogx', array( 'title' => __( 'المدونة والمقالات', 'masar-altamayuz' ), 'panel' => 'masar_panel' ) );
+	$add( 'masar_breadcrumbs', 1, array( 'label' => __( 'مسار التنقل (الرئيسية › القسم › الصفحة)', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_blogx' );
+	$add( 'masar_related_posts', 1, array( 'label' => __( 'مقالات ذات صلة تحت المقال', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_blogx' );
+	$add( 'masar_author_box', 1, array( 'label' => __( 'صندوق الكاتب تحت المقال', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_blogx' );
+	$add( 'masar_share_buttons', 1, array( 'label' => __( 'أزرار مشاركة المقال', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_blogx' );
+
 	/* ---------- الشكل ---------- */
 	$wp_customize->add_section( 'masar_layout', array( 'title' => __( 'الشكل والتخطيط', 'masar-altamayuz' ), 'panel' => 'masar_panel' ) );
 	$add( 'masar_card_style', 'soft', array( 'label' => __( 'شكل الكروت', 'masar-altamayuz' ), 'choices' => array( 'soft' => __( 'ظل ناعم', 'masar-altamayuz' ), 'outline' => __( 'إطار خفيف', 'masar-altamayuz' ), 'glass' => __( 'زجاجي', 'masar-altamayuz' ), 'flat' => __( 'مسطح ملوّن', 'masar-altamayuz' ) ) ), 'masar_sanitize_choice', 'select', 'masar_layout' );

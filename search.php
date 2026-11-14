@@ -2,6 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 get_header(); ?>
 <div class="wrap page-pad">
+	<?php echo masar_breadcrumbs(); // phpcs:ignore ?>
 	<h1 class="page-title"><?php echo esc_html( sprintf( __( 'نتائج البحث عن: %s', 'masar-altamayuz' ), get_search_query() ) ); ?></h1>
 	<?php get_search_form(); ?>
 	<div class="content" style="margin-top:2rem">

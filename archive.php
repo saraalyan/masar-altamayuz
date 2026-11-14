@@ -3,6 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 get_header(); ?>
 <div class="wrap page-pad">
 	<header class="archive-head">
+		<?php echo masar_breadcrumbs(); // phpcs:ignore ?>
 		<h1 class="page-title"><?php the_archive_title(); ?></h1>
 		<?php the_archive_description( '<p class="archive-desc">', '</p>' ); ?>
 	</header>

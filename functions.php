@@ -16,6 +16,7 @@ require get_template_directory() . '/inc/seo.php';
 require get_template_directory() . '/inc/blog.php';
 require get_template_directory() . '/inc/shop.php';
 require get_template_directory() . '/inc/layout.php';
+require get_template_directory() . '/inc/typography.php';
 
 function masar_setup() {
 	load_theme_textdomain( 'masar-altamayuz', get_template_directory() . '/languages' );
@@ -93,6 +94,7 @@ function masar_font_pairs() {
 		'display' => array( 'label' => __( 'عناوين ضخمة: لاليزار + القاهرة', 'masar-altamayuz' ), 'head' => 'Lalezar', 'body' => 'Cairo' ),
 		'literary' => array( 'label' => __( 'أدبي: مركزي', 'masar-altamayuz' ), 'head' => 'Markazi Text', 'body' => 'Markazi Text' ),
 		'clean'   => array( 'label' => __( 'نظيف: القاهرة', 'masar-altamayuz' ), 'head' => 'Cairo', 'body' => 'Cairo' ),
+		'upload'  => array( 'label' => __( 'خطي المرفوع (للعناوين والنصوص)', 'masar-altamayuz' ), 'head' => '@upload', 'body' => '@upload' ),
 		'custom'  => array( 'label' => __( 'مخصص (اختاري الخطين بنفسك)', 'masar-altamayuz' ), 'head' => '', 'body' => '' ),
 	);
 }
@@ -101,11 +103,11 @@ function masar_font_pairs() {
 function masar_fonts_in_use() {
 	$pairs = masar_font_pairs();
 	$k     = get_theme_mod( 'masar_font_pair', 'messiri' );
-	if ( isset( $pairs[ $k ] ) && 'custom' !== $k ) { return array( $pairs[ $k ]['head'], $pairs[ $k ]['body'] ); }
+	if ( isset( $pairs[ $k ] ) && 'custom' !== $k ) { return array( masar_resolve_font( $pairs[ $k ]['head'], 'El Messiri' ), masar_resolve_font( $pairs[ $k ]['body'], 'El Messiri' ) ); }
 	$fonts = masar_fonts_map();
-	$head  = get_theme_mod( 'masar_font_head', 'Amiri' );
-	$body  = get_theme_mod( 'masar_font_body', 'Cairo' );
-	return array( isset( $fonts[ $head ] ) ? $head : 'Amiri', isset( $fonts[ $body ] ) ? $body : 'Cairo' );
+	$head  = masar_resolve_font( get_theme_mod( 'masar_font_head', 'Amiri' ), 'Amiri' );
+	$body  = masar_resolve_font( get_theme_mod( 'masar_font_body', 'Cairo' ), 'Cairo' );
+	return array( ( isset( $fonts[ $head ] ) || masar_is_uploaded_font( $head ) ) ? $head : 'Amiri', ( isset( $fonts[ $body ] ) || masar_is_uploaded_font( $body ) ) ? $body : 'Cairo' );
 }
 
 function masar_palettes() {
@@ -134,13 +136,14 @@ function masar_enqueue() {
 	$fonts = masar_fonts_map();
 	list( $head, $body ) = masar_fonts_in_use();
 	foreach ( array_unique( array( $head, $body ) ) as $fam ) {
+		if ( ! isset( $fonts[ $fam ] ) ) { continue; }
 		wp_enqueue_style( 'masar-font-' . $fonts[ $fam ], get_template_directory_uri() . '/assets/fonts/' . $fonts[ $fam ] . '.css', array(), MASAR_VER );
 	}
 	// خط لاتيني أنيق للعناوين والأرقام والأسماء الإنجليزية
 	wp_enqueue_style( 'masar-font-playfair', get_template_directory_uri() . '/assets/fonts/playfair-display.css', array(), MASAR_VER );
 	wp_enqueue_style( 'masar-main', get_template_directory_uri() . '/assets/css/main.css', array(), MASAR_VER );
 	wp_enqueue_style( 'masar-style', get_stylesheet_uri(), array( 'masar-main' ), MASAR_VER );
-	wp_add_inline_style( 'masar-main', masar_dynamic_css() );
+	wp_add_inline_style( 'masar-main', masar_custom_font_css() . masar_dynamic_css() );
 	wp_enqueue_script( 'masar-main', get_template_directory_uri() . '/assets/js/main.js', array(), MASAR_VER, true );
 	wp_localize_script( 'masar-main', 'MasarCfg', array(
 		'petals'   => (int) get_theme_mod( 'masar_petals', 0 ),
@@ -172,7 +175,7 @@ function masar_editor_fonts_css() {
 	$fonts = masar_fonts_map();
 	list( $head, $body ) = masar_fonts_in_use();
 	$names = array( 'playfair-display' );
-	foreach ( array_unique( array( $head, $body ) ) as $fam ) { $names[] = $fonts[ $fam ]; }
+	foreach ( array_unique( array( $head, $body ) ) as $fam ) { if ( isset( $fonts[ $fam ] ) ) { $names[] = $fonts[ $fam ]; } }
 	$dir = get_template_directory() . '/assets/fonts/';
 	$uri = get_template_directory_uri() . '/assets/fonts/';
 	$css = '';
@@ -181,7 +184,7 @@ function masar_editor_fonts_css() {
 		if ( ! is_readable( $file ) ) { continue; }
 		$css .= preg_replace( '/url\(([^)\'"]+)\)/', 'url(' . $uri . '$1)', (string) file_get_contents( $file ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions
 	}
-	return $css;
+	return $css . masar_custom_font_css();
 }
 
 function masar_editor_settings( $settings ) {
@@ -201,8 +204,9 @@ function masar_dynamic_css() {
 	$ov   = (int) get_theme_mod( 'masar_hero_overlay', 35 );
 	$css  = ':root{--primary:' . esc_attr( $prim ) . ';--accent:' . esc_attr( $acc ) . ';--soft:' . esc_attr( $p['soft'] ) . ';--ink:' . esc_attr( $p['ink'] ) . ';';
 	$css .= '--radius:' . $rad . 'px;--wrap:' . $wid . 'px;--hero-h:' . $hh . 'vh;--overlay:' . ( $ov / 100 ) . ';';
-	$css .= '--font-body:"' . esc_attr( $body ) . '",system-ui,sans-serif;--font-head:"Playfair Display","' . esc_attr( $head ) . '",serif;}';
-	return $css;
+	$latin = masar_is_uploaded_font( $head ) ? '' : '"Playfair Display",';
+	$css .= '--font-body:"' . esc_attr( $body ) . '",system-ui,sans-serif;--font-head:' . $latin . '"' . esc_attr( $head ) . '",serif;}';
+	return $css . masar_typography_css();
 }
 
 function masar_body_classes( $c ) {

@@ -13,6 +13,7 @@ function masar_customize_register( $wp_customize ) {
 	foreach ( masar_palettes() as $k => $p ) { $palettes[ $k ] = $p['label']; }
 	$fonts = array();
 	foreach ( masar_fonts_map() as $k => $v ) { $fonts[ $k ] = $k; }
+	$fonts['@upload'] = __( 'خطي المرفوع', 'masar-altamayuz' );
 	$presets = array();
 	foreach ( masar_presets() as $k => $p ) { $presets[ $k ] = $p['label']; }
 
@@ -47,6 +48,18 @@ function masar_customize_register( $wp_customize ) {
 	$add( 'masar_font_pair', 'messiri', array( 'label' => __( 'تنسيق الخطوط', 'masar-altamayuz' ), 'description' => __( 'اختاري «مخصص» لو عايزة تحددي الخطين بنفسك.', 'masar-altamayuz' ), 'choices' => $pairs ), 'masar_sanitize_choice', 'select', 'masar_look' );
 	$add( 'masar_font_body', '', array( 'label' => __( 'خط النصوص (للتنسيق المخصص)', 'masar-altamayuz' ), 'choices' => $fonts ), 'masar_sanitize_choice', 'select', 'masar_look' );
 	$add( 'masar_font_head', '', array( 'label' => __( 'خط العناوين (للتنسيق المخصص)', 'masar-altamayuz' ), 'choices' => $fonts ), 'masar_sanitize_choice', 'select', 'masar_look' );
+
+	/* رفع خط خاص */
+	$add( 'masar_cf_name', '', array( 'label' => __( 'اسم خطك المرفوع', 'masar-altamayuz' ), 'description' => __( 'أي اسم تحبيه (مثلاً: خط البراند). بعد الرفع اختاري «خطي المرفوع» من تنسيق الخطوط. صيغ مدعومة: woff2 وwoff وttf وotf.', 'masar-altamayuz' ) ), 'masar_sanitize_font_name', 'text', 'masar_look' );
+	foreach ( array( 'masar_cf_regular' => __( 'ملف الخط (عادي 400)', 'masar-altamayuz' ), 'masar_cf_bold' => __( 'ملف الخط الثقيل 700 (اختياري)', 'masar-altamayuz' ) ) as $fid => $flabel ) {
+		$wp_customize->add_setting( $fid, array( 'default' => '', 'sanitize_callback' => 'masar_sanitize_font_url', 'transport' => 'refresh' ) );
+		$wp_customize->add_control( new WP_Customize_Upload_Control( $wp_customize, $fid, array( 'label' => $flabel, 'section' => 'masar_look' ) ) );
+	}
+	/* تحكم الخطوط */
+	$add( 'masar_fs_base', 17, array( 'label' => __( 'حجم خط النصوص (px)', 'masar-altamayuz' ), 'input_attrs' => array( 'min' => 14, 'max' => 22, 'step' => 1 ) ), 'absint', 'range', 'masar_look' );
+	$add( 'masar_fs_head', 100, array( 'label' => __( 'حجم العناوين (%)', 'masar-altamayuz' ), 'input_attrs' => array( 'min' => 80, 'max' => 140, 'step' => 5 ) ), 'absint', 'range', 'masar_look' );
+	$add( 'masar_lh', 185, array( 'label' => __( 'تباعد الأسطر (%)', 'masar-altamayuz' ), 'input_attrs' => array( 'min' => 150, 'max' => 220, 'step' => 5 ) ), 'absint', 'range', 'masar_look' );
+	$add( 'masar_fw_head', 700, array( 'label' => __( 'سُمك العناوين', 'masar-altamayuz' ), 'description' => __( 'بيظهر الفرق على قد الأوزان المتاحة في الخط.', 'masar-altamayuz' ), 'choices' => array( 400 => __( 'عادي', 'masar-altamayuz' ), 500 => __( 'متوسط', 'masar-altamayuz' ), 600 => __( 'شبه ثقيل', 'masar-altamayuz' ), 700 => __( 'ثقيل', 'masar-altamayuz' ), 800 => __( 'ثقيل جداً', 'masar-altamayuz' ) ) ), 'absint', 'select', 'masar_look' );
 
 	/* ---------- الهيدر ---------- */
 	$wp_customize->add_section( 'masar_header', array( 'title' => __( 'الهيدر', 'masar-altamayuz' ), 'panel' => 'masar_panel' ) );

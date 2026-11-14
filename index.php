@@ -13,7 +13,7 @@ get_header(); ?>
 				</div>
 				<div class="pager"><?php the_posts_pagination( array( 'prev_text' => '→', 'next_text' => '←' ) ); ?></div>
 			<?php else : ?>
-				<p class="empty">لا يوجد محتوى هنا حتى الآن 🌱</p>
+				<p class="empty"><?php esc_html_e( 'لا يوجد محتوى هنا حتى الآن 🌱', 'masar-altamayuz' ); ?></p>
 			<?php endif; ?>
 		</div>
 		<?php get_sidebar(); ?>

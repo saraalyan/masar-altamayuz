@@ -17,7 +17,7 @@ $addr  = get_theme_mod( 'masar_contact_address', '' );
 		<div class="footer-cols fcols-<?php echo (int) $ncols; ?>">
 			<div class="fcol fbrand">
 				<div class="flogo"><?php if ( has_custom_logo() ) { the_custom_logo(); } else { echo '<a class="brand-text" href="' . esc_url( home_url( '/' ) ) . '">' . esc_html( get_bloginfo( 'name' ) ) . '</a>'; } ?></div>
-				<p><?php echo esc_html( get_theme_mod( 'masar_footer_about', 'نقدّم لك تجربة تسوّق راقية بجودة تدوم وخدمة تستاهلها.' ) ); ?></p>
+				<p><?php echo esc_html( get_theme_mod( 'masar_footer_about', __( 'نقدّم لك تجربة تسوّق راقية بجودة تدوم وخدمة تستاهلها.', 'masar-altamayuz' ) ) ); ?></p>
 				<?php masar_social_links( 'socials' ); ?>
 				<?php if ( $phone || $mail || $addr ) : ?>
 				<ul class="contact-list">
@@ -30,8 +30,8 @@ $addr  = get_theme_mod( 'masar_contact_address', '' );
 			<?php if ( 'centered' !== $fs ) :
 				for ( $i = 1; $i <= 4; $i++ ) { if ( is_active_sidebar( 'footer-' . $i ) ) { echo '<div class="fcol">'; dynamic_sidebar( 'footer-' . $i ); echo '</div>'; } }
 				if ( ! $any ) {
-					echo '<div class="fcol"><h3 class="widget-title">روابط سريعة</h3>';
-					wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'flinks', 'depth' => 1, 'fallback_cb' => function () { echo '<ul class="flinks"><li><a href="' . esc_url( home_url( '/' ) ) . '">الرئيسية</a></li></ul>'; } ) );
+					echo '<div class="fcol"><h3 class="widget-title">' . esc_html__( 'روابط سريعة', 'masar-altamayuz' ) . '</h3>';
+					wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'flinks', 'depth' => 1, 'fallback_cb' => function () { echo '<ul class="flinks"><li><a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'الرئيسية', 'masar-altamayuz' ) . '</a></li></ul>'; } ) );
 					echo '</div>';
 				}
 			endif; ?>
@@ -40,10 +40,10 @@ $addr  = get_theme_mod( 'masar_contact_address', '' );
 		<?php endif; ?>
 
 		<div class="footer-bottom">
-			<p class="copy">© <?php echo esc_html( date_i18n( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?> — <?php echo esc_html( get_theme_mod( 'masar_footer_text', 'جميع الحقوق محفوظة' ) ); ?></p>
+			<p class="copy">© <?php echo esc_html( date_i18n( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?> — <?php echo esc_html( get_theme_mod( 'masar_footer_text', __( 'جميع الحقوق محفوظة', 'masar-altamayuz' ) ) ); ?></p>
 			<?php if ( 'minimal' === $fs ) { wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'footer-menu', 'depth' => 1, 'fallback_cb' => '__return_empty_string' ) ); masar_social_links( 'socials' ); } ?>
 			<?php if ( get_theme_mod( 'masar_footer_payments', 1 ) ) : ?>
-				<div class="pay" aria-label="وسائل الدفع"><span>VISA</span><span>Mastercard</span><span>PayPal</span><span>Apple Pay</span><span>فوري</span></div>
+				<div class="pay" aria-label="<?php esc_attr_e( 'وسائل الدفع', 'masar-altamayuz' ); ?>"><span>VISA</span><span>Mastercard</span><span>PayPal</span><span>Apple Pay</span><span><?php esc_html_e( 'فوري', 'masar-altamayuz' ); ?></span></div>
 			<?php endif; ?>
 		</div>
 	</div>

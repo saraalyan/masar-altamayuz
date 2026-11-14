@@ -14,7 +14,7 @@ get_header(); ?>
 				</div>
 				<div class="pager"><?php the_posts_pagination( array( 'prev_text' => '→', 'next_text' => '←' ) ); ?></div>
 			<?php else : ?>
-				<p class="empty">لا توجد نتائج.</p>
+				<p class="empty"><?php esc_html_e( 'لا توجد نتائج.', 'masar-altamayuz' ); ?></p>
 			<?php endif; ?>
 		</div>
 		<?php get_sidebar(); ?>

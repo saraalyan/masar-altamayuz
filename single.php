@@ -7,7 +7,7 @@ while ( have_posts() ) : the_post(); ?>
 		<div class="wrap narrow">
 			<div class="meta"><?php the_category( ' · ' ); ?></div>
 			<h1 class="page-title"><?php the_title(); ?></h1>
-			<div class="meta"><?php echo esc_html( get_the_date() ); ?> · <?php echo esc_html( get_the_author() ); ?> · <?php echo (int) masar_reading_time(); ?> د قراءة</div>
+			<div class="meta"><?php echo esc_html( get_the_date() ); ?> · <?php echo esc_html( get_the_author() ); ?> · <?php echo esc_html( sprintf( __( '%d د قراءة', 'masar-altamayuz' ), (int) masar_reading_time() ) ); ?></div>
 		</div>
 	</header>
 	<?php if ( has_post_thumbnail() ) : ?>

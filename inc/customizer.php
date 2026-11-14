@@ -2,6 +2,7 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 function masar_sanitize_check( $v ) { return ( isset( $v ) && $v ) ? 1 : 0; }
+function masar_sanitize_side( $v ) { return in_array( $v, array( 'none', 'start', 'end' ), true ) ? $v : 'none'; }
 function masar_sanitize_choice( $v, $setting ) {
 	$choices = $setting->manager->get_control( $setting->id )->choices;
 	return array_key_exists( $v, $choices ) ? $v : $setting->default;
@@ -103,6 +104,11 @@ function masar_customize_register( $wp_customize ) {
 	$add( 'masar_card_style', 'soft', array( 'label' => __( 'شكل الكروت', 'masar-altamayuz' ), 'choices' => array( 'soft' => __( 'ظل ناعم', 'masar-altamayuz' ), 'outline' => __( 'إطار خفيف', 'masar-altamayuz' ), 'glass' => __( 'زجاجي', 'masar-altamayuz' ), 'flat' => __( 'مسطح ملوّن', 'masar-altamayuz' ) ) ), 'masar_sanitize_choice', 'select', 'masar_layout' );
 	$add( 'masar_btn_style', 'pill', array( 'label' => __( 'شكل الأزرار', 'masar-altamayuz' ), 'choices' => array( 'pill' => __( 'كبسولة', 'masar-altamayuz' ), 'round' => __( 'حواف مدورة', 'masar-altamayuz' ), 'square' => __( 'مربع', 'masar-altamayuz' ) ) ), 'masar_sanitize_choice', 'select', 'masar_layout' );
 	$add( 'masar_blog_layout', 'grid', array( 'label' => __( 'عرض المقالات', 'masar-altamayuz' ), 'choices' => array( 'grid' => __( 'شبكة', 'masar-altamayuz' ), 'list' => __( 'قائمة', 'masar-altamayuz' ), 'masonry' => __( 'بنترست', 'masar-altamayuz' ) ) ), 'masar_sanitize_choice', 'select', 'masar_layout' );
+	$sp = array( 'none' => __( 'بدون سايدبار', 'masar-altamayuz' ), 'start' => __( 'على اليمين', 'masar-altamayuz' ), 'end' => __( 'على اليسار', 'masar-altamayuz' ) );
+	$add( 'masar_side_blog', 'end', array( 'label' => __( 'السايدبار: المدونة والأرشيف', 'masar-altamayuz' ), 'choices' => $sp ), 'masar_sanitize_side', 'select', 'masar_layout' );
+	$add( 'masar_side_single', 'none', array( 'label' => __( 'السايدبار: صفحة المقال', 'masar-altamayuz' ), 'choices' => $sp ), 'masar_sanitize_side', 'select', 'masar_layout' );
+	$add( 'masar_side_page', 'none', array( 'label' => __( 'السايدبار: الصفحات', 'masar-altamayuz' ), 'choices' => $sp ), 'masar_sanitize_side', 'select', 'masar_layout' );
+	$add( 'masar_side_shop', 'none', array( 'label' => __( 'السايدبار: الشوب وصفحة المنتج', 'masar-altamayuz' ), 'choices' => $sp, 'description' => __( 'السايدبار بيظهر بس لو فيه ودجتس جواه (المظهر ← الودجتس).', 'masar-altamayuz' ) ), 'masar_sanitize_side', 'select', 'masar_layout' );
 	$add( 'masar_radius', 18, array( 'label' => __( 'استدارة الحواف (px)', 'masar-altamayuz' ), 'input_attrs' => array( 'min' => 0, 'max' => 36, 'step' => 2 ) ), 'absint', 'range', 'masar_layout' );
 	$add( 'masar_width', 1180, array( 'label' => __( 'عرض المحتوى (px)', 'masar-altamayuz' ), 'input_attrs' => array( 'min' => 960, 'max' => 1440, 'step' => 20 ) ), 'absint', 'range', 'masar_layout' );
 	$add( 'masar_petals', 0, array( 'label' => __( '🌸 تأثير بتلات متساقطة', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_layout' );

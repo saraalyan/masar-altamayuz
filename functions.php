@@ -15,6 +15,7 @@ require get_template_directory() . '/inc/demo.php';
 require get_template_directory() . '/inc/seo.php';
 require get_template_directory() . '/inc/blog.php';
 require get_template_directory() . '/inc/shop.php';
+require get_template_directory() . '/inc/layout.php';
 
 function masar_setup() {
 	load_theme_textdomain( 'masar-altamayuz', get_template_directory() . '/languages' );

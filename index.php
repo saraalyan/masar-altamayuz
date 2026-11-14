@@ -6,7 +6,7 @@ get_header(); ?>
 	<?php if ( is_home() && ! is_front_page() ) : ?>
 		<h1 class="page-title"><?php single_post_title(); ?></h1>
 	<?php endif; ?>
-	<div class="layout<?php echo is_active_sidebar( 'sidebar-1' ) ? ' has-side' : ''; ?>">
+	<div class="layout<?php echo esc_attr( masar_layout_class( 'blog' ) ); ?>">
 		<div class="content">
 			<?php if ( have_posts() ) : ?>
 				<div class="posts">

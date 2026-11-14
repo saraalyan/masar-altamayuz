@@ -7,7 +7,7 @@ get_header(); ?>
 		<h1 class="page-title"><?php the_archive_title(); ?></h1>
 		<?php the_archive_description( '<p class="archive-desc">', '</p>' ); ?>
 	</header>
-	<div class="layout<?php echo is_active_sidebar( 'sidebar-1' ) ? ' has-side' : ''; ?>">
+	<div class="layout<?php echo esc_attr( masar_layout_class( 'blog' ) ); ?>">
 		<div class="content">
 			<?php if ( have_posts() ) : ?>
 				<div class="posts">

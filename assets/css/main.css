@@ -274,6 +274,11 @@ html[dir=rtl] .svc-ico{transform:translateX(50%)}
 
 /* posts & cards */
 .layout.has-side{display:grid;grid-template-columns:1fr 300px;gap:2.5rem}
+.layout.has-side>.content,.layout.has-side>.sidebar{min-width:0}
+.layout.side-start{grid-template-columns:300px 1fr}
+.layout.side-start>.sidebar{order:-1}
+.layout.has-side .entry{max-width:none}
+.sidebar{position:relative}
 .posts{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.6rem}
 .blog-list .posts{grid-template-columns:1fr}
 .blog-list .posts .card{display:grid;grid-template-columns:260px 1fr}
@@ -458,3 +463,6 @@ html[dir=rtl] .svc-ico{transform:translateX(50%)}
 .related .posts{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
 .related .card-body p,.related .more{display:none}
 .crumbs [aria-current]{display:block;max-width:min(60vw,22rem);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+@media (max-width:900px){.layout.side-start>.sidebar{order:0}.layout.side-start,.layout.side-end{grid-template-columns:1fr}}
+.wrap:not(.narrow)>.single-img img{width:100%;max-height:460px;object-fit:cover}

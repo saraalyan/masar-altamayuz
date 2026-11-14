@@ -12,9 +12,9 @@ while ( have_posts() ) : the_post(); ?>
 		</div>
 	</header>
 	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="wrap narrow"><div class="single-img"><?php the_post_thumbnail( 'large' ); ?></div></div>
+		<div class="<?php echo esc_attr( masar_wrap_class( 'single' ) ); ?>"><div class="single-img"><?php the_post_thumbnail( 'large' ); ?></div></div>
 	<?php endif; ?>
-	<div class="wrap narrow entry">
+	<?php masar_entry_open( 'single' ); ?>
 		<?php the_content(); ?>
 		<?php wp_link_pages(); ?>
 		<?php the_tags( '<div class="tags">', '', '</div>' ); ?>
@@ -26,7 +26,7 @@ while ( have_posts() ) : the_post(); ?>
 		</nav>
 		<?php masar_related_posts(); ?>
 		<?php if ( comments_open() || get_comments_number() ) { comments_template(); } ?>
-	</div>
+	<?php masar_entry_close( 'single' ); ?>
 </article>
 <?php endwhile;
 get_footer();

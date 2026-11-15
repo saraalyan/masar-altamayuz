@@ -241,3 +241,14 @@ html body .wc-block-components-address-form__address_2-hidden-input {
 body.has-sticky-atc .to-top,body.has-sticky-atc .wa-float{bottom:5.5rem}
 @media(prefers-reduced-motion:reduce){.masar-toast{transition:none}}
 .qv-box:focus{outline:none}
+
+/* قائمة الأمنيات */
+.wl-btn{background:var(--surface,#fff);border:1px solid var(--line);color:var(--ink);width:38px;height:38px;border-radius:50%;display:grid;place-items:center;cursor:pointer;padding:0;transition:transform .15s,color .15s}
+.wl-btn svg{width:18px;height:18px}
+.wl-btn:hover{transform:scale(1.08)}
+.wl-btn.is-on{color:#d6455d;border-color:#d6455d}
+.wl-btn.is-on svg{fill:currentColor}
+.wl-loop{position:absolute;top:.6rem;inset-inline-start:.6rem;z-index:5;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.wl-single{display:inline-grid;vertical-align:middle;margin-inline-start:.6rem;width:46px;height:46px}
+.wl-empty{text-align:center;color:var(--muted);padding:3rem 0;font-size:1.05rem}
+

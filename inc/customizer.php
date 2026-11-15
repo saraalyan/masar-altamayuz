@@ -125,6 +125,7 @@ function masar_customize_register( $wp_customize ) {
 
 	/* ---------- المتجر ---------- */
 	$wp_customize->add_section( 'masar_shop', array( 'title' => __( 'المتجر (WooCommerce)', 'masar-altamayuz' ), 'panel' => 'masar_panel', 'description' => __( 'بتشتغل لما تفعّلي ووكومرس.', 'masar-altamayuz' ) ) );
+	$add( 'masar_wishlist', 1, array( 'label' => __( 'قائمة الأمنيات (قلب على المنتجات + صفحة خاصة)', 'masar-altamayuz' ), 'description' => __( 'بتتحفظ في متصفح الزائر بدون تسجيل دخول. صفحة «قائمة الأمنيات» بتتعمل لوحدها أول ما المدير يفتح لوحة التحكم.', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_shop' );
 	$add( 'masar_quick_view', 1, array( 'label' => __( 'زر «نظرة سريعة» على المنتجات', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_shop' );
 	$add( 'masar_ajax_single', 1, array( 'label' => __( 'الإضافة للسلة بدون تحميل الصفحة (المنتج البسيط)', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_shop' );
 	$add( 'masar_sticky_atc', 1, array( 'label' => __( 'شريط «أضف للسلة» الثابت في صفحة المنتج', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_shop' );

@@ -65,6 +65,7 @@ $hcls   = $sticky ? ' is-sticky' . ( in_array( $stype, array( 'shrink', 'hide' )
 			<?php if ( get_theme_mod( 'masar_show_theme_toggle', 1 ) ) : ?>
 				<button class="icon-btn theme-toggle" aria-label="<?php esc_attr_e( 'تبديل الوضع الليلي', 'masar-altamayuz' ); ?>" title="<?php esc_attr_e( 'الوضع الليلي', 'masar-altamayuz' ); ?>"><?php echo masar_icon( 'moon', 'ico-dark' ); echo masar_icon( 'sun', 'ico-light' ); ?></button>
 			<?php endif; ?>
+			<?php if ( function_exists( 'masar_wl_header_link' ) ) { echo masar_wl_header_link(); } // phpcs:ignore ?>
 			<?php if ( function_exists( 'WC' ) && WC()->cart ) : ?>
 				<a class="icon-btn cart-link" href="<?php echo esc_url( wc_get_cart_url() ); ?>" aria-label="<?php esc_attr_e( 'السلة', 'masar-altamayuz' ); ?>"><?php echo masar_icon( 'cart' ); ?><span class="cart-count"><?php echo (int) WC()->cart->get_cart_contents_count(); ?></span></a>
 			<?php endif; ?>

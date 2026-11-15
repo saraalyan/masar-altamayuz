@@ -29,7 +29,12 @@ $hs = get_theme_mod( 'masar_header_style', 'split' );
 </div>
 <?php endif; ?>
 
-<header class="site-header<?php echo get_theme_mod( 'masar_sticky', 1 ) ? ' is-sticky' : ''; ?>">
+<?php
+$sticky = get_theme_mod( 'masar_sticky', 1 );
+$stype  = get_theme_mod( 'masar_sticky_type', 'fixed' );
+$hcls   = $sticky ? ' is-sticky' . ( in_array( $stype, array( 'shrink', 'hide' ), true ) ? ' sticky-' . $stype : '' ) : '';
+?>
+<header class="site-header<?php echo esc_attr( $hcls ); ?>">
 	<div class="wrap hdr-inner">
 		<div class="brand">
 			<?php if ( has_custom_logo() ) : the_custom_logo(); else : ?>
@@ -37,7 +42,8 @@ $hs = get_theme_mod( 'masar_header_style', 'split' );
 			<?php endif; ?>
 		</div>
 		<button class="nav-toggle" aria-label="<?php esc_attr_e( 'القائمة', 'masar-altamayuz' ); ?>" aria-expanded="false"><span></span><span></span><span></span></button>
-		<nav class="main-nav" aria-label="<?php esc_attr_e( 'القائمة الرئيسية', 'masar-altamayuz' ); ?>">
+		<nav class="main-nav" id="main-nav" aria-label="<?php esc_attr_e( 'القائمة الرئيسية', 'masar-altamayuz' ); ?>">
+			<button type="button" class="nav-close" aria-label="<?php esc_attr_e( 'إغلاق القائمة', 'masar-altamayuz' ); ?>">&times;</button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'primary',
@@ -69,4 +75,11 @@ $hs = get_theme_mod( 'masar_header_style', 'split' );
 	</div>
 	<div class="search-panel" hidden><div class="wrap"><?php get_search_form(); ?></div></div>
 </header>
+<div class="nav-overlay" hidden></div>
+<?php if ( get_theme_mod( 'masar_subbar_on', 0 ) ) : $sl = get_theme_mod( 'masar_subbar_link', __( 'تسوّق الآن', 'masar-altamayuz' ) ); ?>
+<div class="subbar"><div class="wrap subbar-in">
+	<span><?php echo esc_html( get_theme_mod( 'masar_subbar_text', __( 'عروض الموسم بدأت — خصم حتى 30%', 'masar-altamayuz' ) ) ); ?></span>
+	<?php if ( $sl ) : ?><a href="<?php echo esc_url( get_theme_mod( 'masar_subbar_url', '' ) ?: '#' ); ?>"><?php echo esc_html( $sl ); ?></a><?php endif; ?>
+</div></div>
+<?php endif; ?>
 <main id="main" class="site-main">

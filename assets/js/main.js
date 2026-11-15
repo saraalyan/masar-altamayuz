@@ -20,21 +20,45 @@
 		paint();
 	}
 
-	/* قائمة الموبايل */
+	/* قائمة الموبايل (منسدلة أو جانبية) */
 	var nt = document.querySelector('.nav-toggle');
 	var nav = document.querySelector('.main-nav');
+	var ov = document.querySelector('.nav-overlay');
+	var side = document.body.classList.contains('mnav-side');
+	function setNav(open) {
+		nav.classList.toggle('open', open);
+		nt.setAttribute('aria-expanded', open ? 'true' : 'false');
+		if (side) {
+			document.body.classList.toggle('nav-locked', open);
+			if (ov) { if (open) { ov.removeAttribute('hidden'); } else { ov.setAttribute('hidden', ''); } }
+		}
+	}
 	if (nt && nav) {
-		nt.addEventListener('click', function () {
-			var open = nav.classList.toggle('open');
-			nt.setAttribute('aria-expanded', open ? 'true' : 'false');
-		});
+		nt.addEventListener('click', function () { setNav(!nav.classList.contains('open')); });
+		var nc = nav.querySelector('.nav-close');
+		if (nc) { nc.addEventListener('click', function () { setNav(false); nt.focus(); }); }
+		if (ov) { ov.addEventListener('click', function () { setNav(false); }); }
 		document.addEventListener('keydown', function (e) {
-			if (e.key === 'Escape' && nav.classList.contains('open')) {
-				nav.classList.remove('open');
-				nt.setAttribute('aria-expanded', 'false');
-				nt.focus();
-			}
+			if (e.key === 'Escape' && nav.classList.contains('open')) { setNav(false); nt.focus(); }
 		});
+	}
+
+	/* تثبيت الهيدر: يصغر / يختفي */
+	var hd = document.querySelector('.site-header.is-sticky');
+	if (hd && (hd.classList.contains('sticky-shrink') || hd.classList.contains('sticky-hide'))) {
+		var lastY = window.pageYOffset, tick = false;
+		var onScroll = function () {
+			var y = window.pageYOffset;
+			if (hd.classList.contains('sticky-shrink')) { hd.classList.toggle('is-shrunk', y > 60); }
+			if (hd.classList.contains('sticky-hide')) {
+				var busy = (nav && nav.classList.contains('open')) || hd.querySelector('.search-panel:not([hidden])');
+				if (y > lastY + 4 && y > 160 && !busy) { hd.classList.add('is-hidden'); }
+				else if (y < lastY - 4 || y <= 160) { hd.classList.remove('is-hidden'); }
+			}
+			lastY = y; tick = false;
+		};
+		window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(onScroll); } }, { passive: true });
+		onScroll();
 	}
 
 	/* لوحة البحث */

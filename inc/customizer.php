@@ -71,6 +71,19 @@ function masar_customize_register( $wp_customize ) {
 		'minimal' => __( 'بسيط شفاف', 'masar-altamayuz' ),
 	) ), 'masar_sanitize_choice', 'select', 'masar_header' );
 	$add( 'masar_sticky', 1, array( 'label' => __( 'تثبيت الهيدر عند التمرير', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_header' );
+	$add( 'masar_sticky_type', 'fixed', array( 'label' => __( 'نوع التثبيت', 'masar-altamayuz' ), 'description' => __( 'يعمل لما يكون "تثبيت الهيدر" شغال.', 'masar-altamayuz' ), 'choices' => array(
+		'fixed'  => __( 'ثابت كما هو', 'masar-altamayuz' ),
+		'shrink' => __( 'يصغر عند التمرير', 'masar-altamayuz' ),
+		'hide'   => __( 'يختفي عند النزول ويظهر عند الطلوع', 'masar-altamayuz' ),
+	) ), 'masar_sanitize_choice', 'select', 'masar_header' );
+	$add( 'masar_mobile_menu', 'drop', array( 'label' => __( 'قائمة الموبايل', 'masar-altamayuz' ), 'choices' => array(
+		'drop' => __( 'تنزل تحت الهيدر', 'masar-altamayuz' ),
+		'side' => __( 'قائمة جانبية منزلقة', 'masar-altamayuz' ),
+	) ), 'masar_sanitize_choice', 'select', 'masar_header' );
+	$add( 'masar_subbar_on', 0, array( 'label' => __( 'صف إضافي تحت الهيدر', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_header' );
+	$add( 'masar_subbar_text', __( 'عروض الموسم بدأت — خصم حتى 30%', 'masar-altamayuz' ), array( 'label' => __( 'نص الصف الإضافي', 'masar-altamayuz' ) ), 'sanitize_text_field', 'text', 'masar_header' );
+	$add( 'masar_subbar_link', __( 'تسوّق الآن', 'masar-altamayuz' ), array( 'label' => __( 'نص رابط الصف الإضافي', 'masar-altamayuz' ) ), 'sanitize_text_field', 'text', 'masar_header' );
+	$add( 'masar_subbar_url', '', array( 'label' => __( 'رابط الصف الإضافي', 'masar-altamayuz' ) ), 'esc_url_raw', 'url', 'masar_header' );
 	$add( 'masar_header_overlay', 0, array( 'label' => __( 'هيدر شفاف فوق الهيرو (يعمل مع هيرو الصورة الخلفية فقط)', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_header' );
 	$add( 'masar_show_search', 1, array( 'label' => __( 'أيقونة البحث', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_header' );
 	$add( 'masar_show_account', 1, array( 'label' => __( 'أيقونة حسابي', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_header' );

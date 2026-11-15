@@ -228,6 +228,7 @@ function masar_body_classes( $c ) {
 	$c[] = 'btn-' . get_theme_mod( 'masar_btn_style', 'pill' );
 	$c[] = 'blog-' . get_theme_mod( 'masar_blog_layout', 'grid' );
 	$c[] = 'hdr-' . get_theme_mod( 'masar_header_style', 'split' );
+	$c[] = 'mnav-' . ( 'side' === get_theme_mod( 'masar_mobile_menu', 'drop' ) ? 'side' : 'drop' );
 	$c[] = 'ftr-' . get_theme_mod( 'masar_footer_style', 'columns' );
 	return $c;
 }

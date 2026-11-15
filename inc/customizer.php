@@ -71,7 +71,7 @@ function masar_customize_register( $wp_customize ) {
 		'minimal' => __( 'بسيط شفاف', 'masar-altamayuz' ),
 	) ), 'masar_sanitize_choice', 'select', 'masar_header' );
 	$add( 'masar_sticky', 1, array( 'label' => __( 'تثبيت الهيدر عند التمرير', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_header' );
-	$add( 'masar_sticky_type', 'fixed', array( 'label' => __( 'نوع التثبيت', 'masar-altamayuz' ), 'description' => __( 'يعمل لما يكون "تثبيت الهيدر" شغال.', 'masar-altamayuz' ), 'choices' => array(
+	$add( 'masar_sticky_type', 'fixed', array( 'label' => __( 'نوع التثبيت', 'masar-altamayuz' ), 'description' => __( 'يعمل لما يكون "تثبيت الهيدر" شغال، وما بيعملش مع الهيدر الشفاف (الشفاف بيمشي مع الصفحة).', 'masar-altamayuz' ), 'choices' => array(
 		'fixed'  => __( 'ثابت كما هو', 'masar-altamayuz' ),
 		'shrink' => __( 'يصغر عند التمرير', 'masar-altamayuz' ),
 		'hide'   => __( 'يختفي عند النزول ويظهر عند الطلوع', 'masar-altamayuz' ),

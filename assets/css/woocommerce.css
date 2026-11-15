@@ -273,3 +273,14 @@ html[dir="ltr"] .cmp-tray{transform:translateX(-50%)}
 @media (max-width:560px){.cmp-tray{bottom:76px}}
 
 .cmp-page{width:min(1200px,calc(100vw - 2rem));margin-inline:calc(50% - min(600px,50vw - 1rem))}
+
+/* فلترة المتجر */
+.shop-filters{display:flex;flex-wrap:wrap;gap:.8rem 1rem;align-items:flex-end;background:var(--surface,#fff);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.2rem;margin:0 0 1.5rem}
+.sf-f{display:flex;flex-direction:column;gap:.25rem;font-size:.85rem;font-weight:700}
+.sf-f select,.sf-f input{font:inherit;font-weight:400;padding:.5rem .7rem;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);min-height:42px}
+.sf-n input{width:110px}
+.sf-c{display:flex;align-items:center;gap:.4rem;font-size:.92rem;min-height:42px;cursor:pointer}
+.sf-go{background:var(--primary);color:var(--bg);border:0;border-radius:99px;padding:.6rem 1.4rem;font:inherit;font-weight:700;cursor:pointer;min-height:42px}
+.sf-reset{font-size:.9rem;color:var(--muted);text-decoration:underline;text-underline-offset:3px;align-self:center}
+@media (max-width:560px){.sf-f,.sf-n input{width:100%}.sf-f{flex:1 1 100%}.sf-n{flex:1 1 40%}}
+

@@ -245,7 +245,7 @@ function masar_footer_extras() {
 		$msg = rawurlencode( get_theme_mod( 'masar_whatsapp_msg', __( 'أهلاً، عايز أستفسر عن المنتجات', 'masar-altamayuz' ) ) );
 		echo '<a class="wa-float" href="https://wa.me/' . esc_attr( $wa ) . '?text=' . $msg . '" target="_blank" rel="noopener" aria-label="' . esc_attr__( 'واتساب', 'masar-altamayuz' ) . '"><svg viewBox="0 0 32 32" width="28" height="28" fill="#fff"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.8 2 6.8L3 29l6.6-2c1.9 1 4 1.6 6.4 1.6 7.2 0 13-5.7 13-12.8S23.200 3 16 3zm0 23.200c-2.100 0-4.100-.6-5.800-1.700l-.4-.2-3.900 1.200 1.200-3.800-.3-.4A10.200 10.200 0 0 1 5.800 15.800C5.800 10.200 10.400 5.700 16 5.700s10.200 4.500 10.200 10.100S21.600 26.200 16 26.200zm5.600-7.600c-.3-.2-1.800-.9-2.100-1-.3-.1-.5-.2-.7.200s-.8 1-1 1.200c-.2.200-.4.200-.7.100-.3-.2-1.300-.5-2.500-1.500-.9-.8-1.500-1.800-1.700-2.100-.2-.3 0-.5.100-.6l.5-.5c.1-.2.200-.3.300-.5.100-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400-.3.300-1.100 1.100-1.100 2.600s1.100 3 1.300 3.200c.2.200 2.200 3.400 5.400 4.700 3.200 1.300 3.200.9 3.800.8.600-.1 1.800-.7 2-1.400.3-.7.300-1.300.2-1.400-.1-.2-.3-.2-.6-.4z"/></svg></a>';
 	}
-	echo '<button class="to-top" aria-label="' . esc_attr__( 'للأعلى', 'masar-altamayuz' ) . '" hidden>↑</button>';
+	if ( get_theme_mod( 'masar_backtop', 1 ) ) { echo '<button class="to-top" aria-label="' . esc_attr__( 'للأعلى', 'masar-altamayuz' ) . '" hidden>↑</button>'; }
 }
 add_action( 'wp_footer', 'masar_footer_extras' );
 

@@ -105,6 +105,16 @@ function masar_customize_register( $wp_customize ) {
 		'dark'    => __( 'داكن فاخر', 'masar-altamayuz' ),
 		'minimal' => __( 'سطر واحد بسيط', 'masar-altamayuz' ),
 	) ), 'masar_sanitize_choice', 'select', 'masar_footer' );
+	$add( 'masar_footer_layout', 'wide', array( 'label' => __( 'توزيع أعمدة الفوتر', 'masar-altamayuz' ), 'choices' => array(
+		'wide'  => __( 'عمود التعريف أعرض', 'masar-altamayuz' ),
+		'equal' => __( 'أعمدة متساوية', 'masar-altamayuz' ),
+		'stack' => __( 'التعريف فوق والأعمدة تحته', 'masar-altamayuz' ),
+	) ), 'masar_sanitize_choice', 'select', 'masar_footer' );
+	$add( 'masar_footer_bottom', 'spread', array( 'label' => __( 'الشريط السفلي', 'masar-altamayuz' ), 'choices' => array(
+		'spread' => __( 'الحقوق ووسائل الدفع على الجانبين', 'masar-altamayuz' ),
+		'center' => __( 'كل شيء بالمنتصف', 'masar-altamayuz' ),
+	) ), 'masar_sanitize_choice', 'select', 'masar_footer' );
+	$add( 'masar_backtop', 1, array( 'label' => __( 'زر العودة للأعلى', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_footer' );
 	$add( 'masar_footer_newsletter', 1, array( 'label' => __( 'شريط الاشتراك بالنشرة', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_footer' );
 	$add( 'masar_newsletter_title', __( 'انضم لقائمتنا', 'masar-altamayuz' ), array( 'label' => __( 'عنوان الاشتراك', 'masar-altamayuz' ) ), 'sanitize_text_field', 'text', 'masar_footer' );
 	$add( 'masar_newsletter_text', __( 'اشترك ليوصلك كل جديد وعروض حصرية.', 'masar-altamayuz' ), array( 'label' => __( 'نص الاشتراك', 'masar-altamayuz' ) ), 'sanitize_text_field', 'text', 'masar_footer' );

@@ -503,3 +503,18 @@ body.layout-padded .site-footer{border-radius:0 0 var(--radius) var(--radius)}
 	.nav-locked{overflow:hidden}
 	.nav-locked .site-header{z-index:300}
 }
+
+/* خيارات الفوتر */
+.flay-equal .footer-cols{grid-template-columns:repeat(var(--n,2),1fr)}
+.flay-equal .fcols-2{--n:2}.flay-equal .fcols-3{--n:3}.flay-equal .fcols-4{--n:4}.flay-equal .fcols-5{--n:5}
+.flay-stack .footer-cols{display:flex;flex-wrap:wrap;gap:2rem 3rem}
+.flay-stack .fbrand{flex:1 0 100%}
+.flay-stack .fbrand p{max-width:560px}
+.flay-stack .fcol:not(.fbrand){flex:1 1 180px}
+.fbot-center .footer-bottom{justify-content:center;flex-direction:column;text-align:center}
+@media (max-width:900px){
+	.flay-equal .footer-cols.footer-cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+	.flay-equal .footer-cols.footer-cols{grid-template-columns:1fr}
+}

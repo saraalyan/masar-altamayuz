@@ -11,7 +11,7 @@ $addr  = get_theme_mod( 'masar_contact_address', '' );
 
 <?php if ( get_theme_mod( 'masar_footer_newsletter', 1 ) && ! masar_preset_has( 'newsletter' ) && 'minimal' !== $fs ) { masar_section( 'newsletter', array( 'variant' => 'band' ) ); } ?>
 
-<footer class="site-footer">
+<footer class="site-footer flay-<?php echo esc_attr( get_theme_mod( 'masar_footer_layout', 'wide' ) ); ?> fbot-<?php echo esc_attr( get_theme_mod( 'masar_footer_bottom', 'spread' ) ); ?>">
 	<div class="wrap">
 		<?php if ( 'minimal' !== $fs ) : ?>
 		<div class="footer-cols fcols-<?php echo (int) $ncols; ?>">

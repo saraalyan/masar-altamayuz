@@ -16,6 +16,7 @@ require get_template_directory() . '/inc/seo.php';
 require get_template_directory() . '/inc/blog.php';
 require get_template_directory() . '/inc/shop.php';
 require get_template_directory() . '/inc/wishlist.php';
+require get_template_directory() . '/inc/compare.php';
 require get_template_directory() . '/inc/layout.php';
 require get_template_directory() . '/inc/typography.php';
 

@@ -252,3 +252,24 @@ body.has-sticky-atc .to-top,body.has-sticky-atc .wa-float{bottom:5.5rem}
 .wl-single{display:inline-grid;vertical-align:middle;margin-inline-start:.6rem;width:46px;height:46px}
 .wl-empty{text-align:center;color:var(--muted);padding:3rem 0;font-size:1.05rem}
 
+/* مقارنة المنتجات */
+.cmp-btn{background:none;border:1px solid var(--line);color:var(--ink);font:inherit;font-size:.85rem;font-weight:700;padding:.35rem .9rem;border-radius:99px;cursor:pointer;transition:background .15s,color .15s}
+.cmp-btn:hover,.cmp-btn.is-on{background:var(--primary);color:var(--bg);border-color:var(--primary)}
+.cmp-loop{display:block;margin:.4rem auto 0}
+.cmp-single{margin-inline-start:.6rem;vertical-align:middle;min-height:46px}
+.cmp-tray{position:fixed;bottom:16px;inset-inline-start:50%;transform:translateX(50%);z-index:70;background:var(--primary);color:var(--bg);padding:.6rem 1rem;border-radius:99px;display:flex;align-items:center;gap:.8rem;box-shadow:var(--shadow);font-size:.95rem;white-space:nowrap}
+html[dir="ltr"] .cmp-tray{transform:translateX(-50%)}
+.cmp-tray[hidden]{display:none}
+.cmp-go{color:var(--bg);font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.cmp-clear{background:none;border:0;color:var(--bg);font-size:1.4rem;line-height:1;cursor:pointer;padding:0 .3rem}
+.cmp-scroll{overflow-x:auto}
+.cmp-table{width:100%;border-collapse:collapse;min-width:560px;background:var(--surface,#fff);border-radius:var(--radius);overflow:hidden}
+.cmp-table th,.cmp-table td{padding:1rem;border:1px solid var(--line);vertical-align:top;text-align:start}
+.cmp-table tbody th{width:140px;background:var(--bg);font-weight:700;white-space:nowrap}
+.cmp-prod{position:relative;min-width:180px}
+.cmp-prod img{width:100%;max-width:200px;height:auto;border-radius:10px;display:block;margin-bottom:.5rem}
+.cmp-name{font-weight:700}
+.cmp-x{position:absolute;top:.4rem;inset-inline-end:.4rem;width:30px;height:30px;padding:0;border-radius:50%;font-size:1.2rem;line-height:1}
+@media (max-width:560px){.cmp-tray{bottom:76px}}
+
+.cmp-page{width:min(1200px,calc(100vw - 2rem));margin-inline:calc(50% - min(600px,50vw - 1rem))}

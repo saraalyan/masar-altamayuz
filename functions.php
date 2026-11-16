@@ -147,6 +147,7 @@ function masar_enqueue() {
 	// خط لاتيني أنيق للعناوين والأرقام والأسماء الإنجليزية
 	wp_enqueue_style( 'masar-font-playfair', get_template_directory_uri() . '/assets/fonts/playfair-display.css', array(), MASAR_VER );
 	wp_enqueue_style( 'masar-main', get_template_directory_uri() . '/assets/css/main.css', array(), MASAR_VER );
+	wp_enqueue_style( 'masar-plugins', get_template_directory_uri() . '/assets/css/plugins.css', array( 'masar-main' ), MASAR_VER );
 	wp_enqueue_style( 'masar-style', get_stylesheet_uri(), array( 'masar-main' ), MASAR_VER );
 	wp_add_inline_style( 'masar-main', masar_custom_font_css() . masar_dynamic_css() );
 	wp_enqueue_script( 'masar-main', get_template_directory_uri() . '/assets/js/main.js', array(), MASAR_VER, true );

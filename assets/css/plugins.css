@@ -1,0 +1,31 @@
+/* مسار التميز — توافق البلاجينز: النماذج (CF7 / WPForms / Fluent Forms / Ninja Forms / Mailchimp for WP) وبوابات الدفع */
+
+/* ===== النماذج ===== */
+.wpcf7 form,.wpforms-container form,.fluentform form,.nf-form-cont,.mc4wp-form{text-align:start;direction:rtl}
+.wpcf7 p,.wpforms-field,.ff-el-group,.nf-field-container,.mc4wp-form p{margin:0 0 1.1rem}
+.wpcf7 label,.wpforms-field-label,.ff-el-input--label label,.nf-field-label label,.mc4wp-form label{display:block;font-weight:700;font-size:.95rem;margin-bottom:.35rem;color:var(--ink)}
+.wpcf7 input:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=file]),.wpcf7 textarea,.wpcf7 select,
+.wpforms-container input:not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=file]),.wpforms-container textarea,.wpforms-container select,
+.fluentform .ff-el-form-control,
+.nf-form-cont input:not([type=button]):not([type=checkbox]):not([type=radio]),.nf-form-cont textarea,.nf-form-cont select,
+.mc4wp-form input:not([type=submit]):not([type=checkbox]):not([type=radio]){width:100%;max-width:100%;padding:.7rem 1rem;border:1.5px solid var(--line);border-radius:12px;font-family:inherit;font-size:1rem;background:var(--surface);color:var(--ink);box-sizing:border-box;transition:border-color .15s,box-shadow .15s}
+.wpcf7 textarea,.wpforms-container textarea,.fluentform textarea.ff-el-form-control,.nf-form-cont textarea{min-height:140px;resize:vertical}
+.wpcf7 input:focus,.wpcf7 textarea:focus,.wpcf7 select:focus,.wpforms-container input:focus,.wpforms-container textarea:focus,.wpforms-container select:focus,.fluentform .ff-el-form-control:focus,.nf-form-cont input:focus,.nf-form-cont textarea:focus,.mc4wp-form input:focus{outline:0;border-color:var(--primary);box-shadow:0 0 0 3px color-mix(in srgb,var(--primary) 18%,transparent)}
+.wpcf7 input[type=submit],.wpforms-container .wpforms-submit,.fluentform .ff-btn-submit,.nf-form-cont input[type=button],.mc4wp-form input[type=submit]{display:inline-block;background:var(--primary);color:var(--bg);border:0;border-radius:99px;padding:.75rem 2rem;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;width:auto;transition:transform .15s,box-shadow .15s}
+.wpcf7 input[type=submit]:hover,.wpforms-container .wpforms-submit:hover,.fluentform .ff-btn-submit:hover,.nf-form-cont input[type=button]:hover,.mc4wp-form input[type=submit]:hover{transform:translateY(-2px);box-shadow:0 8px 20px color-mix(in srgb,var(--primary) 35%,transparent)}
+.wpcf7 input[type=checkbox],.wpcf7 input[type=radio],.wpforms-container input[type=checkbox],.wpforms-container input[type=radio]{accent-color:var(--primary);margin-inline-end:.4rem}
+.wpcf7-list-item{margin:0 0 .4rem}
+.wpcf7-list-item label{font-weight:400;display:inline-flex;align-items:center}
+/* رسائل التحقق */
+.wpcf7-not-valid-tip,.wpforms-error,.ff-el-is-error .error,.nf-error-msg{color:#c0392b;font-size:.85rem;margin-top:.3rem;display:block}
+.wpcf7 input.wpcf7-not-valid,.wpcf7 textarea.wpcf7-not-valid,.wpforms-container input.wpforms-error,.wpforms-container textarea.wpforms-error,.fluentform .ff-el-is-error .ff-el-form-control{border-color:#c0392b}
+.wpcf7 form .wpcf7-response-output,.wpforms-confirmation-container-full,.ff-message-success,.mc4wp-response{margin:1rem 0 0;padding:.8rem 1.1rem;border:1.5px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font-size:.95rem}
+.wpcf7 form.sent .wpcf7-response-output,.wpforms-confirmation-container-full,.ff-message-success{border-color:#2e8b57}
+.wpcf7 form.invalid .wpcf7-response-output,.wpcf7 form.failed .wpcf7-response-output{border-color:#c0392b}
+.wpcf7-spinner{margin-inline:.6rem}
+/* النشرة البريدية داخل سكشن الثيم */
+.mc4wp-form-fields{display:flex;flex-wrap:wrap;gap:.6rem}
+.mc4wp-form-fields p{flex:1 1 220px;margin:0}
+.mc4wp-form-fields p:last-child{flex:0 0 auto}
+.dark .wpcf7 input,.skin-dark .wpcf7 input{color-scheme:dark}
+@media (max-width:560px){.wpcf7-spinner{display:block;margin:.6rem auto 0}.wpcf7 input[type=submit],.wpforms-container .wpforms-submit,.fluentform .ff-btn-submit{width:100%}}

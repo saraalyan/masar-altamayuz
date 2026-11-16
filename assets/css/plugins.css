@@ -29,3 +29,11 @@
 .mc4wp-form-fields p:last-child{flex:0 0 auto}
 .dark .wpcf7 input,.skin-dark .wpcf7 input{color-scheme:dark}
 @media (max-width:560px){.wpcf7-spinner{display:block;margin:.6rem auto 0}.wpcf7 input[type=submit],.wpforms-container .wpforms-submit,.fluentform .ff-btn-submit{width:100%}}
+
+/* مبدّل اللغات */
+.lang-sw{display:inline-flex;gap:.6rem;align-items:center}
+.lang-sw a{opacity:.8;font-weight:600}
+.lang-sw a.is-cur{opacity:1;border-bottom:1px solid currentColor}
+.lang-sw.in-hdr{font-size:.85rem;margin-inline-end:.4rem}
+@media (max-width:560px){.lang-sw.in-hdr{display:none}}
+

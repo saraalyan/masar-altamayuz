@@ -80,6 +80,7 @@ function masar_customize_register( $wp_customize ) {
 		'drop' => __( 'تنزل تحت الهيدر', 'masar-altamayuz' ),
 		'side' => __( 'قائمة جانبية منزلقة', 'masar-altamayuz' ),
 	) ), 'masar_sanitize_choice', 'select', 'masar_header' );
+	$add( 'masar_lang_switch', 1, array( 'label' => __( 'مبدّل اللغات (يظهر لما Polylang أو WPML يكون شغال)', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_header' );
 	$add( 'masar_subbar_on', 0, array( 'label' => __( 'صف إضافي تحت الهيدر', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_header' );
 	$add( 'masar_subbar_text', __( 'عروض الموسم بدأت — خصم حتى 30%', 'masar-altamayuz' ), array( 'label' => __( 'نص الصف الإضافي', 'masar-altamayuz' ) ), 'sanitize_text_field', 'text', 'masar_header' );
 	$add( 'masar_subbar_link', __( 'تسوّق الآن', 'masar-altamayuz' ), array( 'label' => __( 'نص رابط الصف الإضافي', 'masar-altamayuz' ) ), 'sanitize_text_field', 'text', 'masar_header' );

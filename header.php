@@ -19,6 +19,7 @@ $hs = get_theme_mod( 'masar_header_style', 'split' );
 	<div class="wrap topbar-in">
 		<span><?php echo esc_html( get_theme_mod( 'masar_announce', __( 'شحن مجاني للطلبات فوق 500 جنيه  |  استرجاع سهل خلال 14 يوم', 'masar-altamayuz' ) ) ); ?></span>
 		<span class="topbar-links">
+			<?php echo function_exists( 'masar_lang_switcher' ) ? masar_lang_switcher() : ''; // phpcs:ignore ?>
 			<?php
 			for ( $i = 1; $i <= 2; $i++ ) {
 				$l = get_theme_mod( 'masar_topbar_link' . $i, array( 1 => __( 'تتبّع طلبك', 'masar-altamayuz' ), 2 => __( 'مركز المساعدة', 'masar-altamayuz' ) )[ $i ] );
@@ -66,6 +67,7 @@ $hcls   = $sticky ? ' is-sticky' . ( in_array( $stype, array( 'shrink', 'hide' )
 			<?php if ( get_theme_mod( 'masar_show_theme_toggle', 1 ) ) : ?>
 				<button class="icon-btn theme-toggle" aria-label="<?php esc_attr_e( 'تبديل الوضع الليلي', 'masar-altamayuz' ); ?>" title="<?php esc_attr_e( 'الوضع الليلي', 'masar-altamayuz' ); ?>"><?php echo masar_icon( 'moon', 'ico-dark' ); echo masar_icon( 'sun', 'ico-light' ); ?></button>
 			<?php endif; ?>
+			<?php if ( ! get_theme_mod( 'masar_topbar_on', 1 ) && function_exists( 'masar_lang_switcher' ) ) { echo masar_lang_switcher( 'in-hdr' ); } // phpcs:ignore ?>
 			<?php if ( function_exists( 'masar_wl_header_link' ) ) { echo masar_wl_header_link(); } // phpcs:ignore ?>
 			<?php if ( function_exists( 'WC' ) && WC()->cart ) : ?>
 				<a class="icon-btn cart-link" href="<?php echo esc_url( wc_get_cart_url() ); ?>" aria-label="<?php esc_attr_e( 'السلة', 'masar-altamayuz' ); ?>"><?php echo masar_icon( 'cart' ); ?><span class="cart-count"><?php echo (int) WC()->cart->get_cart_contents_count(); ?></span></a>

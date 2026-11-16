@@ -20,6 +20,7 @@ require get_template_directory() . '/inc/compare.php';
 require get_template_directory() . '/inc/shop-filters.php';
 require get_template_directory() . '/inc/search.php';
 require get_template_directory() . '/inc/compat-elementor.php';
+require get_template_directory() . '/inc/compat-i18n.php';
 require get_template_directory() . '/inc/layout.php';
 require get_template_directory() . '/inc/typography.php';
 

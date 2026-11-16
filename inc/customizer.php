@@ -137,6 +137,11 @@ function masar_customize_register( $wp_customize ) {
 	/* ---------- المدونة والمقالات ---------- */
 	$wp_customize->add_section( 'masar_blogx', array( 'title' => __( 'المدونة والمقالات', 'masar-altamayuz' ), 'panel' => 'masar_panel' ) );
 	$add( 'masar_breadcrumbs', 1, array( 'label' => __( 'مسار التنقل (الرئيسية › القسم › الصفحة)', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_blogx' );
+	$add( 'masar_blog_pager', 'numbers', array( 'label' => __( 'ترقيم المدونة', 'masar-altamayuz' ), 'choices' => array(
+		'numbers'  => __( 'أرقام الصفحات', 'masar-altamayuz' ),
+		'more'     => __( 'زر «تحميل المزيد»', 'masar-altamayuz' ),
+		'infinite' => __( 'تحميل تلقائي عند النزول', 'masar-altamayuz' ),
+	) ), 'masar_sanitize_choice', 'select', 'masar_blogx' );
 	$add( 'masar_related_posts', 1, array( 'label' => __( 'مقالات ذات صلة تحت المقال', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_blogx' );
 	$add( 'masar_author_box', 1, array( 'label' => __( 'صندوق الكاتب تحت المقال', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_blogx' );
 	$add( 'masar_share_buttons', 1, array( 'label' => __( 'أزرار مشاركة المقال', 'masar-altamayuz' ) ), 'masar_sanitize_check', 'checkbox', 'masar_blogx' );

@@ -530,3 +530,10 @@ body.layout-padded .site-footer{border-radius:0 0 var(--radius) var(--radius)}
 .chip:hover{background:var(--primary);color:var(--bg);border-color:var(--primary)}
 .empty{text-align:center;color:var(--muted);padding:2rem 0 0;font-size:1.05rem}
 
+/* تحميل المزيد */
+.pager.is-enhanced .navigation,.pager.is-enhanced .pagination{display:none}
+.pager.is-enhanced{text-align:center}
+.load-more[hidden]{display:none}
+.load-more:disabled{opacity:.6;cursor:wait}
+.load-status{color:var(--muted);font-size:.95rem;margin:.8rem 0 0}
+

@@ -43,6 +43,66 @@
 		});
 	}
 
+	/* ترقيم المدونة: تحميل المزيد / تلقائي */
+	var pg = document.querySelector('.pager[data-mode]');
+	var grid = document.querySelector('.content .posts');
+	if (pg && grid && window.fetch && window.DOMParser) {
+		var nextLink = function (root) { var a = root.querySelector('.pager a.next'); return a ? a.href : ''; };
+		var url = nextLink(document);
+		pg.classList.add('is-enhanced');
+		var live = document.createElement('p');
+		live.className = 'load-status';
+		live.setAttribute('role', 'status');
+		live.setAttribute('aria-live', 'polite');
+		var btn = document.createElement('button');
+		btn.type = 'button';
+		btn.className = 'btn load-more';
+		btn.textContent = pg.getAttribute('data-more');
+		pg.appendChild(btn);
+		pg.appendChild(live);
+		var busy = false, io = null;
+		var finish = function () {
+			btn.hidden = true;
+			if (io) { io.disconnect(); }
+			live.textContent = pg.getAttribute('data-done');
+		};
+		var load = function () {
+			if (busy || !url) { return; }
+			busy = true;
+			btn.disabled = true;
+			btn.textContent = pg.getAttribute('data-loading');
+			fetch(url, { credentials: 'same-origin' }).then(function (r) {
+				if (!r.ok) { throw new Error('http'); }
+				return r.text();
+			}).then(function (html) {
+				var doc = new DOMParser().parseFromString(html, 'text/html');
+				var items = doc.querySelectorAll('.content .posts > *');
+				var first = null;
+				items.forEach(function (it) {
+					var n = document.importNode(it, true);
+					if (!first) { first = n; }
+					grid.appendChild(n);
+				});
+				url = nextLink(doc);
+				busy = false;
+				btn.disabled = false;
+				btn.textContent = pg.getAttribute('data-more');
+				if (!url) { finish(); }
+			}).catch(function () {
+				busy = false;
+				btn.disabled = false;
+				btn.textContent = pg.getAttribute('data-more');
+				live.textContent = pg.getAttribute('data-error');
+			});
+		};
+		if (!url) { btn.hidden = true; }
+		btn.addEventListener('click', load);
+		if (pg.getAttribute('data-mode') === 'infinite' && 'IntersectionObserver' in window && url) {
+			io = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { load(); } }, { rootMargin: '300px' });
+			io.observe(btn);
+		}
+	}
+
 	/* تثبيت الهيدر: يصغر / يختفي */
 	var hd = document.querySelector('.site-header.is-sticky');
 	if (hd && (hd.classList.contains('sticky-shrink') || hd.classList.contains('sticky-hide'))) {

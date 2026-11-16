@@ -143,3 +143,16 @@ function masar_faq_defaults() {
 		array( __( 'كيف أتواصل معكم؟', 'masar-altamayuz' ), __( 'عبر واتساب أو الهاتف أو البريد، وبنرد خلال ساعات العمل.', 'masar-altamayuz' ) ),
 	);
 }
+
+/** وضع ترقيم المدونة: numbers | more | infinite */
+function masar_pager_mode() {
+	$m = get_theme_mod( 'masar_blog_pager', 'numbers' );
+	return in_array( $m, array( 'more', 'infinite' ), true ) ? $m : 'numbers';
+}
+/** خصائص حاوية الترقيم لـ JS (النصوص مترجمة) */
+function masar_pager_attrs() {
+	$m = masar_pager_mode();
+	if ( 'numbers' === $m ) { return ''; }
+	return ' data-mode="' . esc_attr( $m ) . '" data-more="' . esc_attr__( 'تحميل المزيد', 'masar-altamayuz' ) . '" data-loading="' . esc_attr__( 'جاري التحميل…', 'masar-altamayuz' ) . '" data-error="' . esc_attr__( 'تعذّر التحميل، جرّبي مرة تانية', 'masar-altamayuz' ) . '" data-done="' . esc_attr__( 'وصلتي لآخر المقالات', 'masar-altamayuz' ) . '"';
+}
+

@@ -12,7 +12,7 @@ get_header(); ?>
 				<div class="posts">
 					<?php while ( have_posts() ) { the_post(); get_template_part( 'template-parts/card' ); } ?>
 				</div>
-				<div class="pager"><?php the_posts_pagination( array( 'prev_text' => '→', 'next_text' => '←' ) ); ?></div>
+				<div class="pager"<?php echo masar_pager_attrs(); // phpcs:ignore ?>><?php the_posts_pagination( array( 'prev_text' => '→', 'next_text' => '←' ) ); ?></div>
 			<?php else : ?>
 				<p class="empty"><?php esc_html_e( 'لا يوجد محتوى هنا حتى الآن 🌱', 'masar-altamayuz' ); ?></p>
 			<?php endif; ?>

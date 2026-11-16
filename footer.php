@@ -44,7 +44,11 @@ $addr  = get_theme_mod( 'masar_contact_address', '' );
 			<p class="copy">© <?php echo esc_html( date_i18n( 'Y' ) ); ?> <?php bloginfo( 'name' ); ?> — <?php echo esc_html( get_theme_mod( 'masar_footer_text', __( 'جميع الحقوق محفوظة', 'masar-altamayuz' ) ) ); ?></p>
 			<?php if ( 'minimal' === $fs ) { wp_nav_menu( array( 'theme_location' => 'footer', 'container' => false, 'menu_class' => 'footer-menu', 'depth' => 1, 'fallback_cb' => '__return_empty_string' ) ); masar_social_links( 'socials' ); } ?>
 			<?php if ( get_theme_mod( 'masar_footer_payments', 1 ) ) : ?>
-				<div class="pay" aria-label="<?php esc_attr_e( 'وسائل الدفع', 'masar-altamayuz' ); ?>"><span>VISA</span><span>Mastercard</span><span>PayPal</span><span>Apple Pay</span><span><?php esc_html_e( 'فوري', 'masar-altamayuz' ); ?></span></div>
+				<?php
+				$pay_default = "VISA\nMastercard\nPayPal\nApple Pay\n" . __( 'فوري', 'masar-altamayuz' );
+				$pay_list    = array_filter( array_map( 'trim', preg_split( '/\r\n|\r|\n/', (string) get_theme_mod( 'masar_pay_badges', $pay_default ) ) ) );
+				?>
+				<div class="pay" aria-label="<?php esc_attr_e( 'وسائل الدفع', 'masar-altamayuz' ); ?>"><?php foreach ( array_slice( $pay_list, 0, 10 ) as $pb ) { echo '<span>' . esc_html( $pb ) . '</span>'; } ?></div>
 			<?php endif; ?>
 		</div>
 	</div>

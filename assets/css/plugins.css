@@ -37,3 +37,29 @@
 .lang-sw.in-hdr{font-size:.85rem;margin-inline-end:.4rem}
 @media (max-width:560px){.lang-sw.in-hdr{display:none}}
 
+
+/* ===== بوابات الدفع (Paymob / Fawry / Kashier / Vodafone Cash / InstaPay وغيرها) ===== */
+/* الدفع الكلاسيكي */
+.woocommerce-checkout #payment ul.payment_methods{padding:1rem 1.2rem}
+.woocommerce-checkout #payment ul.payment_methods li{list-style:none;margin:0 0 .6rem;padding:.7rem .9rem;border:1.5px solid var(--line);border-radius:12px;background:var(--surface)}
+.woocommerce-checkout #payment ul.payment_methods li:has(input:checked){border-color:var(--primary)}
+.woocommerce-checkout #payment ul.payment_methods li label{display:inline-flex;align-items:center;flex-wrap:wrap;gap:.5rem;font-weight:700;cursor:pointer}
+.woocommerce-checkout #payment ul.payment_methods li input[type=radio]{accent-color:var(--primary);margin:0}
+.woocommerce-checkout #payment ul.payment_methods li label img,.woocommerce-checkout #payment .payment_method_paymob img,.woocommerce-checkout #payment .payment_method_fawry img,.woocommerce-checkout #payment .payment_method_kashier img{max-height:26px;width:auto;margin:0;float:none;vertical-align:middle}
+.woocommerce-checkout #payment ul.payment_methods li label a.about_paypal{display:none}
+.woocommerce-checkout #payment div.payment_box{margin:.7rem 0 0;padding:.8rem 1rem;border-radius:10px;font-size:.95rem;line-height:1.7}
+.woocommerce-checkout #payment div.payment_box::before{display:none}
+.woocommerce-checkout #payment div.payment_box p:last-child{margin-bottom:0}
+/* iframe بوابات الدفع (بيتجاوز عرض العمود ولازم يتجاوب) */
+.woocommerce-checkout iframe,.woocommerce-order-pay iframe,#paymob-iframe,.paymob-iframe,#kashier-iframe,.fawry-iframe{max-width:100%;border:0;border-radius:12px}
+#paymob-iframe,.paymob-iframe,#kashier-iframe{width:100%;min-height:560px;display:block}
+/* صفحة الدفع بعد الطلب (Pay for order) */
+.woocommerce-order-pay #order_review table.shop_table{width:100%}
+/* بلوكات الدفع الجديدة */
+.wc-block-components-radio-control-accordion-option .wc-block-components-radio-control__label img,.wc-block-components-payment-method-label img{max-height:26px;width:auto}
+.wc-block-components-radio-control__option-checked{border-color:var(--primary)}
+/* صفحة تم استلام الطلب: بيانات الدفع (كود فوري / رقم مرجعي) */
+.woocommerce-order-received .fawry-info,.woocommerce-order-received .payment-instructions,.woocommerce-order-received .woocommerce-bacs-bank-details{background:var(--soft);border:1.5px dashed var(--line);border-radius:12px;padding:1rem 1.2rem;margin:1rem 0;line-height:1.8}
+.woocommerce-order-received .fawry-code,.woocommerce-order-received .reference-number{font-size:1.6rem;font-weight:800;letter-spacing:.08em;color:var(--primary);direction:ltr;display:inline-block}
+/* شارات الدفع في الفوتر: أي نص يتكتب يتعرض بنفس الشكل */
+.pay span{white-space:nowrap}

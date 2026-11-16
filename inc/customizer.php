@@ -106,6 +106,7 @@ function masar_customize_register( $wp_customize ) {
 		'dark'    => __( 'داكن فاخر', 'masar-altamayuz' ),
 		'minimal' => __( 'سطر واحد بسيط', 'masar-altamayuz' ),
 	) ), 'masar_sanitize_choice', 'select', 'masar_footer' );
+	$add( 'masar_pay_badges', "VISA\nMastercard\nPayPal\nApple Pay\n" . __( 'فوري', 'masar-altamayuz' ), array( 'label' => __( 'شارات وسائل الدفع (كل وسيلة في سطر، حد أقصى 10)', 'masar-altamayuz' ), 'description' => __( 'مثال: Paymob، فودافون كاش، إنستاباي، ميزة، فوري', 'masar-altamayuz' ) ), 'sanitize_textarea_field', 'textarea', 'masar_footer' );
 	$add( 'masar_footer_layout', 'wide', array( 'label' => __( 'توزيع أعمدة الفوتر', 'masar-altamayuz' ), 'choices' => array(
 		'wide'  => __( 'عمود التعريف أعرض', 'masar-altamayuz' ),
 		'equal' => __( 'أعمدة متساوية', 'masar-altamayuz' ),

@@ -1,6 +1,7 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 get_header();
+if ( ! masar_elementor_location( 'single' ) ) :
 while ( have_posts() ) : the_post(); ?>
 <article <?php post_class( 'single' ); ?>>
 	<header class="single-head">
@@ -29,4 +30,5 @@ while ( have_posts() ) : the_post(); ?>
 	<?php masar_entry_close( 'single' ); ?>
 </article>
 <?php endwhile;
+endif;
 get_footer();

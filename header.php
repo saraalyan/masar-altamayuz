@@ -13,6 +13,7 @@ $hs = get_theme_mod( 'masar_header_style', 'split' );
 <?php wp_body_open(); ?>
 <a class="skip" href="#main"><?php esc_html_e( 'تخطي إلى المحتوى', 'masar-altamayuz' ); ?></a>
 
+<?php if ( ! masar_elementor_location( 'header' ) ) : ?>
 <?php if ( get_theme_mod( 'masar_topbar_on', 1 ) ) : ?>
 <div class="topbar">
 	<div class="wrap topbar-in">
@@ -83,4 +84,5 @@ $hcls   = $sticky ? ' is-sticky' . ( in_array( $stype, array( 'shrink', 'hide' )
 	<?php if ( $sl ) : ?><a href="<?php echo esc_url( get_theme_mod( 'masar_subbar_url', '' ) ?: '#' ); ?>"><?php echo esc_html( $sl ); ?></a><?php endif; ?>
 </div></div>
 <?php endif; ?>
+<?php endif; // elementor header ?>
 <main id="main" class="site-main">

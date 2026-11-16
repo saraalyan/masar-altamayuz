@@ -9,6 +9,7 @@ $addr  = get_theme_mod( 'masar_contact_address', '' );
 ?>
 </main>
 
+<?php if ( ! masar_elementor_location( 'footer' ) ) : ?>
 <?php if ( get_theme_mod( 'masar_footer_newsletter', 1 ) && ! masar_preset_has( 'newsletter' ) && 'minimal' !== $fs ) { masar_section( 'newsletter', array( 'variant' => 'band' ) ); } ?>
 
 <footer class="site-footer flay-<?php echo esc_attr( get_theme_mod( 'masar_footer_layout', 'wide' ) ); ?> fbot-<?php echo esc_attr( get_theme_mod( 'masar_footer_bottom', 'spread' ) ); ?>">
@@ -48,6 +49,7 @@ $addr  = get_theme_mod( 'masar_contact_address', '' );
 		</div>
 	</div>
 </footer>
+<?php endif; // elementor footer ?>
 
 <div class="petals" aria-hidden="true"></div>
 <?php wp_footer(); ?>

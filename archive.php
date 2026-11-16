@@ -1,6 +1,7 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) { exit; }
-get_header(); ?>
+get_header();
+if ( ! masar_elementor_location( 'archive' ) ) : ?>
 <div class="wrap page-pad">
 	<header class="archive-head">
 		<?php echo masar_breadcrumbs(); // phpcs:ignore ?>
@@ -21,4 +22,5 @@ get_header(); ?>
 		<?php get_sidebar(); ?>
 	</div>
 </div>
-<?php get_footer();
+<?php endif;
+get_footer();

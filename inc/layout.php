@@ -37,11 +37,13 @@ function masar_layout_class( $ctx = null ) {
 
 /** فتح وقفل محتوى المقال/الصفحة: ضيّق من غير سايدبار، وبالتخطيط معاه */
 function masar_entry_open( $ctx ) {
+	if ( function_exists( 'masar_is_elementor_page' ) && is_singular() && masar_is_elementor_page() ) { echo '<div class="entry-el">'; return; }
 	$pos = masar_sidebar_pos( $ctx );
 	if ( 'none' === $pos ) { echo '<div class="wrap narrow entry">'; return; }
 	echo '<div class="wrap layout has-side side-' . esc_attr( $pos ) . '"><div class="entry content">';
 }
 function masar_entry_close( $ctx ) {
+	if ( function_exists( 'masar_is_elementor_page' ) && is_singular() && masar_is_elementor_page() ) { echo '</div>'; return; }
 	if ( 'none' === masar_sidebar_pos( $ctx ) ) { echo '</div>'; return; }
 	echo '</div>';
 	get_sidebar();
